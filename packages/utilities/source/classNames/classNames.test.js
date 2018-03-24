@@ -5,7 +5,7 @@ test("Should export a function", () => {
   expect(typeof cx).toBe("function");
 });
 
-test("Adds all arguments together as a string", () => {
+test("Joins all arguments together as a string", () => {
   expect(cx("hello", "my", 1, "class")).toBe("hello my 1 class");
 });
 
@@ -15,7 +15,7 @@ test("Ignores items that are not strings or numbers", () => {
 
 
 describe("Arrays", () => {
-  test("Adds each item together as a string", () => {
+  test("Joins each item together into a string", () => {
     expect(cx([ "hello", "my", 1, "class" ])).toBe("hello my 1 class");
   });
 
@@ -23,14 +23,14 @@ describe("Arrays", () => {
     expect(cx([ "hello my", null, 1, "class" ])).toBe("hello my 1 class");
   });
 
-  test("Adds values of nested arrays", () => {
+  test("Joins values of nested arrays into a string", () => {
     expect(cx([ [ "hello my", null ], [ 1, "class" ], [ null ] ])).toBe("hello my 1 class");
   })
 });
 
 
 describe("Objects", () => {
-  test("Adds object keys when its value is truthy", () => {
+  test("Joins each object key that has a truthy value", () => {
     const className = cx({
       hello: null,
       my: true,
