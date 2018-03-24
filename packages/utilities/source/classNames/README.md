@@ -21,10 +21,8 @@ classNames("hello my   ", null, 1, "class");
 // > "hello my    1 class"
 ```
 
-### Collections
-  - Joins each item of the collection
-  - Arrays: adds the value if it's a number or string
-  - Objects: adds the key if the value is truthy
+### Arrays
+Joins numbers and strings of the collection
 
 ```js
 import { classNames } from "@zuck/core";
@@ -34,7 +32,12 @@ classNames([ "hello", "my", 1, "class" ]);
 
 classNames([ "hello my   ", null, 1, "class" ]);
 // > "hello my    1 class"
+```
 
+### Objects
+Joins each object key that has a truthy value.
+
+```js
 classNames({
   hello: null,
   my: true,
