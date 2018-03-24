@@ -1,3 +1,1 @@
-export function fire() {
-  return "fire";
-}
+export * from "./classNames/classNames";
