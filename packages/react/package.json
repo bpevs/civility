@@ -12,6 +12,7 @@
     "start": "npm run build:es6 -- --watch"
   },
   "dependencies": {
+    "@types/react": "^16.0.41",
     "lodash-es": "^4.17.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"

@@ -19,6 +19,7 @@
     "test:coverage": "npm run test:unit -- --coverage"
   },
   "dependencies": {
+    "@types/react-dom": "^16.0.4",
     "basscss": "^8.0.4",
     "lodash-es": "^4.17.7",
     "react": "^16.2.0",
@@ -29,7 +30,6 @@
     "@types/enzyme": "^3.1.9",
     "@types/jest": "^22.2.2",
     "@types/lodash-es": "^4.17.0",
-    "@types/react": "^16.0.40",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.3",
@@ -64,7 +64,8 @@
     "moduleFileExtensions": [
       "ts",
       "tsx",
-      "js"
+      "js",
+      "jsx"
     ],
     "setupFiles": [
       "<rootDir>/jestsetup.js"
@@ -73,7 +74,7 @@
       "enzyme-to-json/serializer"
     ],
     "testMatch": [
-      "**/*.test.(ts|tsx|js)"
+      "**/*.test.(js|jsx)"
     ],
     "transform": {
       "^.+\\.(j|t)sx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"

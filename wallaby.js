@@ -14,8 +14,8 @@ module.exports = function () {
     ],
     testFramework: "jest",
     tests: [
-      "source/**/*.test.ts",
-      "source/**/*.test.tsx"
+      "source/**/*.test.js",
+      "source/**/*.test.jsx"
     ],
   };
 };
