@@ -27,11 +27,6 @@
     "redux": "^4.0.0"
   },
   "devDependencies": {
-    "@civility/firebase": "0.0.3",
-    "@civility/react": "0.0.3",
-    "@civility/store": "0.0.3",
-    "@civility/stylesheets": "0.0.1",
-    "@civility/utilities": "0.0.3",
     "@types/enzyme": "^3.1.9",
     "@types/jest": "^22.2.2",
     "@types/lodash-es": "^4.17.0",
@@ -55,7 +50,8 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run test:lint",
-      "pre-push": "npm-run-all test:lint build"
+      "pre-push": "npm-run-all test:lint build",
+      "pre-publish": "npm-run-all test build"
     }
   },
   "jest": {

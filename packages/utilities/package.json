@@ -1,6 +1,6 @@
 {
   "name": "@civility/utilities",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Contains Civility stylesheets",
   "main": "dist/index.js",
   "license": "UNLICENSED",

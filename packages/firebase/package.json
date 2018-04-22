@@ -1,6 +1,6 @@
 {
   "name": "@civility/firebase",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Civility Firebase",
   "main": "dist/index.js",
   "license": "UNLICENSED",
