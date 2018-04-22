@@ -1,4 +1,4 @@
-export type AnyFunc = (...args: any[]) => any;
+import { Func } from "@civility/utilities";
 
 export interface IAction<ActionType> {
   readonly type: ActionType;
@@ -11,7 +11,7 @@ export interface IApiAction<PayloadType> {
   readonly types: [ ActionType, ActionType, ActionType ];
 }
 
-export type IAsyncAction<PayloadType> = IApiAction<PayloadType> | AnyFunc;
+export type IAsyncAction<PayloadType> = IApiAction<PayloadType> | Func;
 
 export type ActionCreator = (...args: any[]) => ActionTypes;
 

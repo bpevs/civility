@@ -12,23 +12,19 @@
     ],
     "noImplicitAny": true,
     "paths": {
-      "lodash/*": [
-        "node_modules/@types/lodash-es/*"
-      ],
+      "*": [
+        "node_modules/*",
+        "/node_modules/*"
+      ]
     },
     "sourceMap": true,
     "strictNullChecks": true,
-    "target": "es5",
-    "typeRoots": [
-      "node_modules/@types",
-      "node_modules/@civility"
-    ]
+    "target": "es5"
   },
   "exclude": [
     "node_modules",
+    "/node_modules",
     "**/*dist/**/*",
-    "**/*.test.ts",
-    "**/*.test.tsx",
     "**/*.test.js",
     "**/*.test.jsx"
   ],

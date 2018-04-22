@@ -2,14 +2,14 @@
   "name": "@civility/react",
   "version": "0.0.4",
   "description": "Civility React Components",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "license": "UNLICENSED",
   "repository": "git+https://github.com/ivebencrazy/civility.git",
   "scripts": {
     "build": "run-p build:* --aggregate-output",
-    "build:commonjs": "tsc --outDir './dist/commonjs/' --module 'commonjs'",
-    "build:es6": "tsc --outDir './dist/' --module 'es6'",
-    "start": "npm run build:es6 -- --watch"
+    "build:commonjs": "tsc -p 'tsconfig.json' --outDir 'dist' --module 'commonjs'",
+    "start": "npm run build:commonjs -- --watch"
   },
   "dependencies": {
     "@civility/utilities": "^0.0.4",
