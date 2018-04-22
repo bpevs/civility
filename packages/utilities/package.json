@@ -8,7 +8,7 @@
   "scripts": {
     "build": "run-p build:* --aggregate-output",
     "build:commonjs": "tsc --outDir './dist/commonjs/' --module 'commonjs'",
-    "build:es6": "tsc --outDir './dist/es6/' --module 'es6'",
+    "build:es6": "tsc --outDir './dist/' --module 'es6'",
     "start": "npm run build:es6 -- --watch"
   },
   "dependencies": {
