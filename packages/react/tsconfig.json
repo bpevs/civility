@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "allowJs": false,
-    "declaration": true
+    "declaration": true,
+    "jsx": "react"
   },
   "extends": "../../tsconfig",
   "include": [
