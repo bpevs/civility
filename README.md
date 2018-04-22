@@ -1,9 +1,9 @@
 Civility :tophat:
 ========
 ![Version](https://img.shields.io/badge/version-0.0.0-red.svg?longCache=true&style=flat-square)
-[![dependencies Status](https://david-dm.org/ivebencrazy/Civility/status.svg?style=flat-square)](https://david-dm.org/ivebencrazy/Civility)
-[![devDependencies Status](https://david-dm.org/ivebencrazy/Civility/dev-status.svg?style=flat-square)](https://david-dm.org/ivebencrazy/Civility?type=dev)
-[![Travis CI Build Status](https://img.shields.io/travis/ivebencrazy/Civility/master.svg?style=flat-square)](https://travis-ci.org/ivebencrazy/Civility)
+[![dependencies Status](https://david-dm.org/ivebencrazy/civility/status.svg?style=flat-square)](https://david-dm.org/ivebencrazy/civility)
+[![devDependencies Status](https://david-dm.org/ivebencrazy/civility/dev-status.svg?style=flat-square)](https://david-dm.org/ivebencrazy/civility?type=dev)
+[![Travis CI Build Status](https://img.shields.io/travis/ivebencrazy/civility/master.svg?style=flat-square)](https://travis-ci.org/ivebencrazy/civility)
 
 
 Civility is a library for making websites and applications, inspired by my learnings in [Zuck](https://github.com/Blanket-Warriors/Zuck).
