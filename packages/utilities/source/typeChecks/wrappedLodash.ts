@@ -35,6 +35,7 @@ export interface Obj {
 }
 export type Nil = null | undefined;
 
+
 // Type-guarded aliases of Lodash methods
 export function isArray(item: any): item is any[] { return _isArray(item); }
 export function isBoolean(item: any): item is boolean { return _isBoolean(item); }
