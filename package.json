@@ -14,9 +14,9 @@
     "prestart": "npm link",
     "start": "lerna run start --parallel",
     "test": "run-p --aggregate-output test:lint test:unit",
+    "test:coverage": "npm run test:unit -- --coverage",
     "test:lint": "tslint --project ./tsconfig.json",
-    "test:unit": "jest --env=jsdom --colors",
-    "test:coverage": "npm run test:unit -- --coverage"
+    "test:unit": "jest --env=jsdom --colors"
   },
   "dependencies": {
     "@types/react-dom": "^16.0.4",
@@ -24,7 +24,7 @@
     "lodash-es": "^4.17.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "redux": "^3.7.2"
+    "redux": "^4.0.0"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.9",
