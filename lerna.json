@@ -9,6 +9,7 @@
   "packages": [
     "packages/react",
     "packages/store",
+    "packages/stylesheets",
     "packages/utilities"
   ]
 }
