@@ -7,15 +7,15 @@ module.exports = function () {
     files: [
       "tsconfig.json",
       "jestsetup.js",
-      "source/**/*.ts",
-      "source/**/*.tsx",
-      "!source/**/*.test.ts",
-      "!source/**/*.test.tsx"
+      "packages/**/*.ts",
+      "packages/**/*.tsx",
+      "!packages/**/*.test.ts",
+      "!packages/**/*.test.tsx"
     ],
     testFramework: "jest",
     tests: [
-      "source/**/*.test.js",
-      "source/**/*.test.jsx"
+      "packages/**/*.test.js",
+      "packages/**/*.test.jsx"
     ],
   };
 };

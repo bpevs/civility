@@ -1,0 +1,685 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`isArray 1`] = `"isArray(s): false"`;
+
+exports[`isArray 2`] = `"isArray(0): false"`;
+
+exports[`isArray 3`] = `"isArray(1): false"`;
+
+exports[`isArray 4`] = `"isArray(1): false"`;
+
+exports[`isArray 5`] = `"isArray(Infinity): false"`;
+
+exports[`isArray 6`] = `"isArray(null): false"`;
+
+exports[`isArray 7`] = `"isArray(undefined): false"`;
+
+exports[`isArray 8`] = `"isArray(): true"`;
+
+exports[`isArray 9`] = `"isArray(1): true"`;
+
+exports[`isArray 10`] = `"isArray([object Object]): false"`;
+
+exports[`isArray 11`] = `"isArray([object Object]): false"`;
+
+exports[`isArray 12`] = `"isArray(function Number() { [native code] }): false"`;
+
+exports[`isArray 13`] = `"isArray(/fsdf/): false"`;
+
+exports[`isArray 14`] = `"isArray(/fsdf/): false"`;
+
+exports[`isArray 15`] = `"isArray(1.5234): false"`;
+
+exports[`isArray 16`] = `"isArray(9007199254740992): false"`;
+
+exports[`isArray 17`] = `"isArray(Error: hello): false"`;
+
+exports[`isArray 18`] = `"isArray(NaN): false"`;
+
+exports[`isBoolean 1`] = `"isBoolean(s): false"`;
+
+exports[`isBoolean 2`] = `"isBoolean(0): false"`;
+
+exports[`isBoolean 3`] = `"isBoolean(1): false"`;
+
+exports[`isBoolean 4`] = `"isBoolean(1): false"`;
+
+exports[`isBoolean 5`] = `"isBoolean(Infinity): false"`;
+
+exports[`isBoolean 6`] = `"isBoolean(null): false"`;
+
+exports[`isBoolean 7`] = `"isBoolean(undefined): false"`;
+
+exports[`isBoolean 8`] = `"isBoolean(): false"`;
+
+exports[`isBoolean 9`] = `"isBoolean(1): false"`;
+
+exports[`isBoolean 10`] = `"isBoolean([object Object]): false"`;
+
+exports[`isBoolean 11`] = `"isBoolean([object Object]): false"`;
+
+exports[`isBoolean 12`] = `"isBoolean(function Number() { [native code] }): false"`;
+
+exports[`isBoolean 13`] = `"isBoolean(/fsdf/): false"`;
+
+exports[`isBoolean 14`] = `"isBoolean(/fsdf/): false"`;
+
+exports[`isBoolean 15`] = `"isBoolean(1.5234): false"`;
+
+exports[`isBoolean 16`] = `"isBoolean(9007199254740992): false"`;
+
+exports[`isBoolean 17`] = `"isBoolean(Error: hello): false"`;
+
+exports[`isBoolean 18`] = `"isBoolean(NaN): false"`;
+
+exports[`isDate 1`] = `"isDate(s): false"`;
+
+exports[`isDate 2`] = `"isDate(0): false"`;
+
+exports[`isDate 3`] = `"isDate(1): false"`;
+
+exports[`isDate 4`] = `"isDate(1): false"`;
+
+exports[`isDate 5`] = `"isDate(Infinity): false"`;
+
+exports[`isDate 6`] = `"isDate(null): false"`;
+
+exports[`isDate 7`] = `"isDate(undefined): false"`;
+
+exports[`isDate 8`] = `"isDate(): false"`;
+
+exports[`isDate 9`] = `"isDate(1): false"`;
+
+exports[`isDate 10`] = `"isDate([object Object]): false"`;
+
+exports[`isDate 11`] = `"isDate([object Object]): false"`;
+
+exports[`isDate 12`] = `"isDate(function Number() { [native code] }): false"`;
+
+exports[`isDate 13`] = `"isDate(/fsdf/): false"`;
+
+exports[`isDate 14`] = `"isDate(/fsdf/): false"`;
+
+exports[`isDate 15`] = `"isDate(1.5234): false"`;
+
+exports[`isDate 16`] = `"isDate(9007199254740992): false"`;
+
+exports[`isDate 17`] = `"isDate(Error: hello): false"`;
+
+exports[`isDate 18`] = `"isDate(NaN): false"`;
+
+exports[`isEmpty 1`] = `"isEmpty(s): false"`;
+
+exports[`isEmpty 2`] = `"isEmpty(0): true"`;
+
+exports[`isEmpty 3`] = `"isEmpty(1): true"`;
+
+exports[`isEmpty 4`] = `"isEmpty(1): false"`;
+
+exports[`isEmpty 5`] = `"isEmpty(Infinity): true"`;
+
+exports[`isEmpty 6`] = `"isEmpty(null): true"`;
+
+exports[`isEmpty 7`] = `"isEmpty(undefined): true"`;
+
+exports[`isEmpty 8`] = `"isEmpty(): true"`;
+
+exports[`isEmpty 9`] = `"isEmpty(1): false"`;
+
+exports[`isEmpty 10`] = `"isEmpty([object Object]): true"`;
+
+exports[`isEmpty 11`] = `"isEmpty([object Object]): false"`;
+
+exports[`isEmpty 12`] = `"isEmpty(function Number() { [native code] }): true"`;
+
+exports[`isEmpty 13`] = `"isEmpty(/fsdf/): true"`;
+
+exports[`isEmpty 14`] = `"isEmpty(/fsdf/): true"`;
+
+exports[`isEmpty 15`] = `"isEmpty(1.5234): true"`;
+
+exports[`isEmpty 16`] = `"isEmpty(9007199254740992): true"`;
+
+exports[`isEmpty 17`] = `"isEmpty(Error: hello): true"`;
+
+exports[`isEmpty 18`] = `"isEmpty(NaN): true"`;
+
+exports[`isError 1`] = `"isError(s): false"`;
+
+exports[`isError 2`] = `"isError(0): false"`;
+
+exports[`isError 3`] = `"isError(1): false"`;
+
+exports[`isError 4`] = `"isError(1): false"`;
+
+exports[`isError 5`] = `"isError(Infinity): false"`;
+
+exports[`isError 6`] = `"isError(null): false"`;
+
+exports[`isError 7`] = `"isError(undefined): false"`;
+
+exports[`isError 8`] = `"isError(): false"`;
+
+exports[`isError 9`] = `"isError(1): false"`;
+
+exports[`isError 10`] = `"isError([object Object]): false"`;
+
+exports[`isError 11`] = `"isError([object Object]): false"`;
+
+exports[`isError 12`] = `"isError(function Number() { [native code] }): false"`;
+
+exports[`isError 13`] = `"isError(/fsdf/): false"`;
+
+exports[`isError 14`] = `"isError(/fsdf/): false"`;
+
+exports[`isError 15`] = `"isError(1.5234): false"`;
+
+exports[`isError 16`] = `"isError(9007199254740992): false"`;
+
+exports[`isError 17`] = `"isError(Error: hello): true"`;
+
+exports[`isError 18`] = `"isError(NaN): false"`;
+
+exports[`isFinite 1`] = `"isFinite(s): false"`;
+
+exports[`isFinite 2`] = `"isFinite(0): true"`;
+
+exports[`isFinite 3`] = `"isFinite(1): true"`;
+
+exports[`isFinite 4`] = `"isFinite(1): false"`;
+
+exports[`isFinite 5`] = `"isFinite(Infinity): false"`;
+
+exports[`isFinite 6`] = `"isFinite(null): false"`;
+
+exports[`isFinite 7`] = `"isFinite(undefined): false"`;
+
+exports[`isFinite 8`] = `"isFinite(): false"`;
+
+exports[`isFinite 9`] = `"isFinite(1): false"`;
+
+exports[`isFinite 10`] = `"isFinite([object Object]): false"`;
+
+exports[`isFinite 11`] = `"isFinite([object Object]): false"`;
+
+exports[`isFinite 12`] = `"isFinite(function Number() { [native code] }): false"`;
+
+exports[`isFinite 13`] = `"isFinite(/fsdf/): false"`;
+
+exports[`isFinite 14`] = `"isFinite(/fsdf/): false"`;
+
+exports[`isFinite 15`] = `"isFinite(1.5234): true"`;
+
+exports[`isFinite 16`] = `"isFinite(9007199254740992): true"`;
+
+exports[`isFinite 17`] = `"isFinite(Error: hello): false"`;
+
+exports[`isFinite 18`] = `"isFinite(NaN): false"`;
+
+exports[`isFunction 1`] = `"isFunction(s): false"`;
+
+exports[`isFunction 2`] = `"isFunction(0): false"`;
+
+exports[`isFunction 3`] = `"isFunction(1): false"`;
+
+exports[`isFunction 4`] = `"isFunction(1): false"`;
+
+exports[`isFunction 5`] = `"isFunction(Infinity): false"`;
+
+exports[`isFunction 6`] = `"isFunction(null): false"`;
+
+exports[`isFunction 7`] = `"isFunction(undefined): false"`;
+
+exports[`isFunction 8`] = `"isFunction(): false"`;
+
+exports[`isFunction 9`] = `"isFunction(1): false"`;
+
+exports[`isFunction 10`] = `"isFunction([object Object]): false"`;
+
+exports[`isFunction 11`] = `"isFunction([object Object]): false"`;
+
+exports[`isFunction 12`] = `"isFunction(function Number() { [native code] }): true"`;
+
+exports[`isFunction 13`] = `"isFunction(/fsdf/): false"`;
+
+exports[`isFunction 14`] = `"isFunction(/fsdf/): false"`;
+
+exports[`isFunction 15`] = `"isFunction(1.5234): false"`;
+
+exports[`isFunction 16`] = `"isFunction(9007199254740992): false"`;
+
+exports[`isFunction 17`] = `"isFunction(Error: hello): false"`;
+
+exports[`isFunction 18`] = `"isFunction(NaN): false"`;
+
+exports[`isInteger 1`] = `"isInteger(s): false"`;
+
+exports[`isInteger 2`] = `"isInteger(0): true"`;
+
+exports[`isInteger 3`] = `"isInteger(1): true"`;
+
+exports[`isInteger 4`] = `"isInteger(1): false"`;
+
+exports[`isInteger 5`] = `"isInteger(Infinity): false"`;
+
+exports[`isInteger 6`] = `"isInteger(null): false"`;
+
+exports[`isInteger 7`] = `"isInteger(undefined): false"`;
+
+exports[`isInteger 8`] = `"isInteger(): false"`;
+
+exports[`isInteger 9`] = `"isInteger(1): false"`;
+
+exports[`isInteger 10`] = `"isInteger([object Object]): false"`;
+
+exports[`isInteger 11`] = `"isInteger([object Object]): false"`;
+
+exports[`isInteger 12`] = `"isInteger(function Number() { [native code] }): false"`;
+
+exports[`isInteger 13`] = `"isInteger(/fsdf/): false"`;
+
+exports[`isInteger 14`] = `"isInteger(/fsdf/): false"`;
+
+exports[`isInteger 15`] = `"isInteger(1.5234): false"`;
+
+exports[`isInteger 16`] = `"isInteger(9007199254740992): true"`;
+
+exports[`isInteger 17`] = `"isInteger(Error: hello): false"`;
+
+exports[`isInteger 18`] = `"isInteger(NaN): false"`;
+
+exports[`isLength 1`] = `"isLength(s): false"`;
+
+exports[`isLength 2`] = `"isLength(0): true"`;
+
+exports[`isLength 3`] = `"isLength(1): true"`;
+
+exports[`isLength 4`] = `"isLength(1): false"`;
+
+exports[`isLength 5`] = `"isLength(Infinity): false"`;
+
+exports[`isLength 6`] = `"isLength(null): false"`;
+
+exports[`isLength 7`] = `"isLength(undefined): false"`;
+
+exports[`isLength 8`] = `"isLength(): false"`;
+
+exports[`isLength 9`] = `"isLength(1): false"`;
+
+exports[`isLength 10`] = `"isLength([object Object]): false"`;
+
+exports[`isLength 11`] = `"isLength([object Object]): false"`;
+
+exports[`isLength 12`] = `"isLength(function Number() { [native code] }): false"`;
+
+exports[`isLength 13`] = `"isLength(/fsdf/): false"`;
+
+exports[`isLength 14`] = `"isLength(/fsdf/): false"`;
+
+exports[`isLength 15`] = `"isLength(1.5234): false"`;
+
+exports[`isLength 16`] = `"isLength(9007199254740992): false"`;
+
+exports[`isLength 17`] = `"isLength(Error: hello): false"`;
+
+exports[`isLength 18`] = `"isLength(NaN): false"`;
+
+exports[`isNil 1`] = `"isNil(s): false"`;
+
+exports[`isNil 2`] = `"isNil(0): false"`;
+
+exports[`isNil 3`] = `"isNil(1): false"`;
+
+exports[`isNil 4`] = `"isNil(1): false"`;
+
+exports[`isNil 5`] = `"isNil(Infinity): false"`;
+
+exports[`isNil 6`] = `"isNil(null): true"`;
+
+exports[`isNil 7`] = `"isNil(undefined): true"`;
+
+exports[`isNil 8`] = `"isNil(): false"`;
+
+exports[`isNil 9`] = `"isNil(1): false"`;
+
+exports[`isNil 10`] = `"isNil([object Object]): false"`;
+
+exports[`isNil 11`] = `"isNil([object Object]): false"`;
+
+exports[`isNil 12`] = `"isNil(function Number() { [native code] }): false"`;
+
+exports[`isNil 13`] = `"isNil(/fsdf/): false"`;
+
+exports[`isNil 14`] = `"isNil(/fsdf/): false"`;
+
+exports[`isNil 15`] = `"isNil(1.5234): false"`;
+
+exports[`isNil 16`] = `"isNil(9007199254740992): false"`;
+
+exports[`isNil 17`] = `"isNil(Error: hello): false"`;
+
+exports[`isNil 18`] = `"isNil(NaN): false"`;
+
+exports[`isNull 1`] = `"isNull(s): false"`;
+
+exports[`isNull 2`] = `"isNull(0): false"`;
+
+exports[`isNull 3`] = `"isNull(1): false"`;
+
+exports[`isNull 4`] = `"isNull(1): false"`;
+
+exports[`isNull 5`] = `"isNull(Infinity): false"`;
+
+exports[`isNull 6`] = `"isNull(null): true"`;
+
+exports[`isNull 7`] = `"isNull(undefined): false"`;
+
+exports[`isNull 8`] = `"isNull(): false"`;
+
+exports[`isNull 9`] = `"isNull(1): false"`;
+
+exports[`isNull 10`] = `"isNull([object Object]): false"`;
+
+exports[`isNull 11`] = `"isNull([object Object]): false"`;
+
+exports[`isNull 12`] = `"isNull(function Number() { [native code] }): false"`;
+
+exports[`isNull 13`] = `"isNull(/fsdf/): false"`;
+
+exports[`isNull 14`] = `"isNull(/fsdf/): false"`;
+
+exports[`isNull 15`] = `"isNull(1.5234): false"`;
+
+exports[`isNull 16`] = `"isNull(9007199254740992): false"`;
+
+exports[`isNull 17`] = `"isNull(Error: hello): false"`;
+
+exports[`isNull 18`] = `"isNull(NaN): false"`;
+
+exports[`isNumber 1`] = `"isNumber(s): false"`;
+
+exports[`isNumber 2`] = `"isNumber(0): true"`;
+
+exports[`isNumber 3`] = `"isNumber(1): true"`;
+
+exports[`isNumber 4`] = `"isNumber(1): false"`;
+
+exports[`isNumber 5`] = `"isNumber(Infinity): true"`;
+
+exports[`isNumber 6`] = `"isNumber(null): false"`;
+
+exports[`isNumber 7`] = `"isNumber(undefined): false"`;
+
+exports[`isNumber 8`] = `"isNumber(): false"`;
+
+exports[`isNumber 9`] = `"isNumber(1): false"`;
+
+exports[`isNumber 10`] = `"isNumber([object Object]): false"`;
+
+exports[`isNumber 11`] = `"isNumber([object Object]): false"`;
+
+exports[`isNumber 12`] = `"isNumber(function Number() { [native code] }): false"`;
+
+exports[`isNumber 13`] = `"isNumber(/fsdf/): false"`;
+
+exports[`isNumber 14`] = `"isNumber(/fsdf/): false"`;
+
+exports[`isNumber 15`] = `"isNumber(1.5234): true"`;
+
+exports[`isNumber 16`] = `"isNumber(9007199254740992): true"`;
+
+exports[`isNumber 17`] = `"isNumber(Error: hello): false"`;
+
+exports[`isNumber 18`] = `"isNumber(NaN): true"`;
+
+exports[`isObject 1`] = `"isObject(s): false"`;
+
+exports[`isObject 2`] = `"isObject(0): false"`;
+
+exports[`isObject 3`] = `"isObject(1): false"`;
+
+exports[`isObject 4`] = `"isObject(1): false"`;
+
+exports[`isObject 5`] = `"isObject(Infinity): false"`;
+
+exports[`isObject 6`] = `"isObject(null): false"`;
+
+exports[`isObject 7`] = `"isObject(undefined): false"`;
+
+exports[`isObject 8`] = `"isObject(): true"`;
+
+exports[`isObject 9`] = `"isObject(1): true"`;
+
+exports[`isObject 10`] = `"isObject([object Object]): true"`;
+
+exports[`isObject 11`] = `"isObject([object Object]): true"`;
+
+exports[`isObject 12`] = `"isObject(function Number() { [native code] }): true"`;
+
+exports[`isObject 13`] = `"isObject(/fsdf/): true"`;
+
+exports[`isObject 14`] = `"isObject(/fsdf/): true"`;
+
+exports[`isObject 15`] = `"isObject(1.5234): false"`;
+
+exports[`isObject 16`] = `"isObject(9007199254740992): false"`;
+
+exports[`isObject 17`] = `"isObject(Error: hello): true"`;
+
+exports[`isObject 18`] = `"isObject(NaN): false"`;
+
+exports[`isPlainObject 1`] = `"isPlainObject(s): false"`;
+
+exports[`isPlainObject 2`] = `"isPlainObject(0): false"`;
+
+exports[`isPlainObject 3`] = `"isPlainObject(1): false"`;
+
+exports[`isPlainObject 4`] = `"isPlainObject(1): false"`;
+
+exports[`isPlainObject 5`] = `"isPlainObject(Infinity): false"`;
+
+exports[`isPlainObject 6`] = `"isPlainObject(null): false"`;
+
+exports[`isPlainObject 7`] = `"isPlainObject(undefined): false"`;
+
+exports[`isPlainObject 8`] = `"isPlainObject(): false"`;
+
+exports[`isPlainObject 9`] = `"isPlainObject(1): false"`;
+
+exports[`isPlainObject 10`] = `"isPlainObject([object Object]): true"`;
+
+exports[`isPlainObject 11`] = `"isPlainObject([object Object]): true"`;
+
+exports[`isPlainObject 12`] = `"isPlainObject(function Number() { [native code] }): false"`;
+
+exports[`isPlainObject 13`] = `"isPlainObject(/fsdf/): false"`;
+
+exports[`isPlainObject 14`] = `"isPlainObject(/fsdf/): false"`;
+
+exports[`isPlainObject 15`] = `"isPlainObject(1.5234): false"`;
+
+exports[`isPlainObject 16`] = `"isPlainObject(9007199254740992): false"`;
+
+exports[`isPlainObject 17`] = `"isPlainObject(Error: hello): false"`;
+
+exports[`isPlainObject 18`] = `"isPlainObject(NaN): false"`;
+
+exports[`isRegExp 1`] = `"isRegExp(s): false"`;
+
+exports[`isRegExp 2`] = `"isRegExp(0): false"`;
+
+exports[`isRegExp 3`] = `"isRegExp(1): false"`;
+
+exports[`isRegExp 4`] = `"isRegExp(1): false"`;
+
+exports[`isRegExp 5`] = `"isRegExp(Infinity): false"`;
+
+exports[`isRegExp 6`] = `"isRegExp(null): false"`;
+
+exports[`isRegExp 7`] = `"isRegExp(undefined): false"`;
+
+exports[`isRegExp 8`] = `"isRegExp(): false"`;
+
+exports[`isRegExp 9`] = `"isRegExp(1): false"`;
+
+exports[`isRegExp 10`] = `"isRegExp([object Object]): false"`;
+
+exports[`isRegExp 11`] = `"isRegExp([object Object]): false"`;
+
+exports[`isRegExp 12`] = `"isRegExp(function Number() { [native code] }): false"`;
+
+exports[`isRegExp 13`] = `"isRegExp(/fsdf/): true"`;
+
+exports[`isRegExp 14`] = `"isRegExp(/fsdf/): true"`;
+
+exports[`isRegExp 15`] = `"isRegExp(1.5234): false"`;
+
+exports[`isRegExp 16`] = `"isRegExp(9007199254740992): false"`;
+
+exports[`isRegExp 17`] = `"isRegExp(Error: hello): false"`;
+
+exports[`isRegExp 18`] = `"isRegExp(NaN): false"`;
+
+exports[`isSafeInteger 1`] = `"isSafeInteger(s): false"`;
+
+exports[`isSafeInteger 2`] = `"isSafeInteger(0): true"`;
+
+exports[`isSafeInteger 3`] = `"isSafeInteger(1): true"`;
+
+exports[`isSafeInteger 4`] = `"isSafeInteger(1): false"`;
+
+exports[`isSafeInteger 5`] = `"isSafeInteger(Infinity): false"`;
+
+exports[`isSafeInteger 6`] = `"isSafeInteger(null): false"`;
+
+exports[`isSafeInteger 7`] = `"isSafeInteger(undefined): false"`;
+
+exports[`isSafeInteger 8`] = `"isSafeInteger(): false"`;
+
+exports[`isSafeInteger 9`] = `"isSafeInteger(1): false"`;
+
+exports[`isSafeInteger 10`] = `"isSafeInteger([object Object]): false"`;
+
+exports[`isSafeInteger 11`] = `"isSafeInteger([object Object]): false"`;
+
+exports[`isSafeInteger 12`] = `"isSafeInteger(function Number() { [native code] }): false"`;
+
+exports[`isSafeInteger 13`] = `"isSafeInteger(/fsdf/): false"`;
+
+exports[`isSafeInteger 14`] = `"isSafeInteger(/fsdf/): false"`;
+
+exports[`isSafeInteger 15`] = `"isSafeInteger(1.5234): false"`;
+
+exports[`isSafeInteger 16`] = `"isSafeInteger(9007199254740992): false"`;
+
+exports[`isSafeInteger 17`] = `"isSafeInteger(Error: hello): false"`;
+
+exports[`isSafeInteger 18`] = `"isSafeInteger(NaN): false"`;
+
+exports[`isString 1`] = `"isString(s): true"`;
+
+exports[`isString 2`] = `"isString(0): false"`;
+
+exports[`isString 3`] = `"isString(1): false"`;
+
+exports[`isString 4`] = `"isString(1): true"`;
+
+exports[`isString 5`] = `"isString(Infinity): false"`;
+
+exports[`isString 6`] = `"isString(null): false"`;
+
+exports[`isString 7`] = `"isString(undefined): false"`;
+
+exports[`isString 8`] = `"isString(): false"`;
+
+exports[`isString 9`] = `"isString(1): false"`;
+
+exports[`isString 10`] = `"isString([object Object]): false"`;
+
+exports[`isString 11`] = `"isString([object Object]): false"`;
+
+exports[`isString 12`] = `"isString(function Number() { [native code] }): false"`;
+
+exports[`isString 13`] = `"isString(/fsdf/): false"`;
+
+exports[`isString 14`] = `"isString(/fsdf/): false"`;
+
+exports[`isString 15`] = `"isString(1.5234): false"`;
+
+exports[`isString 16`] = `"isString(9007199254740992): false"`;
+
+exports[`isString 17`] = `"isString(Error: hello): false"`;
+
+exports[`isString 18`] = `"isString(NaN): false"`;
+
+exports[`isTypedArray 1`] = `"isTypedArray(s): false"`;
+
+exports[`isTypedArray 2`] = `"isTypedArray(0): false"`;
+
+exports[`isTypedArray 3`] = `"isTypedArray(1): false"`;
+
+exports[`isTypedArray 4`] = `"isTypedArray(1): false"`;
+
+exports[`isTypedArray 5`] = `"isTypedArray(Infinity): false"`;
+
+exports[`isTypedArray 6`] = `"isTypedArray(null): false"`;
+
+exports[`isTypedArray 7`] = `"isTypedArray(undefined): false"`;
+
+exports[`isTypedArray 8`] = `"isTypedArray(): false"`;
+
+exports[`isTypedArray 9`] = `"isTypedArray(1): false"`;
+
+exports[`isTypedArray 10`] = `"isTypedArray([object Object]): false"`;
+
+exports[`isTypedArray 11`] = `"isTypedArray([object Object]): false"`;
+
+exports[`isTypedArray 12`] = `"isTypedArray(function Number() { [native code] }): false"`;
+
+exports[`isTypedArray 13`] = `"isTypedArray(/fsdf/): false"`;
+
+exports[`isTypedArray 14`] = `"isTypedArray(/fsdf/): false"`;
+
+exports[`isTypedArray 15`] = `"isTypedArray(1.5234): false"`;
+
+exports[`isTypedArray 16`] = `"isTypedArray(9007199254740992): false"`;
+
+exports[`isTypedArray 17`] = `"isTypedArray(Error: hello): false"`;
+
+exports[`isTypedArray 18`] = `"isTypedArray(NaN): false"`;
+
+exports[`isUndefined 1`] = `"isUndefined(s): false"`;
+
+exports[`isUndefined 2`] = `"isUndefined(0): false"`;
+
+exports[`isUndefined 3`] = `"isUndefined(1): false"`;
+
+exports[`isUndefined 4`] = `"isUndefined(1): false"`;
+
+exports[`isUndefined 5`] = `"isUndefined(Infinity): false"`;
+
+exports[`isUndefined 6`] = `"isUndefined(null): false"`;
+
+exports[`isUndefined 7`] = `"isUndefined(undefined): true"`;
+
+exports[`isUndefined 8`] = `"isUndefined(): false"`;
+
+exports[`isUndefined 9`] = `"isUndefined(1): false"`;
+
+exports[`isUndefined 10`] = `"isUndefined([object Object]): false"`;
+
+exports[`isUndefined 11`] = `"isUndefined([object Object]): false"`;
+
+exports[`isUndefined 12`] = `"isUndefined(function Number() { [native code] }): false"`;
+
+exports[`isUndefined 13`] = `"isUndefined(/fsdf/): false"`;
+
+exports[`isUndefined 14`] = `"isUndefined(/fsdf/): false"`;
+
+exports[`isUndefined 15`] = `"isUndefined(1.5234): false"`;
+
+exports[`isUndefined 16`] = `"isUndefined(9007199254740992): false"`;
+
+exports[`isUndefined 17`] = `"isUndefined(Error: hello): false"`;
+
+exports[`isUndefined 18`] = `"isUndefined(NaN): false"`;
