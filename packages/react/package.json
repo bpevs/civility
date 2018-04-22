@@ -1,6 +1,6 @@
 {
   "name": "@civility/react",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Civility React Components",
   "main": "./dist/index.js",
   "license": "UNLICENSED",
@@ -12,7 +12,7 @@
     "start": "npm run build:es6 -- --watch"
   },
   "dependencies": {
-    "@civility/utilities": "^0.0.2",
+    "@civility/utilities": "^0.0.3",
     "lodash-es": "^4.17.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
