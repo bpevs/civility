@@ -1,3 +1,2 @@
-export function fire() {
-  return "fire";
-}
+export * from "./actions/actions";
+export * from "./actions/actionCreators";
