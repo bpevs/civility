@@ -1,6 +1,6 @@
 {
   "name": "@civility/react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Civility React Components",
   "main": "./dist/index.js",
   "license": "UNLICENSED",
@@ -8,10 +8,11 @@
   "scripts": {
     "build": "run-p build:* --aggregate-output",
     "build:commonjs": "tsc --outDir './dist/commonjs/' --module 'commonjs'",
-    "build:es6": "tsc --outDir './dist/es6/' --module 'es6'",
+    "build:es6": "tsc --outDir './dist/' --module 'es6'",
     "start": "npm run build:es6 -- --watch"
   },
   "dependencies": {
+    "@civility/utilities": "^0.0.2",
     "lodash-es": "^4.17.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
