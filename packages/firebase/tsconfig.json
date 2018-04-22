@@ -1,8 +1,10 @@
 {
-  "allowJs": false,
-  "declaration": true,
+  "compilerOptions": {
+    "allowJs": false,
+    "declaration": true
+  },
   "extends": "../../tsconfig",
-   "include": [
-      "./source/index.ts"
-    ]
+  "include": [
+    "./source/index.ts"
+  ]
 }
