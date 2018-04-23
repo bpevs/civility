@@ -1,14 +1,12 @@
 Civility :tophat:
 ========
-![npm (scoped)](https://img.shields.io/npm/v/@civility/utilities.svg?style=flat-square)
+[![npm (scoped)](https://img.shields.io/npm/v/@civility/utilities.svg?style=flat-square)](https://www.npmjs.com/org/civility)
 [![dependencies Status](https://david-dm.org/ivebencrazy/civility/status.svg?style=flat-square)](https://david-dm.org/ivebencrazy/civility)
 [![devDependencies Status](https://david-dm.org/ivebencrazy/civility/dev-status.svg?style=flat-square)](https://david-dm.org/ivebencrazy/civility?type=dev)
 [![Travis CI Build Status](https://img.shields.io/travis/ivebencrazy/civility/master.svg?style=flat-square)](https://travis-ci.org/ivebencrazy/civility)
 
 
 Civility is a library for making websites and applications, inspired by my learnings in [Zuck](https://github.com/Blanket-Warriors/Zuck).
-
-Version will remain at `0.0.0` until library has an export.
 
 
 Goals
