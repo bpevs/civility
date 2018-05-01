@@ -12,11 +12,11 @@
     "start": "npm run build:commonjs -- --watch"
   },
   "dependencies": {
-    "lodash-es": "^4.17.7"
+    "lodash-es": "^4.17.10"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.2",
-    "typescript": "^2.7.2"
+    "typescript": "^2.8.3"
   },
   "publishConfig": {
     "access": "public"

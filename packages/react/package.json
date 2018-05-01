@@ -13,13 +13,13 @@
   },
   "dependencies": {
     "@civility/utilities": "^0.0.5",
-    "lodash-es": "^4.17.7",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "lodash-es": "^4.17.10",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.2",
-    "typescript": "^2.7.2"
+    "typescript": "^2.8.3"
   },
   "publishConfig": {
     "access": "public"
