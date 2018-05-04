@@ -1,20 +1,20 @@
-import { forEach, isFunction } from "lodash";
+import { forEach, isFunction } from "lodash"
 import {
   ActionType,
   createOverlay,
   deleteOverlay,
-} from "./index";
+} from "./index"
 
 test("ActionTypes should be unique strings", () => {
-  const checkedTypes = {};
+  const checkedTypes = {}
   forEach(ActionType, (type, index) => {
-    expect(checkedTypes[index]).toBeUndefined();
-    expect(typeof type).toBe("string");
-    checkedTypes[index] = type;
-  });
-});
+    expect(checkedTypes[index]).toBeUndefined()
+    expect(typeof type).toBe("string")
+    checkedTypes[index] = type
+  })
+})
 
 test("Should export actionCreators", () => {
-  expect(createOverlay).toBeDefined();
-  expect(deleteOverlay).toBeDefined();
+  expect(createOverlay).toBeDefined()
+  expect(deleteOverlay).toBeDefined()
 });

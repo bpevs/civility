@@ -1,1 +1,1 @@
-export * from "./wrappedLodash";
+export * from "./wrappedLodash"

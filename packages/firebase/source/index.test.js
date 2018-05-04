@@ -1,5 +1,5 @@
-import { service } from "./index";
+import { service } from "./index"
 
 test("Defines service", () => {
-  expect(service).toBeDefined();
-});
+  expect(service).toBeDefined()
+})
