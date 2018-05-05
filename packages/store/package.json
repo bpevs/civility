@@ -12,6 +12,7 @@
     "start": "npm run build:es6 -- --watch"
   },
   "dependencies": {
+    "@civility/utilities": "*",
     "lodash-es": "^4.17.7",
     "redux": "^3.7.2"
   },

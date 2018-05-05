@@ -1,5 +1,5 @@
-import { fire } from "./index";
+import { Store } from "./index";
 
 test("returns fire", () => {
-  expect(fire()).toBe("fire");
+  expect(typeof Store).toBe("object");
 });
