@@ -11,9 +11,7 @@
     "build:commonjs": "tsc -p 'tsconfig.json' --outDir 'dist' --module 'commonjs'",
     "start": "npm run build:commonjs -- --watch"
   },
-  "dependencies": {
-    "lodash-es": "^4.17.10"
-  },
+  "dependencies": {},
   "devDependencies": {
     "npm-run-all": "^4.1.2",
     "typescript": "^2.8.3"

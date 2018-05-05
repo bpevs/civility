@@ -1,4 +1,4 @@
-import { forEach, isFunction } from "lodash"
+import { forEach, isFunction } from "@civility/utilities"
 import {
   ActionType,
   createOverlay,

@@ -1,17 +1,18 @@
 // Types
-export type Empty = EmptyArray | EmptyObj;
-export type EmptyArray = never[];
+export type Collection = any[] | Obj<any>;
 export type Func = (...args: any[]) => any;
 export type Nil = null | undefined;
 
+export type Empty = EmptyArray | EmptyObj;
+export type EmptyArray = never[];
+export type EmptyCollection = EmptyArray | EmptyObj;
+export type EmptyObj = Obj<never>;
+
+
 // Interfaces
-export interface EmptyObj {
-  [index: string]: never;
-  [index: number]: never;
-}
-export interface Obj {
-  [key: string]: any;
-  [key: number]: any;
+export interface Obj<t> {
+  [key: string]: t;
+  [key: number]: t;
 }
 
 
@@ -40,6 +41,10 @@ export function isFunction(item: any): item is Func {
   return typeof item === "function"
 }
 
+export function isMap(item: any): item is Map<any, any> {
+  return item instanceof Map
+}
+
 export function isNil(item: any): item is Nil {
   return item == null
 }
@@ -52,13 +57,21 @@ export function isNumber(item: any): item is number {
   return typeof item === "number"
 }
 
-export function isObject(item: any): item is Obj {
+export function isObject(item: any): item is Obj<any> {
   if (isNull(item)) return false
   return isFunction(item) || typeof item === "object"
 }
 
+export function isPromise(item: any): item is Promise<any> {
+  return item instanceof Promise;
+}
+
 export function isRegExp(item: any): item is RegExp {
   return item instanceof RegExp
+}
+
+export function isSet(item: any): item is Set<any> {
+  return item instanceof Set;
 }
 
 export function isString(item: any): item is string {

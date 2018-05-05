@@ -1,4 +1,4 @@
-import { isArray, isNumber, isObject, isString, keys } from "lodash-es";
+import { isArray, isNumber, isObject, isString } from "../index";
 
 export function classNames(...args: any[]) {
   return args
@@ -13,7 +13,7 @@ export function classNames(...args: any[]) {
       }
 
       if (isObject(arg)) {
-        const argArray = keys(arg).filter(key => arg[key]);
+        const argArray = Object.keys(arg).filter(key => arg[key]);
         const inner = classNames.apply(null, argArray);
         if (inner) return inner;
       }

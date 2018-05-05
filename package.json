@@ -22,7 +22,6 @@
     "@civility/utilities": "0.0.5",
     "@types/react-dom": "^16.0.5",
     "basscss": "^8.0.4",
-    "lodash-es": "^4.17.10",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "redux": "^4.0.0"
@@ -30,7 +29,6 @@
   "devDependencies": {
     "@types/enzyme": "^3.1.10",
     "@types/jest": "^22.2.3",
-    "@types/lodash-es": "^4.17.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.3",
@@ -81,9 +79,6 @@
     ],
     "transform": {
       "^.+\\.(j|t)sx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
-    "transformIgnorePatterns": [
-      "<rootDir>/node_modules/(?!lodash-es/.*)"
-    ]
+    }
   }
 }
