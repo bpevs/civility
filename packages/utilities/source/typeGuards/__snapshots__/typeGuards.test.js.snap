@@ -36,7 +36,7 @@ exports[`isArray 17`] = `"isArray(Error: hello): false"`;
 
 exports[`isArray 18`] = `"isArray(NaN): false"`;
 
-exports[`isArray 19`] = `"isArray(Mon Jan 01 2001 00:00:00 GMT-0800 (PST)): false"`;
+exports[`isArray 19`] = `"isArray(-2174774400000): false"`;
 
 exports[`isArray 20`] = `"isArray([object Promise]): false"`;
 
@@ -80,7 +80,7 @@ exports[`isBoolean 17`] = `"isBoolean(Error: hello): false"`;
 
 exports[`isBoolean 18`] = `"isBoolean(NaN): false"`;
 
-exports[`isBoolean 19`] = `"isBoolean(Mon Jan 01 2001 00:00:00 GMT-0800 (PST)): false"`;
+exports[`isBoolean 19`] = `"isBoolean(-2174774400000): false"`;
 
 exports[`isBoolean 20`] = `"isBoolean([object Promise]): false"`;
 
@@ -124,7 +124,7 @@ exports[`isDate 17`] = `"isDate(Error: hello): false"`;
 
 exports[`isDate 18`] = `"isDate(NaN): false"`;
 
-exports[`isDate 19`] = `"isDate(Mon Jan 01 2001 00:00:00 GMT-0800 (PST)): true"`;
+exports[`isDate 19`] = `"isDate(-2174774400000): false"`;
 
 exports[`isDate 20`] = `"isDate([object Promise]): false"`;
 
@@ -168,7 +168,7 @@ exports[`isEmpty 17`] = `"isEmpty(Error: hello): true"`;
 
 exports[`isEmpty 18`] = `"isEmpty(NaN): true"`;
 
-exports[`isEmpty 19`] = `"isEmpty(Mon Jan 01 2001 00:00:00 GMT-0800 (PST)): true"`;
+exports[`isEmpty 19`] = `"isEmpty(-2174774400000): true"`;
 
 exports[`isEmpty 20`] = `"isEmpty([object Promise]): true"`;
 
@@ -212,7 +212,7 @@ exports[`isError 17`] = `"isError(Error: hello): true"`;
 
 exports[`isError 18`] = `"isError(NaN): false"`;
 
-exports[`isError 19`] = `"isError(Mon Jan 01 2001 00:00:00 GMT-0800 (PST)): false"`;
+exports[`isError 19`] = `"isError(-2174774400000): false"`;
 
 exports[`isError 20`] = `"isError([object Promise]): false"`;
 
@@ -256,7 +256,7 @@ exports[`isFunction 17`] = `"isFunction(Error: hello): false"`;
 
 exports[`isFunction 18`] = `"isFunction(NaN): false"`;
 
-exports[`isFunction 19`] = `"isFunction(Mon Jan 01 2001 00:00:00 GMT-0800 (PST)): false"`;
+exports[`isFunction 19`] = `"isFunction(-2174774400000): false"`;
 
 exports[`isFunction 20`] = `"isFunction([object Promise]): false"`;
 
@@ -300,7 +300,7 @@ exports[`isMap 17`] = `"isMap(Error: hello): false"`;
 
 exports[`isMap 18`] = `"isMap(NaN): false"`;
 
-exports[`isMap 19`] = `"isMap(Mon Jan 01 2001 00:00:00 GMT-0800 (PST)): false"`;
+exports[`isMap 19`] = `"isMap(-2174774400000): false"`;
 
 exports[`isMap 20`] = `"isMap([object Promise]): false"`;
 
@@ -344,7 +344,7 @@ exports[`isNil 17`] = `"isNil(Error: hello): false"`;
 
 exports[`isNil 18`] = `"isNil(NaN): false"`;
 
-exports[`isNil 19`] = `"isNil(Mon Jan 01 2001 00:00:00 GMT-0800 (PST)): false"`;
+exports[`isNil 19`] = `"isNil(-2174774400000): false"`;
 
 exports[`isNil 20`] = `"isNil([object Promise]): false"`;
 
@@ -388,7 +388,7 @@ exports[`isNull 17`] = `"isNull(Error: hello): false"`;
 
 exports[`isNull 18`] = `"isNull(NaN): false"`;
 
-exports[`isNull 19`] = `"isNull(Mon Jan 01 2001 00:00:00 GMT-0800 (PST)): false"`;
+exports[`isNull 19`] = `"isNull(-2174774400000): false"`;
 
 exports[`isNull 20`] = `"isNull([object Promise]): false"`;
 
@@ -432,7 +432,7 @@ exports[`isNumber 17`] = `"isNumber(Error: hello): false"`;
 
 exports[`isNumber 18`] = `"isNumber(NaN): true"`;
 
-exports[`isNumber 19`] = `"isNumber(Mon Jan 01 2001 00:00:00 GMT-0800 (PST)): false"`;
+exports[`isNumber 19`] = `"isNumber(-2174774400000): true"`;
 
 exports[`isNumber 20`] = `"isNumber([object Promise]): false"`;
 
@@ -476,7 +476,7 @@ exports[`isObject 17`] = `"isObject(Error: hello): true"`;
 
 exports[`isObject 18`] = `"isObject(NaN): false"`;
 
-exports[`isObject 19`] = `"isObject(Mon Jan 01 2001 00:00:00 GMT-0800 (PST)): true"`;
+exports[`isObject 19`] = `"isObject(-2174774400000): false"`;
 
 exports[`isObject 20`] = `"isObject([object Promise]): true"`;
 
@@ -520,7 +520,7 @@ exports[`isPromise 17`] = `"isPromise(Error: hello): false"`;
 
 exports[`isPromise 18`] = `"isPromise(NaN): false"`;
 
-exports[`isPromise 19`] = `"isPromise(Mon Jan 01 2001 00:00:00 GMT-0800 (PST)): false"`;
+exports[`isPromise 19`] = `"isPromise(-2174774400000): false"`;
 
 exports[`isPromise 20`] = `"isPromise([object Promise]): true"`;
 
@@ -564,7 +564,7 @@ exports[`isRegExp 17`] = `"isRegExp(Error: hello): false"`;
 
 exports[`isRegExp 18`] = `"isRegExp(NaN): false"`;
 
-exports[`isRegExp 19`] = `"isRegExp(Mon Jan 01 2001 00:00:00 GMT-0800 (PST)): false"`;
+exports[`isRegExp 19`] = `"isRegExp(-2174774400000): false"`;
 
 exports[`isRegExp 20`] = `"isRegExp([object Promise]): false"`;
 
@@ -608,7 +608,7 @@ exports[`isSet 17`] = `"isSet(Error: hello): false"`;
 
 exports[`isSet 18`] = `"isSet(NaN): false"`;
 
-exports[`isSet 19`] = `"isSet(Mon Jan 01 2001 00:00:00 GMT-0800 (PST)): false"`;
+exports[`isSet 19`] = `"isSet(-2174774400000): false"`;
 
 exports[`isSet 20`] = `"isSet([object Promise]): false"`;
 
@@ -652,7 +652,7 @@ exports[`isString 17`] = `"isString(Error: hello): false"`;
 
 exports[`isString 18`] = `"isString(NaN): false"`;
 
-exports[`isString 19`] = `"isString(Mon Jan 01 2001 00:00:00 GMT-0800 (PST)): false"`;
+exports[`isString 19`] = `"isString(-2174774400000): false"`;
 
 exports[`isString 20`] = `"isString([object Promise]): false"`;
 
@@ -696,7 +696,7 @@ exports[`isUndefined 17`] = `"isUndefined(Error: hello): false"`;
 
 exports[`isUndefined 18`] = `"isUndefined(NaN): false"`;
 
-exports[`isUndefined 19`] = `"isUndefined(Mon Jan 01 2001 00:00:00 GMT-0800 (PST)): false"`;
+exports[`isUndefined 19`] = `"isUndefined(-2174774400000): false"`;
 
 exports[`isUndefined 20`] = `"isUndefined([object Promise]): false"`;
 
