@@ -19,7 +19,7 @@
     "test:unit": "jest --env=jsdom --colors"
   },
   "dependencies": {
-    "@civility/utilities": "0.0.5",
+    "@civility/utilities": "0.0.6",
     "@types/react-dom": "^16.0.5",
     "basscss": "^8.0.4",
     "react": "^16.3.2",
@@ -41,8 +41,8 @@
     "react-test-renderer": "^16.3.2",
     "redux-mock-store": "^1.5.1",
     "stylus": "^0.54.5",
-    "ts-jest": "^22.4.4",
-    "tslint": "^5.9.1",
+    "ts-jest": "^22.4.5",
+    "tslint": "^5.10.0",
     "tslint-eslint-rules": "^5.1.0",
     "typescript": "^2.8.3"
   },
