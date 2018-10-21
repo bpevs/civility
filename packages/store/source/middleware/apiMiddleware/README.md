@@ -6,27 +6,27 @@ How to Use
 ----------
 We need to include this middleware and redux-thunk in the initial setup of our Redux Store:
 ```js
-import { apiMiddleware } from "@zuck/core";
-import { applyMiddleware, compose, createStore } from "redux";
-import thunkMiddleware from "redux-thunk";
+import { apiMiddleware } from "@zuck/core"
+import { applyMiddleware, compose, createStore } from "redux"
+import thunkMiddleware from "redux-thunk"
 
-import reducers from "./reducers/reducers";
+import reducers from "./reducers/reducers"
 
-let store = null;
+let store = null
 
 function storeCreator(initialState = {}) {
   const middleware = [
     thunkMiddleware,
     apiMiddleware
-  ];
+  ]
 
   store = createStore(
     reducers,
     initialState,
     compose(applyMiddleware(...middleware))
-  );
+  )
 
-  return store;
+  return store
 }
 ```
 
@@ -37,18 +37,18 @@ function createPoem(poem) {
   return {
 
     // Method to be called for taking action
-    callAPI() { return services.createPoem(poem); },
+    callAPI() { return services.createPoem(poem) },
 
     // Gets passed directly to the return payload.
     payload: { poem },
 
-    // Types are always in the same order; request, success, then failure
+    // Types are always in the same order request, success, then failure
     types: [
       types.CREATE_POEM_REQUEST,
       types.CREATE_POEM_SUCCESS,
       types.CREATE_POEM_FAILURE
     ]
-  };
+  }
 }
 ```
 
@@ -57,7 +57,7 @@ The Promise then resolves to wherever the action was dispatched:
 dispatch(createPoem(poemContentToPost))
   .then(({ payload, type }) => {
       if (type === "CREATE_POEM_SUCCESS") {
-        route(`/poem/${payload.poemId}`);
+        route(`/poem/${payload.poemId}`)
       }
-  });
+  })
 ```

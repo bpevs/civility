@@ -1,4 +1,4 @@
-import { forEach } from "./forEach";
+import { forEach } from "./forEach"
 
 
 describe("forEach", () => {
@@ -49,9 +49,9 @@ describe("forEach", () => {
       this.color = "red"
     }
 
-    ColoredTriangle.prototype = triangle;
+    ColoredTriangle.prototype = triangle
 
-    const obj = new ColoredTriangle();
+    const obj = new ColoredTriangle()
 
     forEach(obj, fn1)
     expect(fn1.mock.calls[0][0]).toBe("red")

@@ -8,7 +8,7 @@ These never directly consume AppState or ServiceData, and extend from the Civili
 **Pages**
 These can consume AppState and ServiceData, and extend the Civility `Page` class. This allows us to subscribe to different aspects of AppState.
 
-Think of these class extensions more like prop-injectors; they shouldn't affect the render, just give additional lifecycle and dependency handling.
+Think of these class extensions more like prop-injectors they shouldn't affect the render, just give additional lifecycle and dependency handling.
 
 
 Usage
@@ -75,8 +75,8 @@ Comment.Replies = class CommentReplies extends Component {
 
 
 Comment.ReplyBox = class CommentReplyBox extends Component {
-  cache = "session"; // Cache state changes in sessionStorage
-  state = {};
+  cache = "session" // Cache state changes in sessionStorage
+  state = {}
 
   constructor(props, state) {
     super(props, state)

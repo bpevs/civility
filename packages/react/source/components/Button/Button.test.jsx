@@ -10,4 +10,4 @@ test("Should Render Button", () => {
   />)
 
   expect(wrapper).toMatchSnapshot()
-});
+})

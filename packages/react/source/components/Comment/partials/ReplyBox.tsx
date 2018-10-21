@@ -2,8 +2,8 @@ import { classNames } from "@civility/utilities"
 import React from "react"
 
 export class ReplyBox extends React.Component {
-  public cache = "session"; // Cache state changes in sessionStorage
-  public state = {};
+  public cache = "session" // Cache state changes in sessionStorage
+  public state = {}
 
   constructor(props, state) {
     super(props, state)

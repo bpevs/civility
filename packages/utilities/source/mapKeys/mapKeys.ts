@@ -1,4 +1,4 @@
-import { reduce } from "../reduce/reduce";
+import { reduce } from "../reduce/reduce"
 import { Func, isFunction } from "../typeGuards/typeGuards"
 
 export function mapKeys(objectToMap: any, iteratee?: Func) {

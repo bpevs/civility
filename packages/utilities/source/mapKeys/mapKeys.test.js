@@ -1,4 +1,4 @@
-import { mapKeys } from "./mapKeys";
+import { mapKeys } from "./mapKeys"
 
 describe("mapKeys", () => {
   test("Should return a new object", () => {

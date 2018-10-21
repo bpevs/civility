@@ -2,7 +2,7 @@ module.exports = function () {
   return {
     env: {
       type: "node",
-      runner: "node"
+      runner: "node",
     },
     files: [
       "tsconfig.json",
@@ -15,7 +15,7 @@ module.exports = function () {
     testFramework: "jest",
     tests: [
       "packages/**/*.test.js",
-      "packages/**/*.test.jsx"
+      "packages/**/*.test.jsx",
     ],
-  };
-};
+  }
+}

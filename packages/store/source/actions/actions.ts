@@ -1,19 +1,19 @@
-import { Func } from "@civility/utilities";
+import { Func } from "@civility/utilities"
 
 export interface IAction<ActionType> {
-  readonly type: ActionType;
+  readonly type: ActionType
 }
 
 export interface IApiAction<PayloadType> {
-  readonly callAPI?: (...args: any[]) => PromiseLike<any>;
-  readonly payload: PayloadType;
-  readonly shouldCallAPI?: (...args: any[]) => boolean;
-  readonly types: [ ActionType, ActionType, ActionType ];
+  readonly callAPI?: (...args: any[]) => PromiseLike<any>
+  readonly payload: PayloadType
+  readonly shouldCallAPI?: (...args: any[]) => boolean
+  readonly types: [ ActionType, ActionType, ActionType ]
 }
 
-export type IAsyncAction<PayloadType> = IApiAction<PayloadType> | Func;
+export type IAsyncAction<PayloadType> = IApiAction<PayloadType> | Func
 
-export type ActionCreator = (...args: any[]) => ActionTypes;
+export type ActionCreator = (...args: any[]) => ActionTypes
 
 
 // ACTION TYPES
@@ -21,7 +21,7 @@ export type ActionCreator = (...args: any[]) => ActionTypes;
 import {
   CreateOverlay,
   DeleteOverlay,
-} from "./overlayActionCreators/overlayActionCreators";
+} from "./overlayActionCreators/overlayActionCreators"
 
 export enum ActionType {
   CREATE_OVERLAY = "CREATE_OVERLAY",
@@ -32,4 +32,4 @@ export enum ActionType {
 export type ActionTypes =
   | CreateOverlay
   | DeleteOverlay
-  | IAction<ActionType.OTHER>;
+  | IAction<ActionType.OTHER>

@@ -1,1 +1,1 @@
-export default () => <h1>Civility</h1>;
+export default () => <h1>Civility</h1>

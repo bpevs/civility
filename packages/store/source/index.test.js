@@ -17,4 +17,4 @@ test("ActionTypes should be unique strings", () => {
 test("Should export actionCreators", () => {
   expect(createOverlay).toBeDefined()
   expect(deleteOverlay).toBeDefined()
-});
+})

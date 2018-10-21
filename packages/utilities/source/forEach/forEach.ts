@@ -1,4 +1,4 @@
-import { Collection, Func, isArray } from "../index";
+import { Collection, Func, isArray } from "../index"
 
 
 export function forEach(
@@ -7,7 +7,7 @@ export function forEach(
 ): void {
 
   if (isArray(collection)) {
-    const length = collection.length;
+    const length = collection.length
     for (let index = 0; index < length; index++) {
       func(collection[index], index)
     }
