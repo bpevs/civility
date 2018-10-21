@@ -1,4 +1,4 @@
-import { forEach, isFunction } from "@civility/utilities"
+import { forEach } from "@civility/utilities"
 import {
   ActionType,
   createOverlay,
