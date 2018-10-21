@@ -1,61 +1,75 @@
+Philosophy
+==========
+**Stores**
+Stores organize how our app consumes data; it defines how we transfer of information from our services to our components. Think of it like an actual supply-chain.
+
+- Our Services provide the stores with products
+- Our Stores define how a consumer gets the product it wants
+- Our Components and Pages define how a consumer uses the product it purchases
+
+Our stores are both B2B and B2c, though (they provide data to both to our Consumers, and also to other Stores), for the convenience of its consumers.
+
+
+Types of Stores
+--------------
+Getting back to programming terminology, we have 2 kinds of Stores:
+
+**AppStore**
+State of interaction within the experience of an application. Some examples of this are:
+- Active Overlays
+- Sign-in State
+- Tracking Error States
+- Routing
+
+**CollectionStore**
+Data where a collection is greater than the span of the current user.
+- Users
+- Comments
+
+
 Usage
 ======
+The store is initialized when we import a `Component` or `Page` Class. So there isn't actually much configuration at all, if you are using built-in stores. This usage will more dictate how we create stores, so you can override them effectively.
 
-`store.js`
-----------
 ```js
-import * as overrides from "./myOverrides"
-import * as customServices from "./myServices";
-import { ActionTypes, Store } from "@civility/store";
+import { Store } from "@civility/store"
 
+// Define a new store by extending the Store class. We'll define a User store.
+class Users extends Store {
+  service = null // Service powering this store
+  state = {} // Default State
 
-// Initialize the Store, and extend or override with custom methods
-export const myStore = new Store({
-  actions: { myAction: overrides.myAction },
-  reducers: { myReducer: overrides.myReducer },
-  services: { customServices },
-});
+  constructor() {
+    super()
+  }
 
+  // Action Creators
+  actions = {
+    // Extended with the correct callAPI
+    async createUser(username, password) {
+      return {
+        type: "CREATE_USER",
+        payload: { password, username },
+      }
+    }
+  }
 
-// Append, prepend, or override existing middleware by name
-myStore.appendMiddleware(myMiddleware);
-myStore.prependMiddleware(myMiddleware);
-myStore.overrideMiddlware("logger", myMiddleware);
-```
+  // Reducer
+  async onUpdate() {
 
-
-`overrides.js`
---------------
-```js
-const type = "MY_ACTION";
-export const myActionCreator = (param) => ({ type, param });
-myActionCreator.type = type;
-
-const types = [ "ASYNC_FETCH", "ASYNC_SUCCESS", "ASYNC_FAIL" ];
-export const myAsyncActionCreator = (param) => ({ types, param });
-myActionCreator.types = types;
-
-export function myReducer(state = {}, action) {
-  return (action.type === type) ? { param } : state;
-}
-
-export const myMiddleware = store => next => action => {
-  console.log("dispatching", action);
-  const result = next(action);
-  console.log("next state", store.getState());
-  return result;
+  }
 }
 ```
 
 
-`myComponent.js`
-----------------
 ```js
-import { dispatcher } from "./myStore";
-dispatcher.createAlert("BE ALERTED");
+import { Store } from "@civility/store"
+
+class Route extends Store {
+  state = {}
+
+  constructor() {
+
+  }
+}
 ```
-
-
-Overrides
-=====
-Override services with [Swagger CodeGen](https://github.com/swagger-api/swagger-codegen.git) code.
