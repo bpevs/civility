@@ -3,13 +3,10 @@ import { createReducer } from "../reducer"
 
 
 export interface IOverlaysState {
-  byId: { [id: string]: any }
+  [id: string]: any
 }
 
-const initialState: IOverlaysState = {
-  byId: {},
-}
-
+const initialState: IOverlaysState = {}
 
 export const overlayReducer = createReducer(initialState, {
   [ActionType.CREATE_OVERLAY]: createOverlay,
@@ -23,7 +20,7 @@ function createOverlay(
 ): IOverlaysState {
   const { id, children } = action.payload
   const nextState = { ...state }
-  nextState.byId[id] = children
+  nextState[id] = children
   return nextState
 }
 
@@ -33,6 +30,6 @@ function deleteOverlay(
 ): IOverlaysState {
   const { id } = action.payload
   const nextState = { ...state }
-  delete nextState.byId[id]
+  delete nextState[id]
   return nextState
 }

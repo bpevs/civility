@@ -1,12 +1,12 @@
 // https://github.com/gaearon/redux-thunk/blob/master/test/index.js
 
 import { isFunction } from "@civility/utilities"
-import { IAction } from "../../actions/Action"
 import { thunkMiddleware } from "./thunkMiddleware"
 
 const doDispatch = arg => arg
 const doGetState = arg => arg
-let nextHandler = thunkMiddleware({ dispatch: doDispatch, getState: doGetState })
+let nextHandler;
+
 beforeEach(() => {
   nextHandler = thunkMiddleware({ dispatch: doDispatch, getState: doGetState })
 })
@@ -35,7 +35,7 @@ describe("handle next", () => {
     })
 
     test("must pass action to next if not a function", done => {
-      const actionObj: IAction<any> = { payload: {}, type: undefined }
+      const actionObj = { payload: {}, type: undefined }
 
       const actionHandler = nextHandler(action => {
         expect(action).toBe(actionObj)
@@ -46,7 +46,7 @@ describe("handle next", () => {
     })
 
     test("must return the return value of next if not a function", () => {
-      const expected: IAction<any> = { payload: {}, type: undefined }
+      const expected = { payload: {}, type: undefined }
       const actionHandler = nextHandler(() => expected)
 
       const outcome = actionHandler()

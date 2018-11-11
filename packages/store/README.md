@@ -33,30 +33,33 @@ The store is initialized when we import a `Component` or `Page` Class. So there 
 
 ```js
 import { Store } from "@civility/store"
+import * as reducers from "./partials"
 
 // Define a new store by extending the Store class. We'll define a User store.
-class Users extends Store {
-  service = null // Service powering this store
+class Overlays extends Store {
+  // Action Creators
+  actions = {
+    // Extended with the correct callAPI
+    createOverlay(username, password) {
+      return {
+        type: "CREATE_OVERLAY",
+        payload: { password, username },
+      }
+    }
+  }
+
   state = {} // Default State
 
   constructor() {
     super()
   }
 
-  // Action Creators
-  actions = {
-    // Extended with the correct callAPI
-    async createUser(username, password) {
-      return {
-        type: "CREATE_USER",
-        payload: { password, username },
-      }
-    }
-  }
-
   // Reducer
-  async onUpdate() {
-
+  onUpdate() {
+    return createReducer(this.state, {
+      [ActionType.CREATE_OVERLAY]: reducers.createOverlay,
+      [ActionType.DELETE_OVERLAY]: reducers.deleteOverlay,
+    })
   }
 }
 ```

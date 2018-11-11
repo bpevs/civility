@@ -1,7 +1,8 @@
 import { Func, isFunction } from "@civility/utilities"
+import { Middleware } from "redux"
 import { IAsyncAction } from "../../actions/actions"
 import { Store } from "../../store/store"
-import { Middleware } from "../createMiddleware/createMiddleware"
+import { createMiddleware } from "../createMiddleware/createMiddleware";
 
 
 function thunk(store: Store, next: Func, action: IAsyncAction<any>) {
@@ -13,4 +14,4 @@ function thunk(store: Store, next: Func, action: IAsyncAction<any>) {
 
 const isFish = (action: IAsyncAction<any>): action is Func => Boolean(isFunction(action))
 
-export const thunkMiddleware: Middleware = new Middleware(thunk)
+export const thunkMiddleware: Middleware = createMiddleware(thunk)

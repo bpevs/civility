@@ -1,50 +1,33 @@
-import { isArray, isFunction, isNumber, isString } from "@civility/utilities"
-import { IAction, IApiAction } from "../../actions/actions"
-import { Middleware } from "../createMiddleware/createMiddleware"
+import { Middleware } from "redux"
+import { isAPIAction } from "../../actions/actions"
+import { getService } from "../../services/registerServices"
+import { createMiddleware } from "../createMiddleware/createMiddleware"
 
 
-function api(store: any, next: (...args: any[]) => any, action: IAction<any> | IApiAction<any>) {
+function api(store: any, next: (...args: any[]) => any, action: any) {
+  if (!isAPIAction(action)) return next(action)
+
   const { dispatch, getState } = store
+  const { shouldCallAPI, type, payload = {} } = action
 
-  // Normal action: pass it on
-  if (!isApiAction(action)) return next(action)
+  const service = getService(action.type)
 
   // If we shouldn't call the API, we are done
-  if (action.shouldCallAPI && !action.shouldCallAPI(getState())) return
+  if (shouldCallAPI && !shouldCallAPI(getState())) return
 
-  const { callAPI, types, payload = {} } = action
+  dispatch({ payload, type: type + "_START" })
 
-  if (!isFunction(callAPI)) {
-    throw new Error("Expected callAPI to be a function")
-  }
-
-  const [ requestType, successType, failureType ] = types
-
-  dispatch({ payload, type: requestType })
-
-  return callAPI().then(
+  return service(action).then(
     (response: any) => dispatch({
       payload: { ...payload, ...response },
-      type: successType,
+      type: type + "_SUCCESS",
     }),
     (error: any) => dispatch({
-      payload: { ...payload,  error },
-      type: failureType,
+      payload: { ...payload, error },
+      type: type + "_FAILURE",
     }),
   )
 }
 
 
-// PRIVATE
-function isApiAction(action: any): action is IApiAction<any> {
-  return isArray(action.types) &&
-  action.types.length === 3 &&
-  action.types.every(isActionType)
-}
-
-function isActionType(type: any) {
-  return isNumber(type) || isString(type)
-}
-
-
-export const apiMiddleware: (...args: any[]) => any = new Middleware(api)
+export const apiMiddleware: Middleware = createMiddleware(api)
