@@ -2,7 +2,7 @@
 
 exports[`Should Render Button 1`] = `
 <button
-  className="hello"
+  className="button hello"
 >
   My Button
 </button>

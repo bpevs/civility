@@ -77,6 +77,7 @@
     "testMatch": [
       "**/*.test.(js|jsx)"
     ],
+    "testURL": "http://localhost/",
     "transform": {
       "^.+\\.(j|t)sx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     }
