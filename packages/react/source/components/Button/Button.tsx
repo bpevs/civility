@@ -1,10 +1,14 @@
+import { classNames as combine } from "@civility/utilities"
 import * as React from "react"
 
-export interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
-}
+export type ButtonProps = React.HTMLProps<HTMLButtonElement>
 
-export const Button: React.StatelessComponent<ButtonProps> = ({
-  ...props,
-}) => {
-  return <button {...props} />
+export const Button: React.SFC<ButtonProps> = ({
+  className,
+  ...props
+}: ButtonProps) => {
+  return <button
+    {...props}
+    className={combine("button", className)}
+  />
 }

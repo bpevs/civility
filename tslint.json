@@ -43,7 +43,11 @@
     "prefer-readonly": true,
     "quotemark": [ true, "double", "jsx-double", "avoid-template" ],
     "semicolon": [false, "never" ],
-    "trailing-comma": [true, { "multiline": "always", "singleline": "never" }],
+    "trailing-comma": [true, {
+      "multiline": "always",
+      "singleline": "never",
+      "esSpecCompliant": true
+    }],
     "whitespace": [
       true,
       "check-branch",
