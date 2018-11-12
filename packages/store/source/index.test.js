@@ -1,4 +1,4 @@
-import { forEach, isFunction } from "@civility/utilities"
+import { forEach } from "@civility/utilities"
 import {
   ActionType,
   createOverlay,
@@ -17,4 +17,4 @@ test("ActionTypes should be unique strings", () => {
 test("Should export actionCreators", () => {
   expect(createOverlay).toBeDefined()
   expect(deleteOverlay).toBeDefined()
-});
+})

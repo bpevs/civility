@@ -42,12 +42,13 @@
     "prefer-function-over-method": true,
     "prefer-readonly": true,
     "quotemark": [ true, "double", "jsx-double", "avoid-template" ],
-    "semicolon": [false, "never" ],
+    "semicolon": [ false, "never" ],
     "trailing-comma": [true, {
       "multiline": "always",
       "singleline": "never",
       "esSpecCompliant": true
     }],
+    "variable-name": false,
     "whitespace": [
       true,
       "check-branch",

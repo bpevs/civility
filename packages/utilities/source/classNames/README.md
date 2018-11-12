@@ -12,12 +12,12 @@ We can combine classes in a few different ways
   - Ignores items that are not strings or numbers
 
 ```js
-import { classNames } from "@zuck/core";
+import { classNames } from "@zuck/core"
 
-classNames("hello", "my", 1, "class");
+classNames("hello", "my", 1, "class")
 // > "hello my 1 class"
 
-classNames("hello my   ", null, 1, "class");
+classNames("hello my   ", null, 1, "class")
 // > "hello my    1 class"
 ```
 
@@ -25,12 +25,12 @@ classNames("hello my   ", null, 1, "class");
 Joins numbers and strings of the collection
 
 ```js
-import { classNames } from "@zuck/core";
+import { classNames } from "@zuck/core"
 
-classNames([ "hello", "my", 1, "class" ]);
+classNames([ "hello", "my", 1, "class" ])
 // > "hello my 1 class"
 
-classNames([ "hello my   ", null, 1, "class" ]);
+classNames([ "hello my   ", null, 1, "class" ])
 // > "hello my    1 class"
 ```
 
@@ -43,6 +43,6 @@ classNames({
   my: true,
   lalala: false,
   className: true
-});
+})
 // > "my className"
 ```

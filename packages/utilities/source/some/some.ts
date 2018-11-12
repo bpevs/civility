@@ -1,4 +1,4 @@
-import { Collection, every, Predicate } from "../index";
+import { Collection, every, Predicate } from "../index"
 
 
 export function some(

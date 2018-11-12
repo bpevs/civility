@@ -1,4 +1,4 @@
-import { Collection, Predicate, reduce } from "../index";
+import { Collection, Predicate, reduce } from "../index"
 
 
 export function every(

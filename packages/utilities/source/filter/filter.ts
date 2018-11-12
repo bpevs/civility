@@ -1,4 +1,4 @@
-import { Collection, forEach, Predicate } from "../index";
+import { Collection, forEach, Predicate } from "../index"
 
 export function filter(
   collection: Collection,
@@ -8,7 +8,7 @@ export function filter(
 
   forEach(collection, (item, index) => {
     if (func(item, index)) result.push(item)
-  });
+  })
 
   return result
 }

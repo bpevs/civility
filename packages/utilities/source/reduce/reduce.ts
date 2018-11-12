@@ -1,4 +1,4 @@
-import { Collection, forEach, Func } from "../index";
+import { Collection, forEach, Func } from "../index"
 
 
 export function reduce(
@@ -12,7 +12,7 @@ export function reduce(
   forEach(collection, (item, index) => {
     result = ignoreInitialValue ? item : func(result, item, index)
     ignoreInitialValue = false
-  });
+  })
 
-  return result;
+  return result
 }
