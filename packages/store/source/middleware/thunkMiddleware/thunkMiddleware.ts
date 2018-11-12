@@ -1,7 +1,6 @@
 import { Func, isFunction } from "@civility/utilities"
-import { Middleware } from "redux"
+import { Middleware, Store } from "redux"
 import { IAsyncAction } from "../../actions/actions"
-import { Store } from "../../store/store"
 import { createMiddleware } from "../createMiddleware/createMiddleware";
 
 

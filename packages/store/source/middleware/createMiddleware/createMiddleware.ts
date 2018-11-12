@@ -1,6 +1,5 @@
 import { Func, isObject } from "@civility/utilities"
-import { Middleware } from "redux"
-import { Store } from "../../store/store"
+import { Middleware, Store } from "redux"
 
 
 export type middlewareFunc = (store: Store, next: Func, action: any) => Func

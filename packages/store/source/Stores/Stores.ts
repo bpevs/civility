@@ -29,7 +29,7 @@ export class Stores {
     this.middleware = [ apiMiddleware, thunkMiddleware ]
   }
 
-  public registerServices(services: IServices) {
+  public registerProvider(services: IServices) {
     Object.assign(this.services, services)
   }
 

@@ -3,76 +3,59 @@ Philosophy
 **Stores**
 Stores organize how our app consumes data; it defines how we transfer of information from our services to our components. Think of it like an actual supply-chain.
 
-- Our Services provide the stores with products
+- Our Providers provide the stores with products
 - Our Stores define how a consumer gets the product it wants
 - Our Components and Pages define how a consumer uses the product it purchases
 
 Our stores are both B2B and B2c, though (they provide data to both to our Consumers, and also to other Stores), for the convenience of its consumers.
-
-
-Types of Stores
---------------
-Getting back to programming terminology, we have 2 kinds of Stores:
-
-**AppStore**
-State of interaction within the experience of an application. Some examples of this are:
-- Active Overlays
-- Sign-in State
-- Tracking Error States
-- Routing
-
-**CollectionStore**
-Data where a collection is greater than the span of the current user.
-- Users
-- Comments
-
 
 Usage
 ======
 The store is initialized when we import a `Component` or `Page` Class. So there isn't actually much configuration at all, if you are using built-in stores. This usage will more dictate how we create stores, so you can override them effectively.
 
 ```js
-import { Store } from "@civility/store"
+import { stores, userStore } from "@civility/store"
+import * as provider from "@civility/firebase"
 import * as reducers from "./partials"
+import { apiKey authDomain databaseURL storageBucket } from "./constants"
 
-// Define a new store by extending the Store class. We'll define a User store.
-class Overlays extends Store {
-  // Action Creators
-  actions = {
-    // Extended with the correct callAPI
-    createOverlay(username, password) {
-      return {
-        type: "CREATE_OVERLAY",
-        payload: { password, username },
-      }
-    }
-  }
+// Firebase-specific setup
+provider.initialize({ apiKey authDomain databaseURL storageBucket })
+stores.registerProvider(provider)
+stores.registerStore(userStore)
 
-  state = {} // Default State
+var user = await stores.createUser({ username, password, email })
 
-  constructor() {
-    super()
-  }
-
-  // Reducer
-  onUpdate() {
-    return createReducer(this.state, {
-      [ActionType.CREATE_OVERLAY]: reducers.createOverlay,
-      [ActionType.DELETE_OVERLAY]: reducers.deleteOverlay,
-    })
-  }
-}
+user = stores.readUser({ uid: user.uid })
 ```
 
-
 ```js
-import { Store } from "@civility/store"
+import { createReducer, Store } from "@civility/store"
+import { isString } from "@civility/utilities"
 
-class Route extends Store {
-  state = {}
+export const userStore = {
+  createUser: { // if no async, `createUser` is also the actiontype
+    async: true, // = actionTypes `createUserRequest`, `createUserSuccess`, `createUserFailure`
+    require: { // Validators determine whether we should send request
+      username: isString,
+      password: isString,
+      email: isString,
+    },
+    respond: null,
+    reducer: collectionReducerKeyBy("uid")
+  },
 
-  constructor() {
-
+  readUser: {
+    async: true,
+    require: {
+      uid: isString
+    },
+    respond: {
+      username: String,
+      password: String,
+      email: String,
+    },
+    reducer: collectionReducerKeyBy("uid")
   }
 }
 ```
