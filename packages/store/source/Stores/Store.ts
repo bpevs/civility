@@ -19,7 +19,7 @@ export class Store implements IStore {
     stores.registerStore(name, this)
   }
 
-   // Each store has a single Reducer
+  // Each store has a single Reducer
   public onUpdate(action?: Action<any>) {
     const update = this[action.type]
     if (typeof update === "function") update(action)

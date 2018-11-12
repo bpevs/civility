@@ -5,17 +5,36 @@ export interface IFirebaseOptions {
   storageBucket?: string
 }
 
-export async function initialize(options: IFirebaseOptions) {
-  const firebase = await import("firebase")
-
-  if (!firebase.apps.length) {
-    firebase.initializeApp(options)
-  }
-
-  return {
-    auth: firebase.auth,
-    database: firebase.database,
-    storage: firebase.storage,
-  }
+export interface IFirebase {
+  auth: () => any,
+  database: () => any,
+  storage: () => any,
 }
 
+let resolveFirebase: (key: IFirebase) => void
+let firebaseInstance: any
+
+export const firebase = new Promise((resolve: (key: IFirebase) => void) => {
+  if (firebaseInstance) resolve(firebaseInstance)
+  else resolveFirebase = resolve
+})
+
+export async function initialize(
+  options: IFirebaseOptions,
+): Promise<void> {
+  const fb = require("firebase")
+
+  if (!firebaseInstance.apps.length) {
+    firebaseInstance.initializeApp(options)
+  }
+
+  if (resolveFirebase) {
+    resolveFirebase(firebaseInstance)
+  } else {
+    firebaseInstance = {
+      auth: fb.auth,
+      database: fb.database,
+      storage: fb.storage,
+    }
+  }
+}

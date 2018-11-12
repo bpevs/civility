@@ -7,7 +7,7 @@ const ERROR_CODE_TO_MESSAGE: { [key: string]: string } = {
   "auth/wrong-password": "You have entered an incorrect password",
 }
 
-export function readErrorMessage(error: Error) {
+export function readErrorMessage(error: any) {
   const code = (error && error.code) || error
   return ERROR_CODE_TO_MESSAGE[code] || error || "An error has occurred"
 }
