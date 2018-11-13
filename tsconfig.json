@@ -28,5 +28,7 @@
     "**/*.test.js",
     "**/*.test.jsx"
   ],
-  "include": [ "./packages/**/*" ]
+  "include": [
+    "./packages/**/*"
+  ]
 }

@@ -14,19 +14,23 @@ Usage
 The store is initialized when we import a `Component` or `Page` Class. So there isn't actually much configuration at all, if you are using built-in stores. This usage will more dictate how we create stores, so you can override them effectively.
 
 ```js
-import { stores, userSchema } from "@civility/store"
+import { createStore, userSchema as users } from "@civility/store"
 import * as provider from "@civility/firebase"
 import * as reducers from "./partials"
 import { apiKey authDomain databaseURL storageBucket } from "./constants"
 
 // Firebase-specific setup
 provider.initialize({ apiKey authDomain databaseURL storageBucket })
-stores.registerProvider(provider)
-stores.registerSchema("users", userSchema)
 
-var user = await stores.createUser({ username, password, email })
+const store = createStore({
+  provider,
+  schema: { users }
+})
 
-user = stores.readUser({ uid: user.uid })
+
+var user = await store.createUser({ username, password, email })
+
+user = store.readUser({ uid: user.uid })
 ```
 
 ```js

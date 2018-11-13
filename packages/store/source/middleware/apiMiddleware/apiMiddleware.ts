@@ -1,16 +1,23 @@
 import { Middleware } from "redux"
 import { isAPIAction } from "../../actions/actions"
-import { getService } from "../../services/registerServices"
+import { ISchema } from "../../schema/schema";
+import { IProvider } from "../../Store/Store";
 import { createMiddleware } from "../createMiddleware/createMiddleware"
 
 
-function api(store: any, next: (...args: any[]) => any, action: any) {
+function api(
+  store: any,
+  next: (...args: any[]) => any,
+  action: any,
+  schema: ISchema,
+  provider: IProvider,
+) {
   if (!isAPIAction(action)) return next(action)
 
   const { dispatch, getState } = store
   const { shouldCallAPI, type, payload = {} } = action
 
-  const service = getService(action.type)
+  const service = provider[action.type]
 
   // If we shouldn't call the API, we are done
   if (shouldCallAPI && !shouldCallAPI(getState())) return
@@ -30,4 +37,9 @@ function api(store: any, next: (...args: any[]) => any, action: any) {
 }
 
 
-export const apiMiddleware: Middleware = createMiddleware(api)
+export function apiMiddleware(
+  schema: ISchema,
+  provider: IProvider,
+): Middleware {
+  return createMiddleware(api, schema, provider)
+}
