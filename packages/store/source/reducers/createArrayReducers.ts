@@ -8,7 +8,7 @@ export interface IArrayActionState {
  * @param name name of collection
  * @param keyBy key to reference items
  */
-export function createArrayReducers(name: string) {
+export function createArrayReducers() {
   const initialState: any[] = []
 
   return {

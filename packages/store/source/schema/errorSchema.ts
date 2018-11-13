@@ -1,8 +1,8 @@
 import { createArrayReducers } from "../reducers/createArrayReducers"
-import { ISchematic } from "./schematics"
-const reducers = createArrayReducers("errors")
+import { ISchema } from "./schema"
+const reducers = createArrayReducers()
 
-export const errorLayout: ISchematic = {
+export const errorSchema: ISchema = {
   pushError: {
     async: false,
     reducer: reducers.push,

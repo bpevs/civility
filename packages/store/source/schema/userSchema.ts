@@ -1,14 +1,12 @@
 import { isString } from "@civility/utilities"
 import { createMapReducers } from "../reducers/createMapReducers";
-import { ISchematic } from "./schematics"
-
+import { ISchema } from "./schema"
 
 const name = "users"
 const keyBy = "uid"
 const reducers = createMapReducers(name, keyBy)
 
-
-export const userLayout: ISchematic = {
+export const userSchema: ISchema = {
   deleteUser: {
     async: true,
     reducer: reducers.delete,

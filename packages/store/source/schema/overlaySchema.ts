@@ -1,12 +1,12 @@
 import { isNil, isString } from "@civility/utilities"
 import { createMapReducers } from "../reducers/createMapReducers"
-import { ISchematic } from "./schematics"
+import { ISchema } from "./schema"
 
 const name = "overlays"
 const keyBy = "id"
 const reducers = createMapReducers(name, keyBy)
 
-export const overlayLayout: ISchematic = {
+export const overlaySchema: ISchema = {
   createOverlay: {
     reducer: reducers.create,
     request: {

@@ -14,7 +14,7 @@ Usage
 The store is initialized when we import a `Component` or `Page` Class. So there isn't actually much configuration at all, if you are using built-in stores. This usage will more dictate how we create stores, so you can override them effectively.
 
 ```js
-import { stores, userStore } from "@civility/store"
+import { stores, userSchema } from "@civility/store"
 import * as provider from "@civility/firebase"
 import * as reducers from "./partials"
 import { apiKey authDomain databaseURL storageBucket } from "./constants"
@@ -22,7 +22,7 @@ import { apiKey authDomain databaseURL storageBucket } from "./constants"
 // Firebase-specific setup
 provider.initialize({ apiKey authDomain databaseURL storageBucket })
 stores.registerProvider(provider)
-stores.registerStore(userStore)
+stores.registerSchema("users", userSchema)
 
 var user = await stores.createUser({ username, password, email })
 
@@ -34,9 +34,9 @@ import { createReducer, Store } from "@civility/store"
 import { isString } from "@civility/utilities"
 
 export const userStore = {
-  createUser: { // if no async, `createUser` is also the actiontype
-    async: true, // = actionTypes `createUserRequest`, `createUserSuccess`, `createUserFailure`
-    require: { // Validators determine whether we should send request
+  createUser: {
+    async: true,
+    require: {
       username: isString,
       password: isString,
       email: isString,
