@@ -1,5 +1,5 @@
 import { isNil, isString } from "@civility/utilities"
-import { createMapReducers } from "../reducers/createMapReducers"
+import { createMapReducers } from "../reducerCreators/createMapReducers"
 import { ISchema } from "./schema"
 
 const name = "overlays"

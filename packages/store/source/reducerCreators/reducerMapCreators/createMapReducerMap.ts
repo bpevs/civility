@@ -1,25 +1,26 @@
-export interface IMapReducerState {
-  [key: string]: any
+import { Obj } from "@civility/utilities"
+import { Reducer } from "redux"
+import { IPayloadAction } from "../../actions/actions"
+
+
+export interface IMapReducerMap {
+  create: Reducer
+  delete: Reducer
+  update: Reducer
 }
 
-export interface IMapActionState {
-  type: string
-  payload: { [key: string]: any }
-}
 
 /**
  * Creates a set of reducers meant to deal with maps
- * @param name name of collection
  * @param keyBy key to reference items
+ * @returns set of map reducers
  */
-export function createMapReducers(name: string, keyBy: string) {
-  const initialState = {}
-
+export function createMapReducerMap(keyBy: string): IMapReducerMap {
   return {
     create: (
-      state: IMapReducerState = initialState,
-      action: IMapActionState,
-    ): IMapReducerState => {
+      state: Obj<any> = {},
+      action: IPayloadAction<any>,
+    ): Obj<any> => {
       const key = action.payload[keyBy]
       const nextState = { ...state }
       nextState[key] = action.payload
@@ -27,9 +28,9 @@ export function createMapReducers(name: string, keyBy: string) {
     },
 
     delete: (
-      state: IMapReducerState = initialState,
-      action: IMapActionState,
-    ): IMapReducerState => {
+      state: Obj<any> = {},
+      action: IPayloadAction<any>,
+    ): Obj<any> => {
       const key = action.payload[keyBy]
       const nextState = { ...state }
       delete nextState[key]
@@ -37,9 +38,9 @@ export function createMapReducers(name: string, keyBy: string) {
     },
 
     update: (
-      state: IMapReducerState = initialState,
-      action: IMapActionState,
-    ): IMapReducerState => {
+      state: Obj<any> = {},
+      action: IPayloadAction<any>,
+    ): Obj<any> => {
       const key = action.payload[keyBy]
       const nextState = { ...state }
       nextState[key] = { ...nextState[key], ...action.payload }

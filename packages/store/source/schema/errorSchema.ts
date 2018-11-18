@@ -1,4 +1,4 @@
-import { createArrayReducers } from "../reducers/createArrayReducers"
+import { createArrayReducers } from "../reducerCreators/createArrayReducers"
 import { ISchema } from "./schema"
 const reducers = createArrayReducers()
 
