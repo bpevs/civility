@@ -16,7 +16,10 @@ export interface IArrayReducerMap {
  */
 export function createArrayReducerMap(): IArrayReducerMap {
   return {
-    pop: (state: any[] = []): any[] => {
+    pop: (
+      state: any[] = [],
+      action: IPayloadAction<any>,
+    ): any[] => {
       const nextState = [ ...state ]
       nextState.pop()
       return nextState
@@ -31,7 +34,10 @@ export function createArrayReducerMap(): IArrayReducerMap {
       return nextState
     },
 
-    shift: (state: any[] = []): any[] => {
+    shift: (
+      state: any[] = [],
+      action: IPayloadAction<any>,
+    ): any[] => {
       const nextState = [ ...state ]
       nextState.shift()
       return nextState

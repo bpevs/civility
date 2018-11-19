@@ -4,40 +4,12 @@ A significant amount of redux boilerplate is caused by creating the same reducer
 
 ## `createReducerFromMap`
 
-This creates a single reducer function from a map of reducer functions, assuming a shared state between these reducers. If you want to combine reducers using separate states for each, you want Redux's [`combineReducers`](https://redux.js.org/api/combinereducers).
-
-#### Example:
-```js
-const initialState = {}
-
-const overlayReducer = createReducer(initialState, {
-  CREATE_OVERLAY: (state, action) => {
-    const { id, children } = action.payload
-    const nextState = Object.assign({}, state)
-    nextState[id] = children
-    return nextState
-  },
-
-  DELETE_OVERLAY: (state, action) => {
-    const { id } = action.payload
-    const nextState = Object.assign({}, state)
-    delete nextState[id]
-    return nextState
-  },
-})
-
-const payload = { id: "overlay1", children: "overlay 1" }
-const action = { type: "CREATE_OVERLAY", payload: payload }
-
-// Reducer that responds to CREATE_OVERLAY and DELETE_OVERLAY
-// with a shared state of { [overlayId]: [overlayChildren] }
-overlayReducer(undefined, action)
-```
+This creates a single reducer function from a map of reducer functions, assuming a shared state between these reducers. If you want to combine reducers using separate states for each, you want Redux's [`combineReducers`](https://redux.js.org/api/combinereducers). Example usage of [createReducerFromMap](./createReducerFromMap/createReducerFromMap.ts) is in the [createReducerFromMap test file](./createReducerFromMap/createReducerFromMap.test.js).
 
 
 ## Reducer Map Creators
 
-Reducer map creators are functions that create maps of reducers, expected to interact with specific structures of data. It is important to note that these functions do NOT create the actual reducers themselves, but maps of reducers. This allows us to modify/rename the individual reducers. If you want a direct reducer, you can use `createReducerFromMap`.
+[Reducer map creators](../reducerMapCreators) are functions that create maps of reducers, expected to interact with specific structures of data. It is important to note that these functions do NOT create the actual reducers themselves, but maps of reducers. This allows us to modify/rename the individual reducers. If you want a direct reducer, you can use `createReducerFromMap`.
 
 #### Example:
 ```js
@@ -58,6 +30,7 @@ const action = { type: "CREATE_OVERLAY", payload: payload }
 // with a shared state of { [overlayId]: [overlayChildren] }
 overlayReducer(undefined, action)
 ```
+
 
 
 ## `createReducerFromSchema`

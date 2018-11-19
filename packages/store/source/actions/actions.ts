@@ -4,6 +4,7 @@ import { getService } from "../services/registerServices"
 
 export interface IAction<ActionType> {
   readonly type: ActionType
+  readonly [key: string]: any
 }
 
 export interface IPayloadAction<ActionType> {
