@@ -1,20 +1,12 @@
-import { Reducer } from "redux"
+import { ReducersMapObject } from "redux"
 import { IPayloadAction } from "../../actions/actions"
-
-
-export interface IArrayReducerMap {
-  pop: Reducer
-  push: Reducer
-  shift: Reducer
-  unshift: Reducer
-}
 
 
 /**
  * Creates a set of reducers meant to deal with arrays
  * @returns set of array reducers
  */
-export function createArrayReducerMap(): IArrayReducerMap {
+export function createArrayReducerMap(): ReducersMapObject {
   return {
     pop: (
       state: any[] = [],

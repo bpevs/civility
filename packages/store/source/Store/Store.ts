@@ -1,56 +1,42 @@
-import { forEach, Func } from "@civility/utilities"
-import { AnyAction, applyMiddleware, combineReducers, compose, createStore, Middleware, Store } from "redux"
-import { apiMiddleware, thunkMiddleware } from "../middleware/middleware"
-import { ISchema } from "../schema/schema"
+import { forEach, Func, Obj } from "@civility/utilities"
+import {
+  AnyAction, applyMiddleware, combineReducers, compose,
+  createStore, Middleware, ReducersMapObject, Store,
+} from "redux"
+import { schemaMiddleware, thunkMiddleware } from "../middleware/middleware"
+import { createReducerFromSchema } from "../reducerCreators/reducerCreators";
+import { ISchema } from "../schemas/schemas"
 
-
-export interface IProvider {
-  [key: string]: Func
-}
-
-export interface IReducers {
-  [key: string]: Func
-}
 
 export interface IstoreCreatorArgs {
   initialState: object
-  provider: IProvider
-  schema: ISchema
+  provider: Obj<Func>
+  schemas: Obj<ISchema>
 }
 
-const services = {}
-let reducers = {}
-let rootReducer: Func = () => ({})
-let store: Store | null
 
 function storeCreator({
   initialState = {},
   provider,
-  schema,
+  schemas,
 }: IstoreCreatorArgs): Store<any, AnyAction> {
-  registerProvider(provider)
-  forEach(schema, (schema, name) => registerSchema(name, schema))
+  const reducers: ReducersMapObject = {};
+  forEach(schemas, (schema, name) => {
+    reducers[name] = createReducerFromSchema(initialState, schema)
+  })
 
-  const defaultMiddleware: Middleware[] = [ apiMiddleware(schema, provider), thunkMiddleware ]
-  const middleware = compose(applyMiddleware(...defaultMiddleware))
-  store = createStore(rootReducer, initialState, middleware);
-  return store
+  const middleware: Middleware[] = [
+    schemaMiddleware(schemas, provider),
+    thunkMiddleware,
+  ]
+
+  return createStore(
+    combineReducers(reducers),
+    initialState,
+    compose(applyMiddleware(...middleware)),
+  );
 }
 
 export {
-  getStoreRef,
   storeCreator as createStore,
 };
-
-function getStoreRef() {
-  return store;
-}
-
-function registerProvider(provider: IProvider) {
-  Object.assign(services, provider)
-}
-
-function registerSchema(name: string, schema: ISchema) {
-  reducers = { ...reducers, [name]: schema }
-  rootReducer = combineReducers(reducers)
-}

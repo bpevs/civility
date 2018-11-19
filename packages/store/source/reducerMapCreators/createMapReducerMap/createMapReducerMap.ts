@@ -1,13 +1,6 @@
 import { Obj } from "@civility/utilities"
-import { Reducer } from "redux"
+import { ReducersMapObject } from "redux"
 import { IPayloadAction } from "../../actions/actions"
-
-
-export interface IMapReducerMap {
-  create: Reducer
-  delete: Reducer
-  update: Reducer
-}
 
 
 /**
@@ -15,7 +8,7 @@ export interface IMapReducerMap {
  * @param keyBy key to reference items
  * @returns set of map reducers
  */
-export function createMapReducerMap(keyBy: string): IMapReducerMap {
+export function createMapReducerMap(keyBy: string): ReducersMapObject {
   return {
     create: (
       state: Obj<any> = {},

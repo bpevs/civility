@@ -1,3 +1,4 @@
+import { ReducersMapObject } from "redux";
 import { IAction } from "../../actions/actions"
 
 
@@ -8,7 +9,7 @@ import { IAction } from "../../actions/actions"
  * @param reducerMap - A map of reducers, keyed by ActionType
  * @returns Redux reducer function
  */
-export function createReducerFromMap(initialState: any, reducerMap: any) {
+export function createReducerFromMap(initialState: any, reducerMap: ReducersMapObject) {
   return function reducer(state = initialState, action: IAction<any>) {
     if (reducerMap.hasOwnProperty(action.type)) {
       return reducerMap[action.type](state, action)

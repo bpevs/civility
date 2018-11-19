@@ -1,6 +1,6 @@
-import { forEach, Obj } from "@civility/utilities"
-import { Reducer } from "redux"
-import { IBehavior, ISchema } from "../../schema/schema"
+import { forEach } from "@civility/utilities"
+import { Reducer, ReducersMapObject } from "redux"
+import { IBehavior, ISchema } from "../../schemas/schemas"
 import { createReducerFromMap } from "../createReducerFromMap/createReducerFromMap"
 
 
@@ -12,13 +12,12 @@ import { createReducerFromMap } from "../createReducerFromMap/createReducerFromM
  */
 export function createReducerFromSchema(
   initialState: any = {},
-  reducerMap: Obj<Reducer>,
   schema: ISchema,
 ): Reducer {
-  const reducersByAction: { [key: string]: Reducer } = {}
+  const reducersByAction: ReducersMapObject = {}
 
-  forEach(schema, (action: IBehavior, actionType: string) => {
-    const reducer = reducerMap[action.method]
+  forEach(schema.behaviors, (action: IBehavior, actionType: string) => {
+    const reducer = schema.reducerMap[action.method]
     if (reducer) reducersByAction[actionType] = reducer
   })
 
