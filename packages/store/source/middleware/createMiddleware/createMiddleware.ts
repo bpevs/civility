@@ -4,6 +4,7 @@ import { Middleware, Store } from "redux"
 
 export type middlewareFunc = (store: Store, next: Func, action: any, ...args: any[]) => Func
 
+
 export function createMiddleware(middleware: middlewareFunc, ...args: any[]): Middleware {
   return (store: Store) => {
     if (!isObject(store)) {

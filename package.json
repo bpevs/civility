@@ -16,7 +16,8 @@
     "test": "run-p --aggregate-output test:lint test:unit",
     "test:coverage": "npm run test:unit -- --coverage",
     "test:lint": "tslint --project ./tsconfig.json",
-    "test:unit": "jest --env=jsdom --colors"
+    "test:unit": "jest --env=jsdom --colors",
+    "test:watch": "jest --env=jsdom --colors --watch"
   },
   "dependencies": {
     "@civility/utilities": "0.0.6",

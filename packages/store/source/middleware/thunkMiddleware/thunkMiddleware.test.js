@@ -13,14 +13,12 @@ beforeEach(() => {
 
 test("must return a function to handle next", () => {
   expect(isFunction(nextHandler)).toBe(true)
-  // expect(nextHandler.length).toBe(1)
 })
 
 describe("handle next", () => {
   test("must return a function to handle action", () => {
     const actionHandler = nextHandler()
     expect(isFunction(actionHandler)).toBe(true)
-    // expect(actionHandler.length).toBe(1)
   })
 
   describe("handle action", () => {

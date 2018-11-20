@@ -4,13 +4,14 @@ import { IAsyncAction } from "../../actions/actions"
 import { createMiddleware } from "../createMiddleware/createMiddleware";
 
 
-function thunk(store: Store, next: Func, action: IAsyncAction<any>) {
+function thunk(store: Store, next: Func, action: any) {
   const { dispatch, getState } = store
-  // Normal action: pass it on
-  if (isFish(action)) return action(dispatch, getState)
+
+  if (isAsyncAction(action)) return action(dispatch, getState)
+
   return next(action)
 }
 
-const isFish = (action: IAsyncAction<any>): action is Func => Boolean(isFunction(action))
+const isAsyncAction = (action: IAsyncAction<any>): action is Func => Boolean(isFunction(action))
 
 export const thunkMiddleware: Middleware = createMiddleware(thunk)

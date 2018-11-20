@@ -3,9 +3,12 @@ import { Middleware } from "redux"
 import { IBehavior, ISchema } from "../../schemas/schemas";
 import { createMiddleware } from "../createMiddleware/createMiddleware"
 
+
 /**
- * If an action is present in a schema and as a service, then call that service.
- * If the service is async, we should call its methods as such.
+ * If an action matches a behavior and provider within Civility, fulfill it.
+ * Otherwise pass the action on.
+ * @param behaviors Map of all behaviors
+ * @param provider All our different async services
  */
 function middleware(
   store: any,

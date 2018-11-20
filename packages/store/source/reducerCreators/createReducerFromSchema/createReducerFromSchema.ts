@@ -18,7 +18,10 @@ export function createReducerFromSchema(
 
   forEach(schema.behaviors, (action: IBehavior, actionType: string) => {
     const reducer = schema.reducerMap[action.method]
-    if (reducer) reducersByAction[actionType] = reducer
+    if (reducer) {
+      reducersByAction[actionType] = reducer
+      reducersByAction[actionType + "Success"] = reducer
+    }
   })
 
   return createReducerFromMap(initialState, reducersByAction)

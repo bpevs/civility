@@ -84,6 +84,18 @@ test("Should dispatch asynchronous actions for failures", async () => {
   })
 })
 
+test.skip("Should dispatch synchronous actions for manual success and failures", () => {
+  const { store, invoke } = createMockSchemaMiddleware(mockSchemas, mockProvider)
+  const successAction = { payload: {}, type: "asyncGetSuccess" }
+  const failureAction = { payload: {}, type: "asyncGetFailure" }
+  invoke(successAction)
+  invoke(failureAction)
+
+  const [ successParams, failureParams ] = store.dispatch.mock.calls
+  expect(successParams[0]).toEqual(successAction)
+  expect(failureParams[0]).toEqual(failureAction)
+})
+
 ​
 function createMockSchemaMiddleware(schema, provider) {
   const store = {

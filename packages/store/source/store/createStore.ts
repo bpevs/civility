@@ -8,18 +8,11 @@ import { createReducerFromSchema } from "../reducerCreators/reducerCreators";
 import { ISchema } from "../schemas/schemas"
 
 
-export interface IstoreCreatorArgs {
-  initialState: object
-  provider: Obj<Func>
-  schemas: Obj<ISchema>
-}
-
-
-function storeCreator({
-  initialState = {},
-  provider,
-  schemas,
-}: IstoreCreatorArgs): Store<any, AnyAction> {
+function storeCreator(
+  initialState: object,
+  provider: Obj<Func>,
+  schemas: Obj<ISchema>,
+): Store<any, AnyAction> {
   const reducers: ReducersMapObject = {};
   forEach(schemas, (schema, name) => {
     reducers[name] = createReducerFromSchema(initialState, schema)
