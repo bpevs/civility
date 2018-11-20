@@ -1,50 +1,96 @@
 import { schemaMiddleware } from "./schemaMiddleware"
 
 const mockProvider = {
-  deleteItem: jest.fn(),
-  fetchItem: jest.fn(),
-  postItem: jest.fn(),
-  putItem: jest.fn(),
+  onlyProvider: jest.fn(),
+  asyncGet: jest.fn(() => Promise.resolve()),
+  asyncFail: jest.fn(() => Promise.reject("ded")),
+  syncGet: jest.fn(() => ({ data: "data" })),
 }
 
 const mockSchemas = {
   items: {
-    fetchItem: {
-      method: "create"
+    behaviors: {
+      asyncFail: {
+        method: "delete"
+      },
+      asyncGet: {
+        method: "create"
+      },
+      onlyBehavior: {
+        method: "create"
+      },
+      syncGet: {
+        method: "update"
+      }
     }
   }
 }
 
 
-test.skip("Passes through actions that don't match a provider method", () => {
-  const { next, invoke } = createSchemaMiddleware(mockSchemas, mockProvider)
-  const action = { type: "TEST" }
+test("Passes through bad actions", () => {
+  const { next, invoke } = createMockSchemaMiddleware(mockSchemas, mockProvider)
+  invoke()
+  expect(next).toHaveBeenCalledWith(undefined)
+})
+
+test("Passes through actions that don't match a provider method", () => {
+  const { next, invoke } = createMockSchemaMiddleware(mockSchemas, mockProvider)
+
+  const action = { type: "onlyBehavior" }
   invoke(action)
   expect(next).toHaveBeenCalledWith(action)
 })
-​
-test.skip("calls the function", () => {
-  const { invoke } = createSchemaMiddleware()
-  const fn = jest.fn()
-  invoke(fn)
-  expect(fn).toHaveBeenCalled()
-})
-​
-test.skip("passes dispatch and getState", () => {
-  const { store, invoke } = createSchemaMiddleware()
-  invoke((dispatch, getState) => {
-    dispatch("TEST DISPATCH")
-    getState()
-  })
-  expect(store.dispatch).toHaveBeenCalledWith("TEST DISPATCH")
-  expect(store.getState).toHaveBeenCalled()
+
+test("Passes through actions that don't match a behavior method", () => {
+  const { next, invoke } = createMockSchemaMiddleware(mockSchemas, mockProvider)
+
+  const action = { type: "onlyProvider" }
+  invoke(action)
+  expect(next).toHaveBeenCalledWith(action)
 })
 
-function createSchemaMiddleware(schema, provider) {
+test("Should dispatch synchronous actions immediately", async () => {
+  const { store, invoke } = createMockSchemaMiddleware(mockSchemas, mockProvider)
+  const action = { payload: {}, type: "syncGet" }
+  await invoke(action)
+  expect(store.dispatch).toHaveBeenCalledWith({
+    payload: { data: "data" },
+    type: "syncGet"
+  })
+})
+
+test("Should dispatch asynchronous actions for success", async () => {
+  const { store, invoke } = createMockSchemaMiddleware(mockSchemas, mockProvider)
+  const action = { payload: {}, type: "asyncGet" }
+  await invoke(action)
+
+  const [ startParams, successParams ] = store.dispatch.mock.calls
+  expect(startParams[0]).toEqual({"payload": {}, "type": "asyncGetStart"})
+  expect(successParams[0]).toEqual({"payload": {}, "type": "asyncGetSuccess"})
+})
+
+test("Should dispatch asynchronous actions for failures", async () => {
+  const { store, invoke } = createMockSchemaMiddleware(mockSchemas, mockProvider)
+  const action = { payload: {}, type: "asyncFail" }
+  await invoke(action)
+
+  const [ startParams, failureParams ] = store.dispatch.mock.calls
+  expect(startParams[0]).toEqual({"payload": {}, "type": "asyncFailStart"})
+  expect(failureParams[0]).toEqual({
+    "payload": {
+      error: "ded"
+    },
+    "type": "asyncFailFailure"
+  })
+})
+
+​
+function createMockSchemaMiddleware(schema, provider) {
   const store = {
     getState: jest.fn(() => ({})),
     dispatch: jest.fn()
   }
+
   const next = jest.fn()
 ​
   const invoke = action => schemaMiddleware(schema, provider)(store)(next)(action)

@@ -1,4 +1,4 @@
-import { forEach, Func, Obj } from "@civility/utilities"
+import { forEach, Func, isPromise, Obj } from "@civility/utilities"
 import { Middleware } from "redux"
 import { IBehavior, ISchema } from "../../schemas/schemas";
 import { createMiddleware } from "../createMiddleware/createMiddleware"
@@ -21,11 +21,18 @@ function middleware(
 
   const { dispatch } = store
 
-  if (!behavior.async) return service(action)
+  const result = service(action)
+
+  if (!isPromise(result)) {
+    return dispatch({
+      type,
+      payload: { ...payload, ...service(action) },
+    })
+  }
 
   dispatch({ payload, type: type + "Start" })
 
-  return service(action).then(
+  return result.then(
     (response: any) => dispatch({
       payload: { ...payload, ...response },
       type: type + "Success",
