@@ -1,5 +1,5 @@
-import { Obj } from "@civility/utilities";
-import { ReducersMapObject } from "redux";
+import { Obj } from "@civility/utilities"
+import { ReducersMapObject } from "redux"
 
 
 export interface IBehavior {

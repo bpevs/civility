@@ -4,7 +4,7 @@ import {
   createStore, Middleware, ReducersMapObject, Store,
 } from "redux"
 import { schemaMiddleware, thunkMiddleware } from "../middleware/middleware"
-import { createReducerFromSchema } from "../reducerCreators/reducerCreators";
+import { createReducerFromSchema } from "../reducerCreators/reducerCreators"
 import { ISchema } from "../schemas/schemas"
 
 
@@ -13,7 +13,7 @@ function storeCreator(
   provider: Obj<Func>,
   schemas: Obj<ISchema>,
 ): Store<any, AnyAction> {
-  const reducers: ReducersMapObject = {};
+  const reducers: ReducersMapObject = {}
   forEach(schemas, (schema, name) => {
     reducers[name] = createReducerFromSchema(initialState, schema)
   })
@@ -27,9 +27,9 @@ function storeCreator(
     combineReducers(reducers),
     initialState,
     compose(applyMiddleware(...middleware)),
-  );
+  )
 }
 
 export {
   storeCreator as createStore,
-};
+}

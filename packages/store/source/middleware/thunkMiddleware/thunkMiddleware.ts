@@ -1,7 +1,7 @@
 import { Func, isFunction } from "@civility/utilities"
 import { Middleware, Store } from "redux"
 import { IAsyncAction } from "../../actions/actions"
-import { createMiddleware } from "../createMiddleware/createMiddleware";
+import { createMiddleware } from "../createMiddleware/createMiddleware"
 
 
 function thunk(store: Store, next: Func, action: any) {

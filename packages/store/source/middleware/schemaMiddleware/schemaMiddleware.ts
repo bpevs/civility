@@ -1,6 +1,6 @@
 import { forEach, Func, isPromise, Obj } from "@civility/utilities"
 import { Middleware } from "redux"
-import { IBehavior, ISchema } from "../../schemas/schemas";
+import { IBehavior, ISchema } from "../../schemas/schemas"
 import { createMiddleware } from "../createMiddleware/createMiddleware"
 
 

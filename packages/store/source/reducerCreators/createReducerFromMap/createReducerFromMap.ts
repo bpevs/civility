@@ -1,4 +1,4 @@
-import { ReducersMapObject } from "redux";
+import { ReducersMapObject } from "redux"
 import { IAction } from "../../actions/actions"
 
 
