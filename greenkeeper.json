@@ -1,0 +1,15 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "docs/package.json",
+        "package.json",
+        "packages/firebase/package.json",
+        "packages/react/package.json",
+        "packages/store/package.json",
+        "packages/stylesheets/package.json",
+        "packages/utilities/package.json"
+      ]
+    }
+  }
+}
