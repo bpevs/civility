@@ -1,7 +1,4 @@
 import * as React from "react"
-import { updateAuthState } from "../../services/authServices"
-import { readErrorMessage } from "../../services/errorServices"
-import { createUser } from "../../services/userServices"
 import { Input } from "../Input/Input"
 
 
@@ -20,12 +17,10 @@ const usernamePlaceholder = {
 }
 
 
-/**
- *
- * @param {object} props
- * @property {string} signinType Are we signing in or signing up?
- */
-export const SigninForm = ({ signinType = "signIn" }) => {
+export const SigninForm = ({
+  dispatch,
+  signinType = "signIn", // Are we signing in or signing up?
+}) => {
   const [ email, setEmail ] = React.useState("")
   const [ username, setUsername ] = React.useState("")
   const [ password, setPassword ] = React.useState("")
@@ -36,14 +31,17 @@ export const SigninForm = ({ signinType = "signIn" }) => {
     if (!email || !password) return
     if (type !== "signIn" && type !== "signUp") return
 
-    try {
-      if (type === "signIn") await updateAuthState(email, password)
-      if (type === "signUp") await createUser(email, password, username)
+    if (type === "signIn") await dispatch({
+      payload: { email, password },
+      type: "updateAuthState",
+    })
 
-      location.assign("/")
-    } catch (error) {
-      alert(readErrorMessage(error))
-    }
+    if (type === "signUp") await dispatch({
+      payload: { email, password, username },
+      type: "createUser",
+    })
+
+    location.assign("/")
   }
 
   return (

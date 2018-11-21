@@ -9,4 +9,4 @@ test("Should create a reducer that returns initial state", () => {
   expect(reducer(undefined, { type: "undefined" })).toBe(initialState)
 })
 
-test.skip("Should create a reducer that can handle actions")
+test.skip("Should create a reducer that can handle actions", () => {})

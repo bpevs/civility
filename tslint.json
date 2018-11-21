@@ -34,7 +34,6 @@
     "no-submodule-imports": false,
     "no-trailing-whitespace": true,
     "no-unnecessary-callback-wrapper": true,
-    "no-unused-variable": true,
     "no-var-requires": false,
     "object-literal-sort-keys": [ true, "ignore-case", "shorthand-first" ],
     "ordered-imports": true,
