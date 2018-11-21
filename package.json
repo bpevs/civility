@@ -9,8 +9,8 @@
   "bugs": "https://github.com/ivebencrazy/civility/issues",
   "repository": "git+https://github.com/ivebencrazy/civility.git",
   "scripts": {
-    "build": "lerna run build --parallel",
-    "default": "lerna bootstrap --ci && run-p test build --aggregate-output",
+    "build": "lerna run build",
+    "default": "lerna bootstrap --ci && run-p test build --aggregate-output --max-parallel 4",
     "prestart": "npm link",
     "start": "lerna run start --parallel",
     "test": "run-p --aggregate-output test:lint test:unit",
