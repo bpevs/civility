@@ -14,7 +14,7 @@ const DEFAULT_OPTIONS = {
   year: "numeric",
 }
 
-export const DateTime: React.SFC<TimeProps> = ({
+export const DateTime: React.FC<TimeProps> = ({
   locale,
   options = {},
   timestamp,

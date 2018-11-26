@@ -1,4 +1,5 @@
-import * as React from "react"
+import { Func } from "@civility/utilities"
+import React, { ChangeEvent, useState } from "react"
 import { Input } from "../Input/Input"
 
 
@@ -17,16 +18,22 @@ const usernamePlaceholder = {
 }
 
 
-export const SigninForm = ({
+export type SigninFormProps = React.HTMLProps<HTMLFormElement> & {
+  dispatch: Func,
+  signinType: "signIn" | "signUp",
+}
+
+
+export const SigninForm: React.FC<SigninFormProps> = ({
   dispatch,
   signinType = "signIn", // Are we signing in or signing up?
 }) => {
-  const [ email, setEmail ] = React.useState("")
-  const [ username, setUsername ] = React.useState("")
-  const [ password, setPassword ] = React.useState("")
-  const [ type, setSigninType ] = React.useState(signinType)
+  const [ email, setEmail ] = useState("")
+  const [ username, setUsername ] = useState("")
+  const [ password, setPassword ] = useState("")
+  const [ type, setSigninType ] = useState(signinType)
 
-  const onSubmit = async (evt: React.ChangeEvent<HTMLFormElement>) => {
+  const onSubmit = async (evt: ChangeEvent<HTMLFormElement>) => {
     evt.preventDefault()
     if (!email || !password) return
     if (type !== "signIn" && type !== "signUp") return
@@ -49,7 +56,7 @@ export const SigninForm = ({
       <h2>{heading[type]}</h2>
       <Input
         className="block col-12 field h4"
-        onChange={({ target }) => setEmail(target.value)}
+        onChange={(evt: any) => setEmail(evt.target.value)}
         name="email" type="email" label="Email"
         placeholder="Enter email"
         value={email} />
@@ -58,7 +65,7 @@ export const SigninForm = ({
         type === "signUp"
           ? <Input
             className="block col-12 field h4"
-            onChange={({ target }) => setUsername(target.value)}
+            onChange={(evt: any) => setUsername(evt.target.value)}
             name="username" type="username" label="Username"
             placeholder={usernamePlaceholder[type]}
             disabled={!usernamePlaceholder[type]}
@@ -68,7 +75,7 @@ export const SigninForm = ({
 
       <Input
         className="block col-12 field h4"
-        onChange={({ target }) => setPassword(target.value)}
+        onChange={(evt: any) => setPassword(evt.target.value)}
         name="password" type="password" label="Password"
         placeholder={passwordPlaceholder[signinType]}
         disabled={!passwordPlaceholder[signinType]}

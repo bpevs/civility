@@ -8,7 +8,7 @@ export type InputProps = React.HTMLProps<HTMLInputElement> & {
 const inputClassName = "block col-12 input"
 const labelClassName = "bold block pt2"
 
-export const Input: React.SFC<InputProps> = ({
+export const Input: React.FC<InputProps> = ({
   label: labelEl,
   ...props
 }: InputProps) => {

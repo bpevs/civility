@@ -3,7 +3,7 @@ import * as React from "react"
 
 export type ButtonProps = React.HTMLProps<HTMLButtonElement>
 
-export const Button: React.SFC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   className,
   ...props
 }: ButtonProps) => {
