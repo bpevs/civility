@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should Render 1`] = `<input />`;
+
+exports[`Should render with label 1`] = `
+<React.Fragment>
+  <label
+    className="bold block pt2"
+  >
+    hello
+  </label>
+  <input
+    className="block col-12 input"
+  />
+</React.Fragment>
+`;

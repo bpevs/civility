@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should Render from date string 1`] = `
+<time
+  dateTime="2014-10-13T18:13:00.000Z"
+>
+  Monday, October 13, 2014
+</time>
+`;
+
+exports[`Should Render from unix timestamp 1`] = `
+<time
+  dateTime="1970-01-02T00:00:00.000Z"
+>
+  Thursday, January 1, 1970
+</time>
+`;
+
+exports[`Should accept toLocaleString options 1`] = `
+<time
+  dateTime="1970-01-02T00:00:00.000Z"
+>
+  Friday, January 2, 1970
+</time>
+`;

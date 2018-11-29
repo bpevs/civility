@@ -3,47 +3,47 @@ import React, { ChangeEvent, useState } from "react"
 import { Input } from "../Input/Input"
 
 
-const heading = {
+const heading: { [type: string]: string } = {
   signIn: "Sign In",
   signUp: "Sign Up",
 }
 
-const passwordPlaceholder = {
+const passwordPlaceholder: { [type: string]: string } = {
   signIn: "Enter Password",
   signUp: "Choose Password",
 }
 
-const usernamePlaceholder = {
+const usernamePlaceholder: { [type: string]: string } = {
   signUp: "Choose username",
 }
 
 
 export type SigninFormProps = React.HTMLProps<HTMLFormElement> & {
   dispatch: Func,
-  signinType: "signIn" | "signUp",
+  type: "signIn" | "signUp",
 }
 
 
 export const SigninForm: React.FC<SigninFormProps> = ({
   dispatch,
-  signinType = "signIn", // Are we signing in or signing up?
+  type = "signIn", // Are we signing in or signing up?
 }) => {
   const [ email, setEmail ] = useState("")
   const [ username, setUsername ] = useState("")
   const [ password, setPassword ] = useState("")
-  const [ type, setSigninType ] = useState(signinType)
+  const [ signinType, setType ] = useState(type)
 
   const onSubmit = async (evt: ChangeEvent<HTMLFormElement>) => {
     evt.preventDefault()
     if (!email || !password) return
-    if (type !== "signIn" && type !== "signUp") return
+    if (signinType !== "signIn" && signinType !== "signUp") return
 
-    if (type === "signIn") await dispatch({
+    if (signinType === "signIn") await dispatch({
       payload: { email, password },
       type: "updateAuthState",
     })
 
-    if (type === "signUp") await dispatch({
+    if (signinType === "signUp") await dispatch({
       payload: { email, password, username },
       type: "createUser",
     })
@@ -53,7 +53,7 @@ export const SigninForm: React.FC<SigninFormProps> = ({
 
   return (
     <form onSubmit={onSubmit} className="sm-col-6 mx-auto">
-      <h2>{heading[type]}</h2>
+      <h2>{heading[signinType]}</h2>
       <Input
         className="block col-12 field h4"
         onChange={(evt: any) => setEmail(evt.target.value)}
@@ -62,13 +62,13 @@ export const SigninForm: React.FC<SigninFormProps> = ({
         value={email} />
 
       {
-        type === "signUp"
+        signinType === "signUp"
           ? <Input
             className="block col-12 field h4"
             onChange={(evt: any) => setUsername(evt.target.value)}
             name="username" type="username" label="Username"
-            placeholder={usernamePlaceholder[type]}
-            disabled={!usernamePlaceholder[type]}
+            placeholder={usernamePlaceholder[signinType]}
+            disabled={!usernamePlaceholder[signinType]}
             value={username} />
           : ""
       }
@@ -82,17 +82,17 @@ export const SigninForm: React.FC<SigninFormProps> = ({
         value={password} />
 
       <button
-        children={heading[type]}
+        children={heading[signinType]}
         className="btn btn-primary bold h4 inline-block mt2"
         disabled={!passwordPlaceholder[signinType]}
       />
 
       <button
-        children={type === "signIn" ? "Sign Up" : "Sign In"}
+        children={signinType === "signIn" ? "Sign Up" : "Sign In"}
         className="btn link h4 inline-block mt2 ml2"
         onClick={evt => {
           evt.preventDefault()
-          setSigninType(type === "signIn" ? "signUp" : "signIn")
+          setType(signinType === "signIn" ? "signUp" : "signIn")
         }} />
     </form>
   )

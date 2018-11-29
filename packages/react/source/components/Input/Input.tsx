@@ -2,7 +2,7 @@ import { classNames as combine, isString } from "@civility/utilities"
 import * as React from "react"
 
 export type InputProps = React.HTMLProps<HTMLInputElement> & {
-  label: React.ReactNode,
+  label?: React.ReactNode,
 }
 
 const inputClassName = "block col-12 input"
