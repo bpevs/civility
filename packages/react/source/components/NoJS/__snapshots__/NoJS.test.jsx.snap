@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should Render with no-js className 1`] = `
-<React.Fragment>
+<Fragment>
   <span
     className="no-js"
     key=".0"
   >
     hello
   </span>
-</React.Fragment>
+</Fragment>
 `;

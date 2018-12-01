@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should be empty when \`if\` is false 1`] = `<React.Fragment />`;
+exports[`Should be empty when \`if\` is false 1`] = `<Fragment />`;
 
 exports[`Should be identity when \`if\` is true 1`] = `
-<React.Fragment>
+<Fragment>
   hello
-</React.Fragment>
+</Fragment>
 `;
