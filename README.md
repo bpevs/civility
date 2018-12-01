@@ -6,9 +6,6 @@ Civility :tophat:
 [![CircleCI](https://circleci.com/gh/ivebencrazy/civility/tree/master.svg?style=svg)](https://circleci.com/gh/ivebencrazy/civility/tree/master)
 
 
-Civility is a library for making websites and applications, inspired by my learnings in [Zuck](https://github.com/Blanket-Warriors/Zuck).
-
-
 Goals
 =====
   - Built piece-by-piece; Always have the project in a usable state.
