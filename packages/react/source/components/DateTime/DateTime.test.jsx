@@ -12,7 +12,7 @@ test("Should Render from unix timestamp", () => {
 
 test("Should Render from date string", () => {
   const wrapper = shallow(<DateTime
-    timestamp="October 13, 2014 11:13:00"
+    timestamp="01 Jan 1970 05:05:05 GMT"
     options={{ timeZone: "UTC" }}
   />);
   expect(wrapper).toMatchSnapshot()
