@@ -10,7 +10,8 @@
   "repository": "git+https://github.com/ivebencrazy/civility.git",
   "scripts": {
     "build": "lerna run build",
-    "default": "lerna bootstrap --ci && npm run test:lint && npm run test:unit && npm run build",
+    "postinstall": "lerna bootstrap --ci",
+    "default": "npm run test:lint && npm run test:unit && npm run build",
     "prestart": "npm link",
     "start": "lerna run start --parallel",
     "test": "run-p --aggregate-output test:lint test:unit",
