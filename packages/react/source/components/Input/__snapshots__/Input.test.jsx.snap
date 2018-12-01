@@ -3,7 +3,7 @@
 exports[`Should Render 1`] = `<input />`;
 
 exports[`Should render with label 1`] = `
-<React.Fragment>
+<Fragment>
   <label
     className="bold block pt2"
   >
@@ -12,5 +12,5 @@ exports[`Should render with label 1`] = `
   <input
     className="block col-12 input"
   />
-</React.Fragment>
+</Fragment>
 `;
