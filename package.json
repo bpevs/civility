@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "author": "Ben Pevsner",
   "main": "index.js",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "description": "A library for making websites and applications",
   "homepage": "https://github.com/ivebencrazy/civility#readme",
   "bugs": "https://github.com/ivebencrazy/civility/issues",
