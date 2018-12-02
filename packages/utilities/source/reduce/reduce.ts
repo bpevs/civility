@@ -1,4 +1,4 @@
-import { Collection, forEach, Func } from "../index"
+import { Collection, forEach, Func } from ".."
 
 
 export function reduce(

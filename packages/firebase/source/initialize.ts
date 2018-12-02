@@ -22,19 +22,19 @@ export const firebase = new Promise((resolve: (key: IFirebase) => void) => {
 export async function initialize(
   options: IFirebaseOptions,
 ): Promise<void> {
-  const fb = require("firebase")
+  const fb = require("firebase/app")
 
-  if (!firebaseInstance.apps.length) {
-    firebaseInstance.initializeApp(options)
+  if (!firebaseInstance && fb && !fb.apps.length) {
+    fb.initializeApp(options)
   }
 
   if (resolveFirebase) {
     resolveFirebase(firebaseInstance)
   } else {
     firebaseInstance = {
-      auth: fb.auth,
-      database: fb.database,
-      storage: fb.storage,
+      auth: require("firebase/auth"),
+      database: require("firebase/database"),
+      storage: require("firebase/storage"),
     }
   }
 }

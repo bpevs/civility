@@ -1,5 +1,5 @@
 import { Func } from "@civility/utilities"
-import { firebase } from "../initialize"
+import { firebase } from ".."
 
 
 export interface IUser {

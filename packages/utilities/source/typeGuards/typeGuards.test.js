@@ -1,4 +1,4 @@
-import { forEach } from "../index"
+import { forEach } from ".."
 import * as typeGuards from "./typeGuards"
 
 

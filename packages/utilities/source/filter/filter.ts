@@ -1,4 +1,4 @@
-import { Collection, forEach, Predicate } from "../index"
+import { Collection, forEach, Predicate } from ".."
 
 export function filter(
   collection: Collection,

@@ -1,6 +1,6 @@
 import { Func } from "@civility/utilities"
-import React, { ChangeEvent, useState } from "react"
-import { Input } from "../Input/Input"
+import * as React from "react"
+import { Input } from "../.."
 
 
 const heading: { [type: string]: string } = {
@@ -20,20 +20,20 @@ const usernamePlaceholder: { [type: string]: string } = {
 
 export type SigninFormProps = React.HTMLProps<HTMLFormElement> & {
   dispatch: Func,
-  type: "signIn" | "signUp",
+  type?: "signIn" | "signUp",
 }
 
 
-export const SigninForm: React.FC<SigninFormProps> = ({
+export const SigninForm: React.FC<SigninFormProps> = function SigninForm({
   dispatch,
   type = "signIn", // Are we signing in or signing up?
-}) => {
-  const [ email, setEmail ] = useState("")
-  const [ username, setUsername ] = useState("")
-  const [ password, setPassword ] = useState("")
-  const [ signinType, setType ] = useState(type)
+}) {
+  const [ email, setEmail ] = React.useState("")
+  const [ username, setUsername ] = React.useState("")
+  const [ password, setPassword ] = React.useState("")
+  const [ signinType, setType ] = React.useState(type)
 
-  const onSubmit = async (evt: ChangeEvent<HTMLFormElement>) => {
+  const onSubmit = async (evt: React.ChangeEvent<HTMLFormElement>) => {
     evt.preventDefault()
     if (!email || !password) return
     if (signinType !== "signIn" && signinType !== "signUp") return

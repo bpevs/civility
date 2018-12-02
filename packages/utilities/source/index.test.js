@@ -2,14 +2,25 @@ import * as utilities from "./index"
 
 
 test("Should export public API", () => {
+  expect(typeof utilities.attempt).toBe("function")
+  expect(typeof utilities.bindAll).toBe("function")
   expect(typeof utilities.classNames).toBe("function")
+  expect(typeof utilities.debounce).toBe("function")
+  expect(typeof utilities.decodeHTMLEntities).toBe("function")
   expect(typeof utilities.every).toBe("function")
   expect(typeof utilities.filter).toBe("function")
   expect(typeof utilities.forEach).toBe("function")
+  expect(typeof utilities.get).toBe("function")
+  expect(typeof utilities.identity).toBe("function")
   expect(typeof utilities.map).toBe("function")
   expect(typeof utilities.mapKeys).toBe("function")
+  expect(typeof utilities.memoize).toBe("function")
+  expect(typeof utilities.noop).toBe("function")
+  expect(typeof utilities.promisify).toBe("function")
   expect(typeof utilities.reduce).toBe("function")
+  expect(typeof utilities.set).toBe("function")
   expect(typeof utilities.some).toBe("function")
+  expect(typeof utilities.times).toBe("function")
 
   // Typeguards
   expect(typeof utilities.isArray).toBe("function")

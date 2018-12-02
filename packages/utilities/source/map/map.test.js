@@ -13,4 +13,10 @@ describe("map", () => {
     const mapped = map(values, val => ++val)
     expect(mapped).toEqual([ 1, 2, 3 ])
   })
+
+  test("Should default to identity", () => {
+    const values = { a: 1, b: 2, c: 3 }
+    const mapped = map(values)
+    expect(mapped).toEqual([ 1, 2, 3 ])
+  })
 })

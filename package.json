@@ -11,7 +11,7 @@
   "scripts": {
     "build": "lerna run build",
     "default": "lerna bootstrap --ci && npm run build && npm run test:lint && npm run test:ci",
-    "prestart": "npm link",
+    "prestart": "lerna run link",
     "start": "lerna run start --parallel",
     "test": "run-p --aggregate-output test:lint test:unit",
     "test:coverage": "npm run test:unit -- --coverage",

@@ -1,5 +1,5 @@
-import { reduce } from "../reduce/reduce"
-import { Func, isFunction } from "../typeGuards/typeGuards"
+import { Func, isFunction, reduce } from ".."
+
 
 export function mapKeys(objectToMap: any, iteratee?: Func) {
   return reduce(objectToMap, (all, value, key) => {

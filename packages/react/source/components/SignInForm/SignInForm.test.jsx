@@ -5,7 +5,7 @@ import { SigninForm } from "./SignInForm"
 test.skip("Should Render", () => {
   const wrapper = shallow(<SigninForm
     dispatch={jest.fn()}
-    signinType="signIn"
+    type="signIn"
   />)
   expect(wrapper).toMatchSnapshot()
 })

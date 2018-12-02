@@ -1,4 +1,4 @@
-import { forEach, Func, Obj } from "@civility/utilities"
+import { forEach, Obj } from "@civility/utilities"
 import {
   AnyAction, applyMiddleware, combineReducers, compose,
   createStore, Middleware, ReducersMapObject, Store,
@@ -10,7 +10,7 @@ import { ISchema } from "../schemas/schemas"
 
 function storeCreator(
   initialState: object,
-  provider: Obj<Func>,
+  provider: Obj<any>,
   schemas: Obj<ISchema>,
 ): Store<any, AnyAction> {
   const reducers: ReducersMapObject = {}

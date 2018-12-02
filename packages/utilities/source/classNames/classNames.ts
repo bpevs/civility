@@ -1,4 +1,4 @@
-import { isArray, isNumber, isObject, isString } from "../index"
+import { isArray, isNumber, isObject, isString } from ".."
 
 export function classNames(...args: any[]) {
   return args

@@ -2,6 +2,7 @@ import * as services from "./index"
 
 
 test("Should export public API", () => {
+  expect(services.firebase instanceof Promise).toBe(true)
   expect(typeof services.deleteUser).toBe("function")
   expect(typeof services.getUser).toBe("function")
   expect(typeof services.initialize).toBe("function")

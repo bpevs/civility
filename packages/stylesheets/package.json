@@ -8,6 +8,7 @@
   "repository": "git+https://github.com/ivebencrazy/civility.git",
   "scripts": {
     "build": "stylus ./source/index.styl --include-css -o ./dist/civility.css",
+    "link": "npm link",
     "prebuild": "mkdir -p dist",
     "start": "npm run build -- -w"
   },
