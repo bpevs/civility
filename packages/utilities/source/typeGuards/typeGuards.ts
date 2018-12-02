@@ -25,6 +25,10 @@ export function isBoolean(item: any): item is boolean {
   return typeof item === "boolean"
 }
 
+export function isClient(): boolean {
+  return typeof window === "object"
+}
+
 export function isDate(item: any): item is Date {
   return item instanceof Date
 }

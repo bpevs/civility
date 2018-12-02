@@ -88,6 +88,50 @@ exports[`isBoolean 21`] = `"isBoolean([object Set]): false"`;
 
 exports[`isBoolean 22`] = `"isBoolean([object Map]): false"`;
 
+exports[`isClient 1`] = `"isClient(s): true"`;
+
+exports[`isClient 2`] = `"isClient(0): true"`;
+
+exports[`isClient 3`] = `"isClient(1): true"`;
+
+exports[`isClient 4`] = `"isClient(1): true"`;
+
+exports[`isClient 5`] = `"isClient(Infinity): true"`;
+
+exports[`isClient 6`] = `"isClient(null): true"`;
+
+exports[`isClient 7`] = `"isClient(undefined): true"`;
+
+exports[`isClient 8`] = `"isClient(): true"`;
+
+exports[`isClient 9`] = `"isClient(1): true"`;
+
+exports[`isClient 10`] = `"isClient([object Object]): true"`;
+
+exports[`isClient 11`] = `"isClient([object Object]): true"`;
+
+exports[`isClient 12`] = `"isClient(function Number() { [native code] }): true"`;
+
+exports[`isClient 13`] = `"isClient(/fsdf/): true"`;
+
+exports[`isClient 14`] = `"isClient(/fsdf/): true"`;
+
+exports[`isClient 15`] = `"isClient(1.5234): true"`;
+
+exports[`isClient 16`] = `"isClient(9007199254740992): true"`;
+
+exports[`isClient 17`] = `"isClient(Error: hello): true"`;
+
+exports[`isClient 18`] = `"isClient(NaN): true"`;
+
+exports[`isClient 19`] = `"isClient(-2174774400000): true"`;
+
+exports[`isClient 20`] = `"isClient([object Promise]): true"`;
+
+exports[`isClient 21`] = `"isClient([object Set]): true"`;
+
+exports[`isClient 22`] = `"isClient([object Map]): true"`;
+
 exports[`isDate 1`] = `"isDate(s): false"`;
 
 exports[`isDate 2`] = `"isDate(0): false"`;

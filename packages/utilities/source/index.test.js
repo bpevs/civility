@@ -25,6 +25,7 @@ test("Should export public API", () => {
   // Typeguards
   expect(typeof utilities.isArray).toBe("function")
   expect(typeof utilities.isBoolean).toBe("function")
+  expect(typeof utilities.isClient).toBe("function")
   expect(typeof utilities.isDate).toBe("function")
   expect(typeof utilities.isEmpty).toBe("function")
   expect(typeof utilities.isError).toBe("function")

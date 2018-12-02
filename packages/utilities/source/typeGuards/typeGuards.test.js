@@ -15,3 +15,8 @@ forEach(typeGuards, check => {
     })
   })
 })
+
+test("isClient returns true if window is available", () => {
+  global.window = {}
+  expect(typeGuards.isClient()).toBe(true)
+})
