@@ -1,9 +1,9 @@
 Civility :tophat:
 ========
-[![npm (scoped)](https://img.shields.io/npm/v/@civility/utilities.svg?style=flat-square)](https://www.npmjs.com/org/civility)
-[![dependencies Status](https://david-dm.org/ivebencrazy/civility/status.svg?style=flat-square)](https://david-dm.org/ivebencrazy/civility)
-[![devDependencies Status](https://david-dm.org/ivebencrazy/civility/dev-status.svg?style=flat-square)](https://david-dm.org/ivebencrazy/civility?type=dev)
-[![CircleCI](https://circleci.com/gh/ivebencrazy/civility/tree/master.svg?style=svg)](https://circleci.com/gh/ivebencrazy/civility/tree/master)
+[![npm (scoped)](https://img.shields.io/npm/v/@civility/utilities.svg?style=shield)](https://www.npmjs.com/org/civility)
+[![dependencies Status](https://david-dm.org/ivebencrazy/civility/status.svg?style=shield)](https://david-dm.org/ivebencrazy/civility)
+[![devDependencies Status](https://david-dm.org/ivebencrazy/civility/dev-status.svg?style=shield)](https://david-dm.org/ivebencrazy/civility?type=dev)
+[![CircleCI](https://circleci.com/gh/ivebencrazy/civility/tree/master.svg?style=shield)](https://circleci.com/gh/ivebencrazy/civility/tree/master)
 
 
 Civility is a library, built to be used between all of my personal projects. I am currently using it for [benpevsner.com](https://github.com/ivebencrazy/benpevsner.com) and for the UI of [Favioli](https://github.com/ivebencrazy/favioli).
