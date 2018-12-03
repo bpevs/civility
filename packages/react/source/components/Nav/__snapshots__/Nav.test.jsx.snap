@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should Render Nav with NavItems 1`] = `
+<nav
+  className="nav list-reset align-middle"
+>
+  <ul
+    className="m0"
+  >
+    <Component
+      href="/"
+      title="My Nav"
+    />
+    <Component
+      className="my-Item"
+    >
+      <Component
+        title="my-nested-item-1"
+      />
+      <Component
+        title="my-nested-item-2"
+      />
+    </Component>
+  </ul>
+</nav>
+`;
+
+exports[`Should Render Nav with className 1`] = `
+<nav
+  className="nav list-reset align-middle my-nav"
+>
+  <ul
+    className="m0"
+  />
+</nav>
+`;

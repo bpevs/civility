@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should Render Col 1`] = `
+<div
+  className="hello col"
+>
+  My Col
+</div>
+`;
+
+exports[`Should Render Col with breakpoint colSizes 1`] = `
+<div
+  className="hello sm-col sm-col-1 md-col-3 lg-col-5"
+>
+  My Col
+</div>
+`;
+
+exports[`Should Render Col with colSize 1`] = `
+<div
+  className="hello col col-5"
+>
+  My Col
+</div>
+`;

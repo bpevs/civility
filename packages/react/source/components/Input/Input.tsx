@@ -1,30 +1,30 @@
-import { classNames as combine, isString } from "@civility/utilities"
+import { classNames as cx, isString } from "@civility/utilities"
 import * as React from "react"
+
 
 export type InputProps = React.HTMLProps<HTMLInputElement> & {
   label?: React.ReactNode,
 }
 
-const inputClassName = "block col-12 input"
-const labelClassName = "bold block pt2"
+const inputStyles = "block col-12 input"
+const labelStyles = "bold block pt2"
+
 
 export const Input: React.FC<InputProps> = ({
+  className,
   label: labelEl,
   ...props
-}: InputProps) => {
+}) => {
   if (!labelEl) return <input {...props} />
 
   const labelComponent = isString(labelEl)
-    ? <label className={labelClassName}>{labelEl}</label>
+    ? <label className={labelStyles}>{labelEl}</label>
     : labelEl
 
   return (
     <React.Fragment>
       {labelComponent}
-      <input
-        {...props}
-        className={combine(inputClassName, props.className)}
-      />
+      <input {...props} className={cx(inputStyles, className)} />
     </React.Fragment>
   )
 }

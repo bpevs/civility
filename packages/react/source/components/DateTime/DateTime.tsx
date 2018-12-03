@@ -19,7 +19,7 @@ export const DateTime: React.FC<TimeProps> = ({
   options = {},
   timestamp,
   ...props
-}: TimeProps) => {
+}) => {
   const date = new Date(timestamp)
   const text = date.toLocaleString(locale, { ...DEFAULT_OPTIONS, ...options })
   const dateTime = date.toISOString()
