@@ -1,3 +1,5 @@
+**This is currently experimental software. Expect breaking changes.**
+
 Civility :tophat:
 ========
 [![npm (scoped)](https://img.shields.io/npm/v/@civility/utilities.svg?style=shield)](https://www.npmjs.com/org/civility)
