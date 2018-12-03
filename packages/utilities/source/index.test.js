@@ -37,6 +37,7 @@ test("Should export public API", () => {
   expect(typeof utilities.isObject).toBe("function")
   expect(typeof utilities.isPromise).toBe("function")
   expect(typeof utilities.isRegExp).toBe("function")
+  expect(typeof utilities.isRegExString).toBe("function")
   expect(typeof utilities.isSet).toBe("function")
   expect(typeof utilities.isString).toBe("function")
   expect(typeof utilities.isUndefined).toBe("function")

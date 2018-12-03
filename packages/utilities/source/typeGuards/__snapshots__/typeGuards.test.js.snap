@@ -44,6 +44,12 @@ exports[`isArray 21`] = `"isArray([object Set]): false"`;
 
 exports[`isArray 22`] = `"isArray([object Map]): false"`;
 
+exports[`isArray 23`] = `"isArray(/myurlorsomething): false"`;
+
+exports[`isArray 24`] = `"isArray(/myregex/aa): false"`;
+
+exports[`isArray 25`] = `"isArray(/myregex/): false"`;
+
 exports[`isBoolean 1`] = `"isBoolean(s): false"`;
 
 exports[`isBoolean 2`] = `"isBoolean(0): false"`;
@@ -87,6 +93,12 @@ exports[`isBoolean 20`] = `"isBoolean([object Promise]): false"`;
 exports[`isBoolean 21`] = `"isBoolean([object Set]): false"`;
 
 exports[`isBoolean 22`] = `"isBoolean([object Map]): false"`;
+
+exports[`isBoolean 23`] = `"isBoolean(/myurlorsomething): false"`;
+
+exports[`isBoolean 24`] = `"isBoolean(/myregex/aa): false"`;
+
+exports[`isBoolean 25`] = `"isBoolean(/myregex/): false"`;
 
 exports[`isClient 1`] = `"isClient(s): true"`;
 
@@ -132,6 +144,12 @@ exports[`isClient 21`] = `"isClient([object Set]): true"`;
 
 exports[`isClient 22`] = `"isClient([object Map]): true"`;
 
+exports[`isClient 23`] = `"isClient(/myurlorsomething): true"`;
+
+exports[`isClient 24`] = `"isClient(/myregex/aa): true"`;
+
+exports[`isClient 25`] = `"isClient(/myregex/): true"`;
+
 exports[`isDate 1`] = `"isDate(s): false"`;
 
 exports[`isDate 2`] = `"isDate(0): false"`;
@@ -175,6 +193,12 @@ exports[`isDate 20`] = `"isDate([object Promise]): false"`;
 exports[`isDate 21`] = `"isDate([object Set]): false"`;
 
 exports[`isDate 22`] = `"isDate([object Map]): false"`;
+
+exports[`isDate 23`] = `"isDate(/myurlorsomething): false"`;
+
+exports[`isDate 24`] = `"isDate(/myregex/aa): false"`;
+
+exports[`isDate 25`] = `"isDate(/myregex/): false"`;
 
 exports[`isEmpty 1`] = `"isEmpty(s): false"`;
 
@@ -220,6 +244,12 @@ exports[`isEmpty 21`] = `"isEmpty([object Set]): true"`;
 
 exports[`isEmpty 22`] = `"isEmpty([object Map]): true"`;
 
+exports[`isEmpty 23`] = `"isEmpty(/myurlorsomething): false"`;
+
+exports[`isEmpty 24`] = `"isEmpty(/myregex/aa): false"`;
+
+exports[`isEmpty 25`] = `"isEmpty(/myregex/): false"`;
+
 exports[`isError 1`] = `"isError(s): false"`;
 
 exports[`isError 2`] = `"isError(0): false"`;
@@ -263,6 +293,12 @@ exports[`isError 20`] = `"isError([object Promise]): false"`;
 exports[`isError 21`] = `"isError([object Set]): false"`;
 
 exports[`isError 22`] = `"isError([object Map]): false"`;
+
+exports[`isError 23`] = `"isError(/myurlorsomething): false"`;
+
+exports[`isError 24`] = `"isError(/myregex/aa): false"`;
+
+exports[`isError 25`] = `"isError(/myregex/): false"`;
 
 exports[`isFunction 1`] = `"isFunction(s): false"`;
 
@@ -308,6 +344,12 @@ exports[`isFunction 21`] = `"isFunction([object Set]): false"`;
 
 exports[`isFunction 22`] = `"isFunction([object Map]): false"`;
 
+exports[`isFunction 23`] = `"isFunction(/myurlorsomething): false"`;
+
+exports[`isFunction 24`] = `"isFunction(/myregex/aa): false"`;
+
+exports[`isFunction 25`] = `"isFunction(/myregex/): false"`;
+
 exports[`isMap 1`] = `"isMap(s): false"`;
 
 exports[`isMap 2`] = `"isMap(0): false"`;
@@ -351,6 +393,12 @@ exports[`isMap 20`] = `"isMap([object Promise]): false"`;
 exports[`isMap 21`] = `"isMap([object Set]): false"`;
 
 exports[`isMap 22`] = `"isMap([object Map]): true"`;
+
+exports[`isMap 23`] = `"isMap(/myurlorsomething): false"`;
+
+exports[`isMap 24`] = `"isMap(/myregex/aa): false"`;
+
+exports[`isMap 25`] = `"isMap(/myregex/): false"`;
 
 exports[`isNil 1`] = `"isNil(s): false"`;
 
@@ -396,6 +444,12 @@ exports[`isNil 21`] = `"isNil([object Set]): false"`;
 
 exports[`isNil 22`] = `"isNil([object Map]): false"`;
 
+exports[`isNil 23`] = `"isNil(/myurlorsomething): false"`;
+
+exports[`isNil 24`] = `"isNil(/myregex/aa): false"`;
+
+exports[`isNil 25`] = `"isNil(/myregex/): false"`;
+
 exports[`isNull 1`] = `"isNull(s): false"`;
 
 exports[`isNull 2`] = `"isNull(0): false"`;
@@ -439,6 +493,12 @@ exports[`isNull 20`] = `"isNull([object Promise]): false"`;
 exports[`isNull 21`] = `"isNull([object Set]): false"`;
 
 exports[`isNull 22`] = `"isNull([object Map]): false"`;
+
+exports[`isNull 23`] = `"isNull(/myurlorsomething): false"`;
+
+exports[`isNull 24`] = `"isNull(/myregex/aa): false"`;
+
+exports[`isNull 25`] = `"isNull(/myregex/): false"`;
 
 exports[`isNumber 1`] = `"isNumber(s): false"`;
 
@@ -484,6 +544,12 @@ exports[`isNumber 21`] = `"isNumber([object Set]): false"`;
 
 exports[`isNumber 22`] = `"isNumber([object Map]): false"`;
 
+exports[`isNumber 23`] = `"isNumber(/myurlorsomething): false"`;
+
+exports[`isNumber 24`] = `"isNumber(/myregex/aa): false"`;
+
+exports[`isNumber 25`] = `"isNumber(/myregex/): false"`;
+
 exports[`isObject 1`] = `"isObject(s): false"`;
 
 exports[`isObject 2`] = `"isObject(0): false"`;
@@ -527,6 +593,12 @@ exports[`isObject 20`] = `"isObject([object Promise]): true"`;
 exports[`isObject 21`] = `"isObject([object Set]): true"`;
 
 exports[`isObject 22`] = `"isObject([object Map]): true"`;
+
+exports[`isObject 23`] = `"isObject(/myurlorsomething): false"`;
+
+exports[`isObject 24`] = `"isObject(/myregex/aa): false"`;
+
+exports[`isObject 25`] = `"isObject(/myregex/): false"`;
 
 exports[`isPromise 1`] = `"isPromise(s): false"`;
 
@@ -572,6 +644,62 @@ exports[`isPromise 21`] = `"isPromise([object Set]): false"`;
 
 exports[`isPromise 22`] = `"isPromise([object Map]): false"`;
 
+exports[`isPromise 23`] = `"isPromise(/myurlorsomething): false"`;
+
+exports[`isPromise 24`] = `"isPromise(/myregex/aa): false"`;
+
+exports[`isPromise 25`] = `"isPromise(/myregex/): false"`;
+
+exports[`isRegExString 1`] = `"isRegExString(s): false"`;
+
+exports[`isRegExString 2`] = `"isRegExString(0): false"`;
+
+exports[`isRegExString 3`] = `"isRegExString(1): false"`;
+
+exports[`isRegExString 4`] = `"isRegExString(1): false"`;
+
+exports[`isRegExString 5`] = `"isRegExString(Infinity): false"`;
+
+exports[`isRegExString 6`] = `"isRegExString(null): false"`;
+
+exports[`isRegExString 7`] = `"isRegExString(undefined): false"`;
+
+exports[`isRegExString 8`] = `"isRegExString(): false"`;
+
+exports[`isRegExString 9`] = `"isRegExString(1): false"`;
+
+exports[`isRegExString 10`] = `"isRegExString([object Object]): false"`;
+
+exports[`isRegExString 11`] = `"isRegExString([object Object]): false"`;
+
+exports[`isRegExString 12`] = `"isRegExString(function Number() { [native code] }): false"`;
+
+exports[`isRegExString 13`] = `"isRegExString(/fsdf/): false"`;
+
+exports[`isRegExString 14`] = `"isRegExString(/fsdf/): false"`;
+
+exports[`isRegExString 15`] = `"isRegExString(1.5234): false"`;
+
+exports[`isRegExString 16`] = `"isRegExString(9007199254740992): false"`;
+
+exports[`isRegExString 17`] = `"isRegExString(Error: hello): false"`;
+
+exports[`isRegExString 18`] = `"isRegExString(NaN): false"`;
+
+exports[`isRegExString 19`] = `"isRegExString(-2174774400000): false"`;
+
+exports[`isRegExString 20`] = `"isRegExString([object Promise]): false"`;
+
+exports[`isRegExString 21`] = `"isRegExString([object Set]): false"`;
+
+exports[`isRegExString 22`] = `"isRegExString([object Map]): false"`;
+
+exports[`isRegExString 23`] = `"isRegExString(/myurlorsomething): false"`;
+
+exports[`isRegExString 24`] = `"isRegExString(/myregex/aa): false"`;
+
+exports[`isRegExString 25`] = `"isRegExString(/myregex/): true"`;
+
 exports[`isRegExp 1`] = `"isRegExp(s): false"`;
 
 exports[`isRegExp 2`] = `"isRegExp(0): false"`;
@@ -615,6 +743,12 @@ exports[`isRegExp 20`] = `"isRegExp([object Promise]): false"`;
 exports[`isRegExp 21`] = `"isRegExp([object Set]): false"`;
 
 exports[`isRegExp 22`] = `"isRegExp([object Map]): false"`;
+
+exports[`isRegExp 23`] = `"isRegExp(/myurlorsomething): false"`;
+
+exports[`isRegExp 24`] = `"isRegExp(/myregex/aa): false"`;
+
+exports[`isRegExp 25`] = `"isRegExp(/myregex/): false"`;
 
 exports[`isSet 1`] = `"isSet(s): false"`;
 
@@ -660,6 +794,12 @@ exports[`isSet 21`] = `"isSet([object Set]): true"`;
 
 exports[`isSet 22`] = `"isSet([object Map]): false"`;
 
+exports[`isSet 23`] = `"isSet(/myurlorsomething): false"`;
+
+exports[`isSet 24`] = `"isSet(/myregex/aa): false"`;
+
+exports[`isSet 25`] = `"isSet(/myregex/): false"`;
+
 exports[`isString 1`] = `"isString(s): true"`;
 
 exports[`isString 2`] = `"isString(0): false"`;
@@ -704,6 +844,12 @@ exports[`isString 21`] = `"isString([object Set]): false"`;
 
 exports[`isString 22`] = `"isString([object Map]): false"`;
 
+exports[`isString 23`] = `"isString(/myurlorsomething): true"`;
+
+exports[`isString 24`] = `"isString(/myregex/aa): true"`;
+
+exports[`isString 25`] = `"isString(/myregex/): true"`;
+
 exports[`isUndefined 1`] = `"isUndefined(s): false"`;
 
 exports[`isUndefined 2`] = `"isUndefined(0): false"`;
@@ -747,3 +893,9 @@ exports[`isUndefined 20`] = `"isUndefined([object Promise]): false"`;
 exports[`isUndefined 21`] = `"isUndefined([object Set]): false"`;
 
 exports[`isUndefined 22`] = `"isUndefined([object Map]): false"`;
+
+exports[`isUndefined 23`] = `"isUndefined(/myurlorsomething): false"`;
+
+exports[`isUndefined 24`] = `"isUndefined(/myregex/aa): false"`;
+
+exports[`isUndefined 25`] = `"isUndefined(/myregex/): false"`;

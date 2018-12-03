@@ -74,6 +74,10 @@ export function isRegExp(item: any): item is RegExp {
   return item instanceof RegExp
 }
 
+export function isRegExString(item: any): item is string {
+  return isString(item) && /^\/.*\/$/.test(item)
+}
+
 export function isSet(item: any): item is Set<any> {
   return item instanceof Set
 }
