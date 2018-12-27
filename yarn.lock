@@ -18,11 +18,6 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@civility/utilities@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@civility/utilities/-/utilities-0.1.0.tgz#0c79c2869d020f06322788705aa78329aabe4cdb"
-  integrity sha512-xxv/UxN3qINO95oeWpgL54NufnQ4f7Y+89Qbl3grnAX5IVKhqxdt8102rbHBBuDGUjokGv9Zd5i2o1Npd5J8SQ==
-
 "@firebase/app-types@0.3.2", "@firebase/app-types@^0.3.2":
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.3.2.tgz#a92dc544290e2893bd8c02a81e684dae3d8e7c85"
