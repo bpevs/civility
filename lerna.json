@@ -6,6 +6,8 @@
       "allowBranch": "master"
     }
   },
+  "npmClient": "yarn",
+  "useWorkspaces": true,
   "packages": [
     "packages/firebase",
     "packages/react",
