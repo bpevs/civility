@@ -29,7 +29,7 @@
     "test:watch": "jest --env=jsdom --colors --watch"
   },
   "dependencies": {
-    "@civility/utilities": "0.1.0",
+    "@civility/utilities": "0.1.4",
     "basscss": "^8.0.10",
     "react": "^16.7.0-alpha.2",
     "react-dom": "^16.7.0-alpha.2",
