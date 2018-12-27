@@ -4,7 +4,7 @@
   "description": "Civility Firebase",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "repository": "git+https://github.com/ivebencrazy/civility.git",
   "scripts": {
     "build": "run-p build:* --aggregate-output",
@@ -13,6 +13,7 @@
     "start": "npm run build:commonjs -- --watch"
   },
   "dependencies": {
+    "@civility/utilities": "^0.1.4",
     "firebase": "^5.6.0"
   },
   "devDependencies": {

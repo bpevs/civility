@@ -4,7 +4,7 @@
   "description": "Contains Civility stylesheets",
   "main": "dist/index.css",
   "style": "dist/index.css",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "repository": "git+https://github.com/ivebencrazy/civility.git",
   "scripts": {
     "build": "stylus ./source/index.styl --include-css -o ./dist/civility.css",
