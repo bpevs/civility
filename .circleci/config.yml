@@ -23,8 +23,8 @@ jobs:
           command: yarn install
 
       - run:
-        name: Run Tests
-        command: yarn default
+          name: Run Tests
+          command: yarn default
 
       - save_cache:
           name: Save Yarn Package Cache
