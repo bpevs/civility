@@ -1,6 +1,6 @@
 import { classNames as cx } from "@civility/utilities"
 import * as React from "react"
-import { Only } from "../.."
+import { Only } from "../Only/Only"
 
 export type ItemProps = React.HTMLProps<HTMLLIElement> & {
   href?: string,

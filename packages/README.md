@@ -3,22 +3,10 @@ Packages
 **Our Philosophy:** Any of these packages should be able to be replaced as long as replacing segments conform to a standard API of interaction.
 
 
-Firebase
-----
-### `@civility/firebase`
-Contains services that use Firebase to interact with the Civility Redux Store.
-
-
 React
 ----
 ### `@civility/react`
 Contains React components meant to be used with [next.js](https://github.com/zeit/next.js/), and the Civility Store.
-
-
-Store
-----
-### `@civility/store`
-The heart of Civility, the store defines how Civility components interact with Civility services.
 
 
 Stylesheets

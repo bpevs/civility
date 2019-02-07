@@ -43,7 +43,9 @@ export const Background: React.FC<BackgroundProps> = ({
       setTimeout(show, transitionSpeed * 2)
     }
 
-    return () => cancelled = true
+    return () => {
+      cancelled = true
+    }
   }, [ color, children, src ])
 
   const imageComponent = currImage && <img src={currImage} />

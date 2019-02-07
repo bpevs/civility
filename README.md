@@ -17,5 +17,4 @@ Goals
 =====
   - Built piece-by-piece; Always have the project in a usable state. Even if the full structure of Civility is not complete, the individual utilities and components should be available to use. Essentially, I just don't want another repo where I add a lot of code, and don't end up using it.
   - Overridable UI using functional css React components
-  - Pre-built [Redux](https://redux.js.org/) store with a core of extendable actions, reducers, middleware
   - Swappable services with documented specs (not sure how to handle exactly, yet). Would prefer something where I can generate an api from docs, like [Swagger](https://swagger.io/). Services will probably be one of the earlier pieces built, but some of the last pieces to be solidified.

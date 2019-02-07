@@ -1,6 +1,6 @@
 import { Func } from "@civility/utilities"
 import * as React from "react"
-import { Input } from "../.."
+import { Input } from "../Input/Input"
 
 
 const heading: { [type: string]: string } = {
