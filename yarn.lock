@@ -18,6 +18,11 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
+"@civility/utilities@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@civility/utilities/-/utilities-0.1.4.tgz#37d9cf2b6fd287d4f04dee115a95d89016138b38"
+  integrity sha512-osFkCSke/KJzbdNUCnWNTW1AvhlNBgY1TwshE2vncmkGRP+skDCfo+UmiG3RGr0cuEyqPC3lLbYy/tmIcetnyw==
+
 "@lerna/add@3.10.6":
   version "3.10.6"
   resolved "https://registry.yarnpkg.com/@lerna/add/-/add-3.10.6.tgz#6f2c6b26eb905c40fef4180f3ffa34ad9dbb860b"
