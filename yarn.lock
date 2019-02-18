@@ -909,6 +909,21 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@civility/react@file:packages/react":
+  version "0.2.1"
+  dependencies:
+    "@civility/utilities" "^0.2.1"
+    react "^16.8.1"
+    react-dom "^16.8.1"
+
+"@civility/stylesheets@file:packages/stylesheets":
+  version "0.2.0"
+  dependencies:
+    basscss "^8.0.10"
+
+"@civility/utilities@file:packages/utilities":
+  version "0.2.1"
+
 "@emotion/cache@^0.8.8":
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-0.8.8.tgz#2c3bd1aa5fdb88f1cc2325176a3f3201739e726c"

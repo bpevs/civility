@@ -9,6 +9,7 @@
   "npmClient": "yarn",
   "useWorkspaces": true,
   "packages": [
+    "applications/react-sandbox",
     "packages/react",
     "packages/stylesheets",
     "packages/utilities"

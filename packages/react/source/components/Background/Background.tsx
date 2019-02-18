@@ -1,5 +1,6 @@
 import { classNames } from "@civility/utilities"
-import React, { useEffect, useState } from "react"
+import * as React from "react"
+const { useEffect, useState } = React
 
 
 export type BackgroundProps = React.HTMLProps<HTMLDivElement> & {

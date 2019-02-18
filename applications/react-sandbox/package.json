@@ -11,7 +11,9 @@
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "dependencies": {
-    "@civility/react": "^0.2.1",
+    "@civility/react": "file:../../packages/react",
+    "@civility/stylesheets": "file:../../packages/stylesheets",
+    "@civility/utilities": "file:../../packages/utilities",
     "react": "^16.8.1",
     "react-dom": "^16.8.1"
   },

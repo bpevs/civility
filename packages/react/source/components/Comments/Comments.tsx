@@ -5,14 +5,14 @@ import { Replies } from "./partials/Replies"
 import { ReplyBox } from "./partials/ReplyBox"
 
 
-export interface CommentProps extends React.HTMLProps<HTMLElement> {
+export interface CommentsProps extends React.HTMLProps<HTMLElement> {
   comment: string
   user: object
   root: boolean
   replies: object
 }
 
-export class Comment extends React.Component<CommentProps> {
+export class Comments extends React.Component<CommentsProps> {
   public Author = Author
   public Content = Content
   public Replies = Replies
@@ -27,9 +27,9 @@ export class Comment extends React.Component<CommentProps> {
 
     return (
       <div className={ root ? "root" : "reply"}>
-        <Comment.Author author={user} />
-        <Comment.Content content={content} />
-        <Comment.Replies replies={replies} />
+        <Comments.Author author={user} />
+        <Comments.Content content={content} />
+        <Comments.Replies replies={replies} />
       </div>
     )
   }
