@@ -14,12 +14,14 @@
     "@civility/react": "file:../../packages/react",
     "@civility/stylesheets": "file:../../packages/stylesheets",
     "@civility/utilities": "file:../../packages/utilities",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1"
+    "@emotion/core": "~0.10.0",
+    "react": "~16.8.0",
+    "react-dom": "~16.8.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@storybook/react": "^4.1.11",
-    "babel-loader": "8.0.4"
+    "@babel/core": "~7.2.0",
+    "@storybook/react": "~4.1.0",
+    "babel-loader": "~8.0.0",
+    "webpack": "~4.36.0"
   }
 }
