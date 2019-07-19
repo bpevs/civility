@@ -55,6 +55,11 @@
     "tslint-eslint-rules": "~5.4.0",
     "typescript": "~3.5.0"
   },
+  "resolutions": {
+    "**/**/lodash": "^4.17.12",
+    "**/**/mixin-deep": "^2.0.1",
+    "**/**/set-value": "^3.0.1"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "npm run test:lint",
