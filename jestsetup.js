@@ -1,4 +1,5 @@
-require("raf/polyfill") // raf polyfill only for testing in dom
+// raf polyfill for testing in dom
+require("raf/polyfill")
 const Enzyme = require("enzyme")
 const Adapter = require("enzyme-adapter-react-16")
 

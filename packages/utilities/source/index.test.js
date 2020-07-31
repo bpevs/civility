@@ -1,4 +1,4 @@
-import * as utilities from "./index"
+import * as utilities from "."
 
 
 test("Should export public API", () => {
@@ -10,7 +10,6 @@ test("Should export public API", () => {
   expect(typeof utilities.every).toBe("function")
   expect(typeof utilities.filter).toBe("function")
   expect(typeof utilities.forEach).toBe("function")
-  expect(typeof utilities.get).toBe("function")
   expect(typeof utilities.identity).toBe("function")
   expect(typeof utilities.map).toBe("function")
   expect(typeof utilities.mapKeys).toBe("function")

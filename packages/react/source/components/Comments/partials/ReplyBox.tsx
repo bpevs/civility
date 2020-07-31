@@ -1,6 +1,4 @@
-import { classNames } from "@civility/utilities"
-import React from "react"
-
+import react from "React"
 
 export class ReplyBox extends React.Component {
   public cache = "session" // Cache state changes in sessionStorage
