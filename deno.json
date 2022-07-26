@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "deno.ns",
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable",
+      "esnext"
+    ]
+  },
+  "importMap": "./import_map.test.json",
+  "fmt": {
+    "options": {
+      "singleQuote": true,
+      "proseWrap": "preserve"
+    }
+  },
+  "lint": {
+    "files": {
+      "exclude": ["dist"]
+    }
+  }
+}

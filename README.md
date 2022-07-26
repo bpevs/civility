@@ -1,20 +1,19 @@
-**This is currently experimental software. Expect breaking changes.**
+# Civility 🎩
 
-Civility :tophat:
-========
-[![npm (scoped)](https://img.shields.io/npm/v/@civility/utilities.svg?style=shield)](https://www.npmjs.com/org/civility)
-[![dependencies Status](https://david-dm.org/ivebencrazy/civility/status.svg?style=shield)](https://david-dm.org/ivebencrazy/civility)
-[![devDependencies Status](https://david-dm.org/ivebencrazy/civility/dev-status.svg?style=shield)](https://david-dm.org/ivebencrazy/civility?type=dev)
-[![CircleCI](https://circleci.com/gh/ivebencrazy/civility/tree/master.svg?style=shield)](https://circleci.com/gh/ivebencrazy/civility/tree/master)
+Civility is a library for Deno, meant to be a set of opinionated components, hooks, and utilities that assume use of Fresh + Supabase + Deno Deploy + Tailwind. Also includes more client-focused utilities, with the assumption of inclusion.
 
+# Goals
 
-Civility is a library, built to be used between all of my personal projects. I am currently using it for [benpevsner.com](https://github.com/ivebencrazy/benpevsner.com) and for the UI of [Favioli](https://github.com/ivebencrazy/favioli).
+- Built piece-by-piece; Always have the project in a usable state
+- Overridable UI using functional css preact components
+- Standard drop-ins for services; ie user management
+- Avoids anything already built into https://deno.land/std
 
-I am currently putting together all the pieces to make it work; it has usable components and utilities in each package of the monorepo. 1.0.0 will signal that the structure and the defaults I want built in are ready. Anything before that, and you should expect unexpected drastic changes.
+# Assumes use of
 
-
-Goals
-=====
-  - Built piece-by-piece; Always have the project in a usable state. Even if the full structure of Civility is not complete, the individual utilities and components should be available to use. Essentially, I just don't want another repo where I add a lot of code, and don't end up using it.
-  - Overridable UI using functional css React components
-  - Swappable services with documented specs (not sure how to handle exactly, yet). Would prefer something where I can generate an api from docs, like [Swagger](https://swagger.io/). Services will probably be one of the earlier pieces built, but some of the last pieces to be solidified.
+- https://deno.land/x/fresh
+- https://deno.land/x/postgres
+- https://deno.land/std
+- https://esm.sh/preact
+- https://esm.sh/twind
+- https://esm.sh/@supabase/supabase-js
