@@ -1,5 +1,5 @@
-import { assertSnapshot } from 'std/snapshot';
-import * as typeGuards from '../type_guards.ts';
+import { assertSnapshot } from '$std/testing/snapshot.ts'
+import * as typeGuards from '../type_guards.ts'
 
 const items = [
   's',
@@ -27,17 +27,17 @@ const items = [
   '/myurlorsomething',
   '/myregex/aa',
   '/myregex/',
-];
+]
 
 Object.keys(typeGuards).forEach((checkName) => {
-  const check = typeGuards[checkName];
+  const check = typeGuards[checkName]
   try {
     Deno.test(check.name, async (t) => {
       await Promise.all(items.map((item) => {
-        return assertSnapshot(t, `${check.name}(${item}): ${check(item)}`);
-      }));
-    });
+        return assertSnapshot(t, `${check.name}(${item}): ${check(item)}`)
+      }))
+    })
   } catch (e) {
-    console.error(e);
+    console.error(e)
   }
-});
+})

@@ -15,5 +15,4 @@ Civility is a library for Deno, meant to be a set of opinionated components, hoo
 - https://deno.land/x/postgres
 - https://deno.land/std
 - https://esm.sh/preact
-- https://esm.sh/twind
 - https://esm.sh/@supabase/supabase-js

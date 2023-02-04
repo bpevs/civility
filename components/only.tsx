@@ -1,10 +1,8 @@
-/* @jsx h */
-import { preact } from '../deps.ts';
-const { Fragment, h } = preact;
+import { Fragment, VNode } from 'preact'
 
 export interface OnlyProps {
-  if: boolean;
-  children: preact.VNode | string | (preact.VNode | string)[];
+  if: boolean
+  children: VNode | string | (VNode | string)[]
 }
 
 export function Only({ if: predicate, children }: OnlyProps) {
@@ -12,5 +10,5 @@ export function Only({ if: predicate, children }: OnlyProps) {
     <Fragment>
       {predicate ? children : null}
     </Fragment>
-  );
+  )
 }

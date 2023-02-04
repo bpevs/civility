@@ -1,4 +1,4 @@
-import { isArray, isNumber, isObject, isString } from './type_guards.ts';
+import { isArray, isNumber, isObject, isString } from './type_guards.ts'
 
 // classNames
 // ================
@@ -48,29 +48,29 @@ import { isArray, isNumber, isObject, isString } from './type_guards.ts';
 // // > "my className"
 // ```
 
-type ClassName = string | number | boolean | null | void;
+type ClassName = string | number | boolean | null | void
 type ClassNameCollection = ClassName | ClassName[] | ClassNameCollection[] | {
-  [name: string | number]: boolean;
-};
+  [name: string | number]: boolean
+}
 
 export function classNames(...args: ClassNameCollection[]): string {
   return args
     .map(function flattenClassNames(arg: ClassNameCollection) {
       if (isString(arg) || isNumber(arg)) {
-        return arg;
+        return arg
       }
 
       if (isArray(arg)) {
-        const inner = classNames.apply(null, arg);
-        if (inner) return inner;
+        const inner = classNames.apply(null, arg)
+        if (inner) return inner
       }
 
       if (isObject(arg)) {
-        const argArray = Object.keys(arg).filter((key) => arg[key]);
-        const inner = classNames.apply(null, argArray);
-        if (inner) return inner;
+        const argArray = Object.keys(arg).filter((key) => arg[key])
+        const inner = classNames.apply(null, argArray)
+        if (inner) return inner
       }
     })
     .filter(Boolean)
-    .join(' ');
+    .join(' ')
 }

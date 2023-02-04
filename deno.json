@@ -6,18 +6,33 @@
       "dom.iterable",
       "dom.asynciterable",
       "esnext"
-    ]
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
   },
-  "importMap": "./import_map.test.json",
   "fmt": {
     "options": {
       "singleQuote": true,
-      "proseWrap": "preserve"
+      "proseWrap": "preserve",
+      "semiColons": false
     }
   },
   "lint": {
     "files": {
       "exclude": ["dist"]
     }
+  },
+  "tasks": {
+    "start": "(cd sandbox && deno run -A --watch=static/,routes/ dev.ts)"
+  },
+  "imports": {
+    "civility": "./",
+    "$std/": "https://deno.land/std@0.138.0/",
+    "preact": "https://esm.sh/preact@10.9.0?dev",
+    "preact/": "https://esm.sh/preact@10.9.0/",
+
+    "@dom": "./utilities/test_dom.ts",
+    "deno-dom": "https://deno.land/x/deno_dom@v0.1.32-alpha/deno-dom-wasm.ts",
+    "@testing-library/preact": "https://esm.sh/@testing-library/preact@3.2.2/pure?dev"
   }
 }

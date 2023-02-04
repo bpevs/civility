@@ -1,33 +1,32 @@
-import { hooks, preact } from '../deps.ts';
-
-const { useEffect, useRef } = hooks;
+import { useEffect, useRef } from 'preact/hooks'
+import type { RefObject } from 'preact'
 
 export default function useFocusObserver(
   callback: () => void,
   // deno-lint-ignore no-explicit-any
-  ignoredRefs: preact.RefObject<any>[] = [],
+  ignoredRefs: RefObject<any>[] = [],
 ) {
-  const ref = useRef<HTMLElement>();
+  const ref = useRef<HTMLElement>()
 
   useEffect(() => {
     function handleClick(event: Event) {
       if (
         event.target instanceof HTMLElement &&
         ![ref, ...ignoredRefs].some((ref) => {
-          if (!ref?.current?.contains) return false;
-          return ref?.current.contains(event.target);
+          if (!ref?.current?.contains) return false
+          return ref?.current.contains(event.target)
         })
       ) {
-        callback();
+        callback()
       }
     }
 
-    document.addEventListener('mousedown', handleClick);
+    document.addEventListener('mousedown', handleClick)
 
     return () => {
-      document.removeEventListener('mousedown', handleClick);
-    };
-  }, [ref]);
+      document.removeEventListener('mousedown', handleClick)
+    }
+  }, [ref])
 
-  return ref;
+  return ref
 }
