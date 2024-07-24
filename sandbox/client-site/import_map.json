@@ -1,0 +1,11 @@
+{
+  "imports": {
+    "civility/": "./",
+    "std/": "https://deno.land/std@0.138.0/",
+    "path": "https://deno.land/std@0.150.0/path/mod.ts",
+    "solid-js": "npm:solid-js",
+    "solid-js/web": "npm:solid-js/web",
+    "motion": "npm:motion",
+    "@motion/solid": "npm:@motionone/solid"
+  }
+}

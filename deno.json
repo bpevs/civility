@@ -11,11 +11,9 @@
     "jsxImportSource": "preact"
   },
   "fmt": {
-    "options": {
-      "singleQuote": true,
-      "proseWrap": "preserve",
-      "semiColons": false
-    }
+    "singleQuote": true,
+    "proseWrap": "preserve",
+    "semiColons": false
   },
   "lint": {
     "files": {
@@ -23,13 +21,14 @@
     }
   },
   "tasks": {
-    "start": "(cd sandbox && deno run -A --watch=static/,routes/ dev.ts)"
+    "start:fresh": "(cd sandbox/fresh-site && deno run -A --watch=static/,routes/ dev.ts)",
+    "start:client": "(cd sandbox/client-site && deno run -A build.ts --watch)"
   },
   "imports": {
     "civility": "./",
-    "$std/": "https://deno.land/std@0.138.0/",
-    "preact": "https://esm.sh/preact@10.9.0?dev",
-    "preact/": "https://esm.sh/preact@10.9.0/",
+    "$std/": "https://deno.land/std@0.150.0/",
+    "preact": "https://esm.sh/preact@10.11.0",
+    "preact/": "https://esm.sh/preact@10.11.0/",
 
     "@dom": "./utilities/test_dom.ts",
     "deno-dom": "https://deno.land/x/deno_dom@v0.1.32-alpha/deno-dom-wasm.ts",
