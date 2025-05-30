@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styles Framework Demo</title>
+
+    <link rel="stylesheet" href="../dist/civility.css">
+    <link rel="stylesheet" href="../dist/themes/default.css">
+
+    <style>
+      .demo-section {
+        margin-bottom: var(--s4);
+        padding: var(--s4);
+        border: 1px solid currentColor;
+        border-radius: var(--br-lg);
+      }
+
+      .demo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--s3);
+        margin: var(--s3) 0;
+      }
+
+      .color-showcase {
+        padding: var(--s3);
+        margin: var(--s3) 0;
+        border: 1px solid currentColor;
+        border-radius: var(--br-base);
+      }
+
+      .neutral-demo {
+        color: var(--secondary);
+      }
+
+      .blue-demo {
+        color: var(--primary);
+      }
+
+      .green-demo {
+        color: var(--success);
+      }
+
+      .red-demo {
+        color: var(--error);
+      }
+
+      .orange-demo {
+        color: var(--warning);
+      }
+
+      .info-demo {
+        color: var(--info);
+      }
+
+      .background-demo {
+        background-color: var(--background-dull);
+        padding: var(--s3);
+        border-radius: var(--br-base);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-to-main">Skip to main content</a>
+
+    <header>
+      <nav>
+        <div>
+          <strong>Styles Framework Demo</strong>
+        </div>
+        <ul>
+          <li><a href="#typography">Typography</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li>
+            <a href="#components">Components</a>
+            <ul>
+              <li><a href="#cards">Cards</a></li>
+              <li><a href="#badges">Badges</a></li>
+              <li><a href="#layout">Layout</a></li>
+            </ul>
+          </li>
+          <li><a href="#aria">ARIA</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <h1>Styles Framework Demonstration</h1>
+      <p>
+        This page demonstrates all features of the neutral-first, semantic
+        styles framework. Everything you see uses either semantic HTML or custom
+        elements with the <code>ui-</code> prefix.
+      </p>
+
+      <!-- Color Philosophy Demo -->
+      <section class="demo-section">
+        <h2>Neutral-First Color Philosophy</h2>
+        <p>
+          Civility uses <code>currentColor</code> for everything except
+          links, making it completely themeable by changing text color.
+        </p>
+
+        <div class="demo-grid">
+          <div class="color-showcase neutral-demo">
+            <h3>Neutral Theme</h3>
+            <p>Everything inherits this text color.</p>
+            <button>Button</button>
+            <ui-badge>Badge</ui-badge>
+            <ui-progress style="--progress-value: 60%"></ui-progress>
+          </div>
+
+          <div class="color-showcase blue-demo">
+            <h3>Blue Theme</h3>
+            <p>Simply changing text color themes everything.</p>
+            <button>Button</button>
+            <ui-badge>Badge</ui-badge>
+            <ui-progress style="--progress-value: 60%"></ui-progress>
+          </div>
+
+          <div class="color-showcase green-demo">
+            <h3>Green Theme</h3>
+            <p>No CSS changes needed, just the text color.</p>
+            <button>Button</button>
+            <ui-badge>Badge</ui-badge>
+            <ui-progress style="--progress-value: 60%"></ui-progress>
+          </div>
+        </div>
+      </section>
+
+      <!-- Typography -->
+      <section id="typography" class="demo-section">
+        <h2>Typography</h2>
+        <p>All typography uses semantic HTML with no classes required.</p>
+
+        <h1>Heading Level 1</h1>
+        <h2>Heading Level 2</h2>
+        <h3>Heading Level 3</h3>
+        <h4>Heading Level 4</h4>
+        <h5>Heading Level 5</h5>
+        <h6>Heading Level 6</h6>
+
+        <p>
+          This is a paragraph with <strong>bold text</strong>, <em>italic
+            text</em>, and <a href="#">a link</a>. Links are the only elements
+          with color by default.
+        </p>
+
+        <p>
+          Here's some <code>inline code</code> and a <kbd>keyboard
+            shortcut</kbd>.
+        </p>
+
+        <pre
+        >
+<code>// Code block
+function example() {
+    return "Hello, World!";
+}</code></pre>
+
+        <blockquote>
+          <p>
+            This is a blockquote. It demonstrates how semantic elements are
+            styled without any classes.
+          </p>
+        </blockquote>
+
+        <ul>
+          <li>Unordered list item 1</li>
+          <li>
+            Unordered list item 2
+            <ul>
+              <li>Nested item</li>
+              <li>Another nested item</li>
+            </ul>
+          </li>
+          <li>Unordered list item 3</li>
+        </ul>
+
+        <ol>
+          <li>Ordered list item 1</li>
+          <li>Ordered list item 2</li>
+          <li>Ordered list item 3</li>
+        </ol>
+      </section>
+
+      <!-- Forms -->
+      <section id="forms" class="demo-section">
+        <h2>Forms</h2>
+        <p>
+          All form elements are styled semantically with focus states and
+          accessibility features.
+        </p>
+
+        <form>
+          <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+            >
+
+            <label for="bio">Bio</label>
+            <textarea
+              id="bio"
+              rows="4"
+              placeholder="Tell us about yourself"
+            ></textarea>
+
+            <label for="country">Country</label>
+            <select id="country">
+              <option value="">Select a country</option>
+              <option value="us">United States</option>
+              <option value="uk">United Kingdom</option>
+              <option value="ca">Canada</option>
+            </select>
+          </fieldset>
+
+          <ui-button-group>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <button type="button" disabled>Disabled</button>
+          </ui-button-group>
+        </form>
+      </section>
+
+      <!-- Components -->
+      <section id="components" class="demo-section">
+        <h2>Custom Components</h2>
+        <p>
+          Framework components use custom elements with <code>ui-</code> prefix
+          for semantic clarity.
+        </p>
+
+        <!-- Cards -->
+        <div id="cards">
+          <h3>Cards</h3>
+          <ui-grid cols="3">
+            <ui-card>
+              <div style="padding: var(--s3)">
+                <h4>Basic Card</h4>
+                <p>This is a simple card with some content.</p>
+              </div>
+            </ui-card>
+
+            <ui-card clickable>
+              <div style="padding: var(--s3)">
+                <h4>Clickable Card</h4>
+                <p>This card has hover effects and cursor pointer.</p>
+              </div>
+            </ui-card>
+
+            <ui-card>
+              <div style="padding: var(--s3)">
+                <h4>Card with Components</h4>
+                <p>Cards can contain other framework components.</p>
+                <ui-badge variant="success">Success</ui-badge>
+              </div>
+            </ui-card>
+          </ui-grid>
+        </div>
+
+        <!-- Badges -->
+        <div id="badges">
+          <h3>Badges</h3>
+          <ui-stack direction="row" spacing="sm">
+            <ui-badge>Default</ui-badge>
+            <ui-badge variant="success">Success</ui-badge>
+            <ui-badge variant="warning">Warning</ui-badge>
+            <ui-badge variant="error">Error</ui-badge>
+            <ui-badge variant="info">Info</ui-badge>
+          </ui-stack>
+        </div>
+
+        <!-- Layout Components -->
+        <div id="layout">
+          <h3>Layout Components</h3>
+
+          <h4>Button Groups</h4>
+          <ui-button-group>
+            <button>Option 1</button>
+            <button>Option 2</button>
+            <button>Option 3</button>
+          </ui-button-group>
+
+          <h4>Attached Button Group</h4>
+          <ui-button-group attached>
+            <button>Left</button>
+            <button>Center</button>
+            <button>Right</button>
+          </ui-button-group>
+
+          <h4>Stack Layout</h4>
+          <ui-stack spacing="md">
+            <div style="padding: var(--s3); border: 1px solid currentColor; border-radius: var(--br-base)">
+              Item 1
+            </div>
+            <div style="padding: var(--s3); border: 1px solid currentColor; border-radius: var(--br-base)">
+              Item 2
+            </div>
+            <div style="padding: var(--s3); border: 1px solid currentColor; border-radius: var(--br-base)">
+              Item 3
+            </div>
+          </ui-stack>
+
+          <h4>Progress Indicators</h4>
+          <ui-stack spacing="md">
+            <div>
+              <label>Default Progress (75%)</label>
+              <ui-progress style="--progress-value: 75%"></ui-progress>
+            </div>
+            <div>
+              <label>Success Progress (90%)</label>
+              <ui-progress
+                variant="success"
+                style="--progress-value: 90%"
+              ></ui-progress>
+            </div>
+            <div>
+              <label>Warning Progress (45%)</label>
+              <ui-progress
+                variant="warning"
+                style="--progress-value: 45%"
+              ></ui-progress>
+            </div>
+          </ui-stack>
+        </div>
+
+        <!-- Alerts -->
+        <div>
+          <h3>Alerts</h3>
+          <ui-stack spacing="md">
+            <ui-alert variant="success">
+              <strong>Success!</strong> This is a success message.
+            </ui-alert>
+            <ui-alert variant="warning">
+              <strong>Warning:</strong> This is a warning message.
+            </ui-alert>
+            <ui-alert variant="error">
+              <strong>Error:</strong> This is an error message.
+            </ui-alert>
+            <ui-alert variant="info">
+              <strong>Info:</strong> This is an informational message.
+            </ui-alert>
+          </ui-stack>
+        </div>
+
+        <!-- Avatars and Spinners -->
+        <div>
+          <h3>Avatars & Loading</h3>
+          <ui-stack direction="row" spacing="lg">
+            <ui-avatar size="sm">JD</ui-avatar>
+            <ui-avatar>AB</ui-avatar>
+            <ui-avatar size="lg">XY</ui-avatar>
+            <ui-spinner size="sm"></ui-spinner>
+            <ui-spinner></ui-spinner>
+            <ui-spinner size="lg"></ui-spinner>
+          </ui-stack>
+        </div>
+      </section>
+
+      <!-- Tables -->
+      <section class="demo-section">
+        <h2>Tables</h2>
+        <p>
+          Tables are styled semantically with proper headers and accessibility
+          features.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe</td>
+              <td>Developer</td>
+              <td><ui-badge variant="success">Active</ui-badge></td>
+              <td>
+                <ui-button-group>
+                  <button>Edit</button>
+                  <button>Delete</button>
+                </ui-button-group>
+              </td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>Designer</td>
+              <td><ui-badge variant="warning">Pending</ui-badge></td>
+              <td>
+                <ui-button-group>
+                  <button>Edit</button>
+                  <button>Delete</button>
+                </ui-button-group>
+              </td>
+            </tr>
+            <tr>
+              <td>Bob Johnson</td>
+              <td>Manager</td>
+              <td><ui-badge variant="error">Inactive</ui-badge></td>
+              <td>
+                <ui-button-group>
+                  <button>Edit</button>
+                  <button>Delete</button>
+                </ui-button-group>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ARIA Support -->
+      <section id="aria" class="demo-section">
+        <h2>ARIA-Aware Components</h2>
+        <p>
+          Civility automatically styles ARIA patterns for accessibility.
+        </p>
+
+        <h3>Tab Interface</h3>
+        <div role="tablist" id="demo-tabs">
+          <button
+            role="tab"
+            aria-selected="true"
+            aria-controls="tab1"
+            onclick="showTab(event, 'tab1')"
+          >
+            Tab 1
+          </button>
+          <button
+            role="tab"
+            aria-selected="false"
+            aria-controls="tab2"
+            onclick="showTab(event, 'tab2')"
+          >
+            Tab 2
+          </button>
+          <button
+            role="tab"
+            aria-selected="false"
+            aria-controls="tab3"
+            onclick="showTab(event, 'tab3')"
+          >
+            Tab 3
+          </button>
+        </div>
+
+        <div role="tabpanel" id="tab1">
+          <h4>Tab 1 Content</h4>
+          <p>
+            This is the content for the first tab. Civility automatically
+            styles ARIA tab patterns.
+          </p>
+        </div>
+
+        <div role="tabpanel" id="tab2" hidden>
+          <h4>Tab 2 Content</h4>
+          <p>
+            This is the content for the second tab. Notice how the styling
+            adapts to ARIA states.
+          </p>
+        </div>
+
+        <div role="tabpanel" id="tab3" hidden>
+          <h4>Tab 3 Content</h4>
+          <p>
+            This is the content for the third tab. Everything uses semantic ARIA
+            patterns.
+          </p>
+        </div>
+
+        <h3>Details/Summary</h3>
+        <details>
+          <summary>Click to expand</summary>
+          <p>
+            This content is hidden by default and can be expanded using the
+            details/summary elements. Civility provides attractive styling
+            for these semantic HTML elements.
+          </p>
+          <ui-alert variant="info">
+            This alert is inside a collapsible section!
+          </ui-alert>
+        </details>
+      </section>
+
+      <!-- Responsive Demo -->
+      <section class="demo-section">
+        <h2>Responsive Design</h2>
+        <p>
+          Civility is mobile-first and responsive. Resize your browser to
+          see the layout adapt.
+        </p>
+
+        <ui-grid cols="4">
+          <ui-card>
+            <div style="padding: var(--s3)">
+              <h4>Card 1</h4>
+              <p>Responsive grid</p>
+            </div>
+          </ui-card>
+          <ui-card>
+            <div style="padding: var(--s3)">
+              <h4>Card 2</h4>
+              <p>Adapts to screen size</p>
+            </div>
+          </ui-card>
+          <ui-card>
+            <div style="padding: var(--s3)">
+              <h4>Card 3</h4>
+              <p>Mobile-first approach</p>
+            </div>
+          </ui-card>
+          <ui-card>
+            <div style="padding: var(--s3)">
+              <h4>Card 4</h4>
+              <p>Semantic and accessible</p>
+            </div>
+          </ui-card>
+        </ui-grid>
+      </section>
+
+      <ui-divider></ui-divider>
+
+      <section class="demo-section">
+        <h2>Framework Benefits</h2>
+        <ul>
+          <li>
+            <strong>Semantic HTML:</strong> Uses proper HTML elements and ARIA
+            patterns
+          </li>
+          <li>
+            <strong>Neutral-first:</strong> Everything adapts to text color for
+            complete theming
+          </li>
+          <li>
+            <strong>Accessible:</strong> Built with accessibility as a
+            first-class concern
+          </li>
+          <li>
+            <strong>Layered:</strong> Clear separation between normalization,
+            themes, base styles, and components
+          </li>
+          <li>
+            <strong>Custom Elements:</strong> Components use <code>ui-</code>
+            prefix for clarity
+          </li>
+          <li>
+            <strong>Minimal Classes:</strong> Relies on semantic HTML instead of
+            utility classes
+          </li>
+          <li>
+            <strong>Responsive:</strong> Mobile-first design that adapts to all
+            screen sizes
+          </li>
+          <li>
+            <strong>Performance:</strong> Lightweight CSS with minimal overhead
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2024 Styles Framework Demo. Built with semantic HTML and
+        accessibility in mind.
+      </p>
+    </footer>
+
+    <script>
+      function showTab(event, tabId) {
+        const panels = document.querySelectorAll('[role="tabpanel"]')
+        panels.forEach((panel) => panel.hidden = true)
+
+        const tabs = document.querySelectorAll('[role="tab"]')
+        tabs.forEach((tab) => tab.setAttribute('aria-selected', 'false'))
+
+        document.getElementById(tabId).hidden = false
+
+        event.target.setAttribute('aria-selected', 'true')
+      }
+    </script>
+  </body>
+</html>

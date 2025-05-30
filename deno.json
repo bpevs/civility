@@ -6,16 +6,12 @@
       "dom.iterable",
       "dom.asynciterable",
       "esnext"
-    ],
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact"
+    ]
   },
   "fmt": {
-    "options": {
-      "singleQuote": true,
-      "proseWrap": "preserve",
-      "semiColons": false
-    }
+    "singleQuote": true,
+    "proseWrap": "preserve",
+    "semiColons": false
   },
   "lint": {
     "files": {
@@ -23,16 +19,12 @@
     }
   },
   "tasks": {
-    "start": "(cd sandbox && deno run -A --watch=static/,routes/ dev.ts)"
+    "build": "deno run -A build.ts"
   },
   "imports": {
-    "civility": "./",
-    "$std/": "https://deno.land/std@0.138.0/",
-    "preact": "https://esm.sh/preact@10.9.0?dev",
-    "preact/": "https://esm.sh/preact@10.9.0/",
-
-    "@dom": "./utilities/test_dom.ts",
-    "deno-dom": "https://deno.land/x/deno_dom@v0.1.32-alpha/deno-dom-wasm.ts",
-    "@testing-library/preact": "https://esm.sh/@testing-library/preact@3.2.2/pure?dev"
+    "@std/fs": "jsr:@std/fs@^1.0.18",
+    "autoprefixer": "npm:autoprefixer@^10.4.21",
+    "postcss": "npm:postcss@^8.5.4",
+    "postcss-import": "npm:postcss-import@^16.1.0"
   }
 }

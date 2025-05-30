@@ -1,0 +1,316 @@
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* Width utilities */
+
+.w-100 {
+  width: 100%;
+}
+
+.mw6 {
+  max-width: var(--max-width-sm);
+}
+
+.measure {
+  max-width: 30em;
+}
+
+/* Spacing utilities */
+
+.pa0 {
+  padding: 0;
+}
+
+.pa1 {
+  padding: var(--s1);
+}
+
+.pa2 {
+  padding: var(--s2);
+}
+
+.pa3 {
+  padding: var(--s3);
+}
+
+.pa4 {
+  padding: var(--s4);
+}
+
+.ma0 {
+  margin: 0;
+}
+
+.ma1 {
+  margin: var(--s1);
+}
+
+.ma2 {
+  margin: var(--s2);
+}
+
+.ma3 {
+  margin: var(--s3);
+}
+
+.mh-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mv3 {
+  margin-top: var(--s3);
+  margin-bottom: var(--s3);
+}
+
+.mb2 {
+  margin-bottom: var(--s2);
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.mt3 {
+  margin-top: var(--s3);
+}
+
+.mt2 {
+  margin-top: var(--s2);
+}
+
+.mr3 {
+  margin-right: var(--s3);
+}
+
+.pr3 {
+  padding-right: var(--s3);
+}
+
+.pl2 {
+  padding-left: var(--s2);
+}
+
+.pt2 {
+  padding-top: var(--s2);
+}
+
+.pb4 {
+  padding-bottom: var(--s4);
+}
+
+.pb0 {
+  padding-bottom: 0;
+}
+
+.pb3 {
+  padding-bottom: var(--s3);
+}
+
+/* Typography utilities */
+
+.f3 {
+  font-size: var(--f3);
+}
+
+.f4 {
+  font-size: var(--f4);
+}
+
+.f5 {
+  font-size: var(--f5);
+}
+
+.f6 {
+  font-size: var(--f6);
+}
+
+.tc {
+  text-align: center;
+}
+
+.tr {
+  text-align: right;
+}
+
+.b {
+  font-weight: var(--fw-bold);
+}
+
+/* Border utilities */
+
+.br2 {
+  border-radius: var(--br2);
+}
+
+.ba {
+  border: 1px solid currentColor;
+}
+
+.b1 {
+  border-width: 1px;
+}
+
+.t-border {
+  border: 1px solid transparent;
+}
+
+.border {
+  border: 1px solid currentColor;
+}
+
+/* List utilities */
+
+.list {
+  list-style: none;
+}
+
+/* Interaction utilities */
+
+.pointer {
+  cursor: pointer;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Opacity utilities */
+
+.o-30 {
+  opacity: 0.3;
+}
+
+.o-40 {
+  opacity: 0.4;
+}
+
+.o-60 {
+  opacity: 0.6;
+}
+
+/* Text decoration */
+
+.underline {
+  text-decoration: underline;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* Display utilities */
+
+.db {
+  display: block;
+}
+
+/* Size utilities */
+
+.h2 {
+  height: 2rem;
+}
+
+.h3 {
+  height: 3rem;
+}
+
+/* Form utilities */
+
+.input {
+  border: 1px solid currentColor;
+  padding: var(--s2);
+  border-radius: var(--br2);
+}
+
+.input-reset {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+}
+
+/* Shadow utilities */
+
+.shadow {
+  box-shadow: var(--shadow-base);
+}
+
+/* Padding utilities */
+
+.pv2 {
+  padding-top: var(--s2);
+  padding-bottom: var(--s2);
+}
+
+.pv1 {
+  padding-top: var(--s1);
+  padding-bottom: var(--s1);
+}
+
+.ph2 {
+  padding-left: var(--s2);
+  padding-right: var(--s2);
+}
+
+/* Typography utilities - additional */
+
+.lh-copy {
+  line-height: var(--lh-copy);
+}
+
+.center {
+  text-align: center;
+}
+
+/* Flex utilities */
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* Framework compatibility and app-specific styles */
+
+.no-select {
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}

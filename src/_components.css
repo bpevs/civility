@@ -1,0 +1,385 @@
+/**
+ * Custom Components CSS
+ *
+ * Components are elements that HTML doesn't have a concept for.
+ * We define these as HTML custom components with `ui-` prefix.
+ *
+ * These components are aware of theme variables but base.css has no awareness of them.
+ */
+
+/* UI Card Component */
+ui-card {
+  display: block;
+  border: 1px solid currentColor;
+  border-radius: var(--br-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  overflow: hidden;
+}
+
+ui-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+ui-card[clickable] {
+  cursor: pointer;
+}
+
+ui-card[clickable]:active {
+  transform: translateY(0);
+}
+
+/* UI Badge Component */
+ui-badge {
+  display: inline-block;
+  padding: var(--s1) var(--s2);
+  font-size: var(--f7);
+  font-weight: var(--fw-medium);
+  border: 1px solid currentColor;
+  border-radius: var(--br-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+ui-badge[variant='success'] {
+  background-color: var(--success-dull);
+  color: var(--success);
+}
+
+ui-badge[variant='warning'] {
+  background-color: var(--warning-dull);
+  color: var(--warning);
+}
+
+ui-badge[variant='error'] {
+  background-color: var(--error-dull);
+  color: var(--error);
+}
+
+ui-badge[variant='info'] {
+  background-color: var(--info-dull);
+  color: var(--info);
+}
+
+/* UI Button Group */
+ui-button-group {
+  display: flex;
+  gap: var(--s2);
+  flex-wrap: wrap;
+}
+
+ui-button-group[orientation='vertical'] {
+  flex-direction: column;
+}
+
+ui-button-group[attached] {
+  gap: 0;
+}
+
+ui-button-group[attached]>button:not(:first-child),
+ui-button-group[attached]>input:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+}
+
+ui-button-group[attached]>button:not(:last-child),
+ui-button-group[attached]>input:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* UI Grid */
+ui-grid {
+  display: grid;
+  gap: var(--s3);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+ui-grid[cols='1'] {
+  grid-template-columns: 1fr;
+}
+
+ui-grid[cols='2'] {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+ui-grid[cols='3'] {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+ui-grid[cols='4'] {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+
+  ui-grid[cols='2'],
+  ui-grid[cols='3'],
+  ui-grid[cols='4'] {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* UI Stack */
+ui-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+}
+
+ui-stack[spacing='xs'] {
+  gap: var(--s1);
+}
+
+ui-stack[spacing='sm'] {
+  gap: var(--s2);
+}
+
+ui-stack[spacing='md'] {
+  gap: var(--s3);
+}
+
+ui-stack[spacing='lg'] {
+  gap: var(--s3);
+}
+
+ui-stack[spacing='xl'] {
+  gap: var(--s3);
+}
+
+ui-stack[direction='row'] {
+  flex-direction: row;
+  align-items: center;
+}
+
+/* UI Progress */
+ui-progress {
+  display: block;
+  width: 100%;
+  height: 8px;
+  border: 1px solid currentColor;
+  border-radius: var(--br-full);
+  overflow: hidden;
+}
+
+ui-progress::before {
+  content: '';
+  display: block;
+  height: 100%;
+  background-color: currentColor;
+  border-radius: var(--br-full);
+  width: var(--progress-value, 0%);
+  transition: width var(--transition-base);
+}
+
+ui-progress[variant='success']::before {
+  background-color: var(--success);
+}
+
+ui-progress[variant='warning']::before {
+  background-color: var(--warning);
+}
+
+ui-progress[variant='error']::before {
+  background-color: var(--error);
+}
+
+/* UI Alert */
+ui-alert {
+  display: block;
+  padding: var(--s3);
+  border-radius: var(--br-base);
+  border: 1px solid currentColor;
+}
+
+ui-alert[variant='success'] {
+  background-color: var(--success-dull);
+  border-color: var(--success);
+  color: var(--success);
+}
+
+ui-alert[variant='warning'] {
+  background-color: var(--warning-dull);
+  border-color: var(--warning);
+  color: var(--warning);
+}
+
+ui-alert[variant='error'] {
+  background-color: var(--error-dull);
+  border-color: var(--error);
+  color: var(--error);
+}
+
+ui-alert[variant='info'] {
+  background-color: var(--info-dull);
+  border-color: var(--info);
+  color: var(--info);
+}
+
+/* UI Divider */
+ui-divider {
+  display: block;
+  height: 1px;
+  border-top: 1px solid currentColor;
+  margin: var(--s4) 0;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+ui-divider[orientation='vertical'] {
+  width: 1px;
+  height: auto;
+  margin: 0 var(--s3);
+}
+
+/* UI Loading Spinner */
+ui-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  border-color: currentColor transparent currentColor transparent;
+  border-radius: 50%;
+  animation: ui-spin 1s linear infinite;
+}
+
+ui-spinner[size='sm'] {
+  width: 16px;
+  height: 16px;
+}
+
+ui-spinner[size='lg'] {
+  width: 32px;
+  height: 32px;
+  border-width: 3px;
+}
+
+@keyframes ui-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* UI Breadcrumb */
+ui-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  font-size: var(--f5);
+}
+
+ui-breadcrumb a {
+  color: var(--primary);
+  text-decoration: none;
+  padding: var(--s1) var(--s2);
+  border-radius: var(--br-sm);
+  transition: opacity var(--transition-base);
+}
+
+ui-breadcrumb a:hover {
+  opacity: 0.7;
+}
+
+ui-breadcrumb::before {
+  content: attr(separator);
+  opacity: 0.5;
+  margin: 0 var(--s1);
+}
+
+ui-breadcrumb:first-child::before {
+  display: none;
+}
+
+/* UI Avatar */
+ui-avatar {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--br-full);
+  border: 1px solid currentColor;
+  font-weight: var(--fw-medium);
+  text-align: center;
+  line-height: 40px;
+  font-size: var(--f5);
+  overflow: hidden;
+}
+
+ui-avatar[size='sm'] {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: var(--f7);
+}
+
+ui-avatar[size='lg'] {
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  font-size: var(--f4);
+}
+
+ui-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* UI Dropdown */
+ui-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+ui-dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  border: 1px solid currentColor;
+  border-radius: var(--br-base);
+  box-shadow: var(--shadow-lg);
+  min-width: 200px;
+  z-index: var(--z-dropdown);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all var(--transition-base);
+}
+
+ui-dropdown[open] ui-dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+ui-dropdown-item {
+  display: block;
+  padding: var(--s3);
+  text-decoration: none;
+  transition: opacity var(--transition-base);
+  cursor: pointer;
+}
+
+ui-dropdown-item:hover {
+  opacity: 0.7;
+}
+
+ui-dropdown-item[active] {
+  opacity: 1;
+  font-weight: var(--fw-medium);
+}
+
+@media (max-width: 768px) {
+  ui-dropdown-content {
+    left: auto;
+    right: 0;
+    min-width: 150px;
+  }
+}

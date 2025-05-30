@@ -1,0 +1,103 @@
+/* Forms */
+form {
+  margin: 0 0 var(--s4) 0;
+}
+
+fieldset {
+  border: 1px solid currentColor;
+  border-radius: var(--br-base);
+  padding: var(--s3);
+  margin: 0 0 var(--s3) 0;
+}
+
+legend {
+  font-weight: var(--fw-semibold);
+  padding: 0 var(--s2);
+  opacity: 1;
+}
+
+label {
+  display: block;
+  font-weight: var(--fw-medium);
+  margin-bottom: var(--s2);
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+input[type='search'],
+input[type='url'],
+input[type='tel'],
+textarea,
+select {
+  width: 100%;
+  padding: var(--s3);
+  border: 1px solid currentColor;
+  border-radius: var(--br-base);
+  font-size: var(--f5);
+  line-height: var(--lh-base);
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    opacity var(--transition-base);
+  margin-bottom: var(--s3);
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid currentColor;
+  /* box-shadow: 0 0 0 3px currentColor; */
+  outline-offset: 2px;
+  opacity: 1;
+}
+
+button,
+input[type='submit'],
+input[type='button'] {
+  display: inline-block;
+  padding: var(--s2) var(--s2);
+  background: none;
+  color: inherit;
+  border: 1px solid currentColor;
+  border-radius: var(--br-base);
+  font-size: var(--f5);
+  font-weight: var(--fw-medium);
+  cursor: pointer;
+  transition: opacity var(--transition-base), transform var(--transition-fast);
+  text-decoration: none;
+}
+
+button:hover,
+input[type='submit']:hover,
+input[type='button']:hover {
+  opacity: 0.7;
+  transform: translateY(-1px);
+}
+
+button:active,
+input[type='submit']:active,
+input[type='button']:active {
+  transform: translateY(0);
+}
+
+button:disabled,
+input[type='submit']:disabled,
+input[type='button']:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Links */
+a {
+  color: var(--primary);
+  text-decoration: underline;
+  transition: color var(--transition-base);
+}
+
+a:hover {
+  color: var(--primary-dull);
+}

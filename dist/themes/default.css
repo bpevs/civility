@@ -1,0 +1,164 @@
+/**
+ * Basic Theme Variables
+ * Defines foundational design tokens for the styles framework
+ */
+
+:root {
+  /* Typography */
+  --font-family-base:
+    system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  --font-family-mono:
+    ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+
+  /* FONT SIZE */
+  --f-headline: 6rem;
+  --f-subheadline: 5rem;
+  --f1: 3rem;
+  --f2: 2.25rem;
+  --f3: 1.5rem;
+  --f4: 1.25rem;
+  --f5: 1rem;
+  --f6: 0.875rem;
+  --f7: 0.75rem;
+
+  /* FONT WEIGHT */
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* LINE HEIGHT */
+  --lh-tight: 1.2;
+  --lh-base: 1.5;
+  --lh-relaxed: 1.7;
+
+  /* SPACING */
+  --s0: 0;
+  --s1: 0.25rem;
+  --s2: 0.5rem;
+  --s3: 1rem;
+  --s4: 2rem;
+  --s5: 3rem;
+
+  /* BORDER RADIUS */
+  --br-none: 0;
+  --br-sm: 0.25rem;
+  --br-base: 0.5rem;
+  --br-lg: 0.75rem;
+  --br-xl: 1rem;
+  --br-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-base:
+    0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-base: 0.2s ease-in-out;
+  --transition-slow: 0.3s ease-in-out;
+
+  /* Layout */
+  --max-width-sm: 640px;
+  --max-width-md: 768px;
+  --max-width-lg: 1024px;
+  --max-width-xl: 1280px;
+  --max-width-2xl: 1536px;
+
+  /* Z-index scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+
+  /* Grid and breakpoints */
+  --grid-columns: 12;
+  --container-padding: var(--s3);
+
+  /* Animation curves */
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Neutral colors */
+  --blackH: 0;
+  --blackS: 0%;
+  --blackL: 0%;
+
+  --grayH: 220;
+  --grayS: 14%;
+  --grayL: 41%;
+
+  --whiteH: 0;
+  --whiteS: 0%;
+  --whiteL: 100%;
+
+  /* Brand colors */
+  --blueH: 217;
+  --blueS: 91%;
+  --blueL: 60%;
+
+  --greenH: 142;
+  --greenS: 71%;
+  --greenL: 45%;
+
+  --yellowH: 45;
+  --yellowS: 93%;
+  --yellowL: 47%;
+
+  --orangeH: 25;
+  --orangeS: 95%;
+  --orangeL: 53%;
+
+  --redH: 0;
+  --redS: 84%;
+  --redL: 60%;
+
+  --purpleH: 262;
+  --purpleS: 83%;
+  --purpleL: 58%;
+
+  /* Semantic colors */
+  --errorH: var(--redH);
+  --errorS: var(--redS);
+  --errorL: var(--redL);
+
+  --warningH: var(--orangeH);
+  --warningS: var(--orangeS);
+  --warningL: var(--orangeL);
+
+  --infoH: var(--blueH);
+  --infoS: var(--blueS);
+  --infoL: var(--blueL);
+
+  --successH: var(--greenH);
+  --successS: var(--greenS);
+  --successL: var(--greenL);
+
+  /* Neutral application colors */
+  --backgroundH: var(--whiteH);
+  --backgroundS: var(--whiteS);
+  --backgroundL: var(--whiteL);
+
+  --bodyH: var(--blackH);
+  --bodyS: var(--blackS);
+  --bodyL: 13%;
+
+  --secondaryH: var(--grayH);
+  --secondaryS: var(--grayS);
+  --secondaryL: var(--grayL);
+
+  --primaryH: var(--blueH);
+  --primaryS: var(--blueS);
+  --primaryL: var(--blueL);
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color System Test</title>
+
+    <link rel="stylesheet" href="../dist/civility.css">
+    <link rel="stylesheet" href="../dist/themes/dark.css">
+
+    <style>
+      .color-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--s3);
+        margin: var(--s4) 0;
+      }
+
+      .color-card {
+        padding: var(--s3);
+        border: 1px solid currentColor;
+        border-radius: var(--br-base);
+        text-align: center;
+      }
+
+      .color-swatch {
+        width: 100%;
+        height: 60px;
+        border-radius: var(--br-sm);
+        margin-bottom: var(--s2);
+        border: 1px solid currentColor;
+      }
+
+      .primary-swatch {
+        background-color: var(--primary);
+      }
+      .secondary-swatch {
+        background-color: var(--secondary);
+      }
+      .success-swatch {
+        background-color: var(--success);
+      }
+      .warning-swatch {
+        background-color: var(--warning);
+      }
+      .error-swatch {
+        background-color: var(--error);
+      }
+      .info-swatch {
+        background-color: var(--info);
+      }
+      .background-swatch {
+        background-color: var(--background);
+        border: 2px solid var(--body);
+      }
+      .body-swatch {
+        background-color: var(--body);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#colors">Colors</a></li>
+          <li><a href="#components">Components</a></li>
+          <li><a href="#neutral">Neutral Design</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <h1>Color System Test</h1>
+        <p>
+          This page demonstrates the neutral-first color philosophy of the
+          framework.
+        </p>
+
+        <section id="colors">
+          <h2>Color Palette</h2>
+          <div class="color-grid">
+            <div class="color-card">
+              <div class="color-swatch primary-swatch"></div>
+              <strong>Primary</strong>
+              <p>var(--primary)</p>
+            </div>
+            <div class="color-card">
+              <div class="color-swatch secondary-swatch"></div>
+              <strong>Secondary</strong>
+              <p>var(--secondary)</p>
+            </div>
+            <div class="color-card">
+              <div class="color-swatch success-swatch"></div>
+              <strong>Success</strong>
+              <p>var(--success)</p>
+            </div>
+            <div class="color-card">
+              <div class="color-swatch warning-swatch"></div>
+              <strong>Warning</strong>
+              <p>var(--warning)</p>
+            </div>
+            <div class="color-card">
+              <div class="color-swatch error-swatch"></div>
+              <strong>Error</strong>
+              <p>var(--error)</p>
+            </div>
+            <div class="color-card">
+              <div class="color-swatch info-swatch"></div>
+              <strong>Info</strong>
+              <p>var(--info)</p>
+            </div>
+            <div class="color-card">
+              <div class="color-swatch background-swatch"></div>
+              <strong>Background</strong>
+              <p>var(--background)</p>
+            </div>
+            <div class="color-card">
+              <div class="color-swatch body-swatch"></div>
+              <strong>Body Text</strong>
+              <p>var(--body)</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="components">
+          <h2>Component Color Variants</h2>
+
+          <h3>Badges</h3>
+          <ui-stack direction="row" spacing="sm">
+            <ui-badge>Default Badge</ui-badge>
+            <ui-badge variant="success">Success</ui-badge>
+            <ui-badge variant="warning">Warning</ui-badge>
+            <ui-badge variant="error">Error</ui-badge>
+            <ui-badge variant="info">Info</ui-badge>
+          </ui-stack>
+
+          <h3>Alerts</h3>
+          <ui-alert>Default alert uses current text color</ui-alert>
+          <ui-alert variant="success"
+          >Success alert with green styling</ui-alert>
+          <ui-alert variant="warning"
+          >Warning alert with orange styling</ui-alert>
+          <ui-alert variant="error">Error alert with red styling</ui-alert>
+          <ui-alert variant="info">Info alert with blue styling</ui-alert>
+
+          <h3>Progress Bars</h3>
+          <ui-progress style="--progress-value: 60%"></ui-progress>
+          <ui-progress
+            variant="success"
+            style="--progress-value: 80%"
+          ></ui-progress>
+          <ui-progress
+            variant="warning"
+            style="--progress-value: 45%"
+          ></ui-progress>
+          <ui-progress
+            variant="error"
+            style="--progress-value: 25%"
+          ></ui-progress>
+        </section>
+
+        <section id="neutral">
+          <h2>Neutral Design Philosophy</h2>
+          <p>
+            Notice how most elements use neutral colors (currentColor, --body,
+            --background) by default:
+          </p>
+
+          <ui-card>
+            <h4>Card Component</h4>
+            <p>
+              Cards use borders with currentColor - completely neutral and
+              themeable.
+            </p>
+            <button>Button with currentColor border</button>
+          </ui-card>
+
+          <h3>Form Elements</h3>
+          <form>
+            <label for="test-input">Input Field</label>
+            <input
+              type="text"
+              id="test-input"
+              placeholder="Uses currentColor for borders"
+            >
+
+            <label for="test-select">Select</label>
+            <select id="test-select">
+              <option>Option 1</option>
+              <option>Option 2</option>
+            </select>
+
+            <button type="submit">Submit Button</button>
+          </form>
+
+          <h3>The Only Colored Element</h3>
+          <p>
+            Links are the only elements that have color by default: <a
+              href="#colors"
+            >This link uses --primary color</a>
+          </p>
+
+          <h3>Color is Opt-in</h3>
+          <p>
+            All other color comes from explicit variants or application-specific
+            styling. This ensures:
+          </p>
+          <ul>
+            <li>
+              Complete themeability - change --body and --background to theme
+              everything
+            </li>
+            <li>
+              Accessible contrast - always inherits proper contrast from text
+            </li>
+            <li>Predictable behavior - no surprise colors</li>
+            <li>
+              Easy customization - override text color for sections to theme
+              them
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <p>
+        Framework maintains neutral-first approach: color is always intentional,
+        never accidental.
+      </p>
+    </footer>
+  </body>
+</html>

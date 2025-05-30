@@ -1,0 +1,46 @@
+:root {
+  --black: hsl(var(--blackH), var(--blackS), var(--blackL));
+  --gray: hsl(var(--grayH), var(--grayS), var(--grayL));
+  --white: hsl(var(--whiteH), var(--whiteS), var(--whiteL));
+  --blue: hsl(var(--blueH), var(--blueS), var(--blueL));
+  --green: hsl(var(--greenH), var(--greenS), var(--greenL));
+  --yellow: hsl(var(--yellowH), var(--yellowS), var(--yellowL));
+  --orange: hsl(var(--orangeH), var(--orangeS), var(--orangeL));
+  --red: hsl(var(--redH), var(--redS), var(--redL));
+  --pink: hsl(var(--pinkH), var(--pinkS), var(--pinkL));
+  --purple: hsl(var(--purpleH), var(--purpleS), var(--purpleL));
+
+  --error: hsl(var(--errorH), var(--errorS), var(--errorL));
+  --error-dull: hsl(var(--errorH), var(--errorS), var(--errorL), 0.2);
+
+  --warning: hsl(var(--warningH), var(--warningS), var(--warningL));
+  --warning-dull: hsl(var(--warningH), var(--warningS), var(--warningL), 0.2);
+
+  --info: hsl(var(--infoH), var(--infoS), var(--infoL));
+  --info-dull: hsl(var(--infoH), var(--infoS), var(--infoL), 0.2);
+
+  --success: hsl(var(--successH), var(--successS), var(--successL));
+  --success-dull: hsl(var(--successH), var(--successS), var(--successL), 0.2);
+
+  --background: hsl(var(--backgroundH), var(--backgroundS), var(--backgroundL));
+  --background-dull: hsl(
+    var(--backgroundH),
+    var(--backgroundS),
+    var(--backgroundL),
+    0.2
+  );
+
+  --body: hsl(var(--bodyH), var(--bodyS), var(--bodyL));
+  --body-dull: hsl(var(--bodyH), var(--bodyS), var(--bodyL), 0.2);
+
+  --secondary: hsl(var(--secondaryH), var(--secondaryS), var(--secondaryL));
+  --secondary-dull: hsl(
+    var(--secondaryH),
+    var(--secondaryS),
+    var(--secondaryL),
+    0.2
+  );
+
+  --primary: hsl(var(--primaryH), var(--primaryS), var(--primaryL));
+  --primary-dull: hsl(var(--primaryH), var(--primaryS), var(--primaryL), 0.2);
+}
