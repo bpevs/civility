@@ -31,7 +31,6 @@ input[type='url'],
 input[type='tel'],
 textarea,
 select {
-  width: 100%;
   padding: var(--s3);
   border: 1px solid currentColor;
   border-radius: var(--br-base);
@@ -73,7 +72,7 @@ input[type='button'] {
 button:hover,
 input[type='submit']:hover,
 input[type='button']:hover {
-  opacity: 0.7;
+  opacity: 0.8;
   transform: translateY(-1px);
 }
 
@@ -89,15 +88,4 @@ input[type='button']:disabled {
   opacity: 0.3;
   cursor: not-allowed;
   transform: none;
-}
-
-/* Links */
-a {
-  color: var(--primary);
-  text-decoration: underline;
-  transition: color var(--transition-base);
-}
-
-a:hover {
-  color: var(--primary-dull);
 }

@@ -52,6 +52,37 @@
   max-width: 30em;
 }
 
+/* Container utilities */
+
+.container-sm {
+  max-width: var(--max-width-sm);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.container-md {
+  max-width: var(--max-width-md);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.container-lg {
+  max-width: var(--max-width-lg);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.container-xl {
+  max-width: var(--max-width-xl);
+  margin: 0 auto;  
+  padding: 0 var(--container-padding);
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 var(--container-padding);
+}
+
 /* Spacing utilities */
 
 .pa0 {
@@ -313,4 +344,51 @@
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+
+/* Position utilities */
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute-center {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Overflow utilities */
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Z-index utilities */
+
+.z-dropdown {
+  z-index: var(--z-dropdown);
+}
+
+.z-modal {
+  z-index: var(--z-modal);
+}
+
+.z-tooltip {
+  z-index: var(--z-tooltip);
 }

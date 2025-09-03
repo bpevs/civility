@@ -25,8 +25,8 @@ body {
 /* Layout landmarks */
 main {
   flex: 1;
-  padding: 0;
-  max-width: var(--max-width-xl);
+  padding: var(--main-padding, 0);
+  max-width: var(--main-max-width, var(--max-width-xl));
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
@@ -34,7 +34,7 @@ main {
 
 footer {
   flex-shrink: 0;
-  padding: var(--s3) var(--container-padding);
+  padding: var(--footer-padding, var(--s3) var(--container-padding));
   border-top: 1px solid currentColor;
   margin-top: auto;
 }

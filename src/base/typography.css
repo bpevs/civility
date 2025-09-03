@@ -34,6 +34,13 @@ h6 {
   font-size: var(--f6);
 }
 
+/* Links */
+a {
+  color: var(--primary);
+  text-decoration: underline;
+  transition: color var(--transition-base);
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: var(--f3);
