@@ -1,4 +1,9 @@
 {
+  "name": "@bpev/civility",
+  "exports": {
+    ".": "/dist/",
+    "./pwa": "./scripts/cli.ts"
+  },
   "compilerOptions": {
     "lib": [
       "deno.ns",
@@ -22,8 +27,11 @@
     "build": "deno run -A build.ts"
   },
   "imports": {
-    "@std/fs": "jsr:@std/fs@^1.0.18",
+    "@luca/esbuild-deno-loader": "jsr:@luca/esbuild-deno-loader@^0.11.1",
+    "@std/fs": "jsr:@std/fs@^1.0.19",
+    "@std/path": "jsr:@std/path@^1.1.2",
     "autoprefixer": "npm:autoprefixer@^10.4.21",
+    "esbuild": "npm:esbuild@^0.25.10",
     "postcss": "npm:postcss@^8.5.4",
     "postcss-import": "npm:postcss-import@^16.1.0"
   }

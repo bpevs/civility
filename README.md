@@ -1,8 +1,8 @@
 # Civility 🎩
 
-### Unopinionated Styles for Semantic Websites
+### Unopinionated Styles and Utilities for Semantic Webapps
 
-Civility is a set of CSS and JS tools meant for building websites in a very structured way. We provide:
+Civility is a set of CSS and JS tools meant for building webapps in a very structured way. We provide:
 
 ### A Classless Baselayer
 
