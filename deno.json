@@ -1,8 +1,7 @@
 {
   "name": "@bpev/civility",
   "exports": {
-    ".": "/dist/",
-    "./pwa": "./scripts/cli.ts"
+    "./cli": "./scripts/cli.ts"
   },
   "compilerOptions": {
     "lib": [
@@ -19,9 +18,7 @@
     "semiColons": false
   },
   "lint": {
-    "files": {
-      "exclude": ["dist"]
-    }
+    "exclude": ["dist"]
   },
   "tasks": {
     "build": "deno run -A build.ts"

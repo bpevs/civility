@@ -1,8 +1,8 @@
 #!/usr/bin/env -S deno run -A
-import { denoPlugins } from 'jsr:@luca/esbuild-deno-loader'
-import { ensureDir } from 'jsr:@std/fs'
-import { join, resolve } from 'jsr:@std/path'
-import * as esbuild from 'npm:esbuild'
+import { denoPlugins } from '@luca/esbuild-deno-loader'
+import { ensureDir } from '@std/fs'
+import { join, resolve } from '@std/path'
+import * as esbuild from 'esbuild'
 
 await ensureDir('./dist')
 
@@ -58,7 +58,10 @@ if (Deno.args[0] === 'build') {
     const { code, stderr } = await cmd.output()
 
     if (code !== 0) {
-      console.error(`Failed to create ${output}:`, new TextDecoder().decode(stderr))
+      console.error(
+        `Failed to create ${output}:`,
+        new TextDecoder().decode(stderr),
+      )
       Deno.exit(1)
     }
 
@@ -69,7 +72,8 @@ if (Deno.args[0] === 'build') {
   const icoCmd = new Deno.Command('magick', {
     args: [
       sourceIcon,
-      '-define', 'icon:auto-resize=256,128,64,48,32,16',
+      '-define',
+      'icon:auto-resize=256,128,64,48,32,16',
       icoPath,
     ],
   })
@@ -77,7 +81,10 @@ if (Deno.args[0] === 'build') {
   const { code: icoCode, stderr: icoStderr } = await icoCmd.output()
 
   if (icoCode !== 0) {
-    console.error('Failed to create icon.ico:', new TextDecoder().decode(icoStderr))
+    console.error(
+      'Failed to create icon.ico:',
+      new TextDecoder().decode(icoStderr),
+    )
     Deno.exit(1)
   }
 

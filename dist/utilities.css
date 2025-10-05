@@ -74,7 +74,7 @@
 
 .container-xl {
   max-width: var(--max-width-xl);
-  margin: 0 auto;  
+  margin: 0 auto;
   padding: 0 var(--container-padding);
 }
 
@@ -293,8 +293,8 @@
 
 .input-reset {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background: transparent;
 }
 
@@ -342,8 +342,8 @@
 .no-select {
   cursor: default;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 /* Position utilities */

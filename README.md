@@ -154,7 +154,6 @@ Custom components using HTML custom elements with `ui-` prefix. These components
   <button>Button 1</button>
   <button>Button 2</button>
 </ui-button-group>
-
 ```
 
 ### Component Features

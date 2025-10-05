@@ -97,8 +97,8 @@
       <section class="demo-section">
         <h2>Neutral-First Color Philosophy</h2>
         <p>
-          Civility uses <code>currentColor</code> for everything except
-          links, making it completely themeable by changing text color.
+          Civility uses <code>currentColor</code> for everything except links,
+          making it completely themeable by changing text color.
         </p>
 
         <div class="demo-grid">
@@ -151,8 +151,7 @@
             shortcut</kbd>.
         </p>
 
-        <pre
-        >
+        <pre>
 <code>// Code block
 function example() {
     return "Hello, World!";
@@ -301,13 +300,19 @@ function example() {
 
           <h4>Stack Layout</h4>
           <ui-stack spacing="md">
-            <div style="padding: var(--s3); border: 1px solid currentColor; border-radius: var(--br-base)">
+            <div
+              style="padding: var(--s3); border: 1px solid currentColor; border-radius: var(--br-base)"
+            >
               Item 1
             </div>
-            <div style="padding: var(--s3); border: 1px solid currentColor; border-radius: var(--br-base)">
+            <div
+              style="padding: var(--s3); border: 1px solid currentColor; border-radius: var(--br-base)"
+            >
               Item 2
             </div>
-            <div style="padding: var(--s3); border: 1px solid currentColor; border-radius: var(--br-base)">
+            <div
+              style="padding: var(--s3); border: 1px solid currentColor; border-radius: var(--br-base)"
+            >
               Item 3
             </div>
           </ui-stack>
@@ -461,8 +466,8 @@ function example() {
         <div role="tabpanel" id="tab1">
           <h4>Tab 1 Content</h4>
           <p>
-            This is the content for the first tab. Civility automatically
-            styles ARIA tab patterns.
+            This is the content for the first tab. Civility automatically styles
+            ARIA tab patterns.
           </p>
         </div>
 
@@ -487,8 +492,8 @@ function example() {
           <summary>Click to expand</summary>
           <p>
             This content is hidden by default and can be expanded using the
-            details/summary elements. Civility provides attractive styling
-            for these semantic HTML elements.
+            details/summary elements. Civility provides attractive styling for
+            these semantic HTML elements.
           </p>
           <ui-alert variant="info">
             This alert is inside a collapsible section!
@@ -500,8 +505,8 @@ function example() {
       <section class="demo-section">
         <h2>Responsive Design</h2>
         <p>
-          Civility is mobile-first and responsive. Resize your browser to
-          see the layout adapt.
+          Civility is mobile-first and responsive. Resize your browser to see
+          the layout adapt.
         </p>
 
         <ui-grid cols="4">
@@ -585,7 +590,9 @@ function example() {
         panels.forEach((panel) => panel.hidden = true)
 
         const tabs = document.querySelectorAll('[role="tab"]')
-        tabs.forEach((tab) => tab.setAttribute('aria-selected', 'false'))
+        tabs.forEach((tab) =>
+          tab.setAttribute('aria-selected', 'false')
+        )
 
         document.getElementById(tabId).hidden = false
 
