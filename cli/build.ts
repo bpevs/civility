@@ -1,10 +1,9 @@
-import { denoPlugins } from 'jsr:@luca/esbuild-deno-loader@^0.11.1'
-import { resolve } from 'jsr:@std/path@^1.1.2'
-import * as esbuild from 'npm:esbuild@^0.25.10'
+import { colors, denoPlugins, esbuild, resolve } from './deps.ts'
+import { logError, logInfo, logSuccess, logWarning } from './ui.ts'
 
 export interface BuildConfig {
   configPath: string
-  config: any
+  config: Record<string, unknown>
   buildOptions: esbuild.BuildOptions
 }
 
@@ -33,15 +32,65 @@ globalThis.__APP_VERSION__ = "${config.version}";`,
 export async function buildOnce(
   buildOptions: esbuild.BuildOptions,
 ): Promise<void> {
-  await esbuild.build(buildOptions)
-  esbuild.stop()
+  try {
+    const start = performance.now()
+    await esbuild.build(buildOptions)
+    const duration = Math.round(performance.now() - start)
+
+    logSuccess(`Build completed in ${colors.bold(duration + 'ms')}`)
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error)
+    logError(`Build failed:\n${message}`)
+    throw error
+  } finally {
+    esbuild.stop()
+  }
 }
 
 export async function buildWatch(
   buildOptions: esbuild.BuildOptions,
 ): Promise<esbuild.BuildContext> {
-  const ctx = await esbuild.context(buildOptions)
-  await ctx.watch()
-  console.log('esbuild watching for changes...')
-  return ctx
+  try {
+    const buildWithCallback: esbuild.BuildOptions = {
+      ...buildOptions,
+      plugins: [
+        ...(buildOptions.plugins || []),
+        {
+          name: 'build-feedback',
+          setup(build: esbuild.PluginBuild) {
+            let isFirstBuild = true
+            build.onStart(() => {
+              if (!isFirstBuild) logInfo('Rebuilding...')
+            })
+            build.onEnd(({ errors, warnings }: esbuild.BuildResult) => {
+              if (errors.length > 0) {
+                logError(`Build failed with ${errors.length} error(s)`)
+              } else if (warnings.length > 0) {
+                logWarning(`Build completed with ${warnings.length} warning(s)`)
+              } else {
+                logSuccess(
+                  isFirstBuild
+                    ? 'Initial build completed'
+                    : 'Rebuild completed',
+                )
+              }
+
+              if (isFirstBuild) {
+                isFirstBuild = false
+                logInfo('Watching for changes...')
+              }
+            })
+          },
+        },
+      ],
+    }
+
+    const ctx = await esbuild.context(buildWithCallback)
+    await ctx.watch()
+    return ctx
+  } catch (error) {
+    const msg = error instanceof Error ? error.message : String(error)
+    logError(`Watch setup failed:\n${msg}`)
+    throw error
+  }
 }
