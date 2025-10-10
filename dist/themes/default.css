@@ -22,6 +22,21 @@
   --f6: 0.875rem;
   --f7: 0.75rem;
 
+  /* SPACING */
+  --s0: 0;
+  --s1: 0.25rem;
+  --s2: 0.5rem;
+  --s3: 1rem;
+  --s4: 2rem;
+  --s5: 3rem;
+
+  /* Layout */
+  --max-width-sm: 640px;
+  --max-width-md: 768px;
+  --max-width-lg: 1024px;
+  --max-width-xl: 1280px;
+  --max-width-2xl: 1536px;
+
   /* FONT WEIGHT */
   --fw-normal: 400;
   --fw-medium: 500;
@@ -32,14 +47,6 @@
   --lh-tight: 1.2;
   --lh-base: 1.5;
   --lh-relaxed: 1.7;
-
-  /* SPACING */
-  --s0: 0;
-  --s1: 0.25rem;
-  --s2: 0.5rem;
-  --s3: 1rem;
-  --s4: 2rem;
-  --s5: 3rem;
 
   /* BORDER RADIUS */
   --br-none: 0;
@@ -64,13 +71,6 @@
   --transition-fast: 0.15s ease-in-out;
   --transition-base: 0.2s ease-in-out;
   --transition-slow: 0.3s ease-in-out;
-
-  /* Layout */
-  --max-width-sm: 640px;
-  --max-width-md: 768px;
-  --max-width-lg: 1024px;
-  --max-width-xl: 1280px;
-  --max-width-2xl: 1536px;
 
   /* Z-index scale */
   --z-dropdown: 1000;
