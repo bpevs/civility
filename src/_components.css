@@ -382,3 +382,148 @@ ui-dropdown-item[active] {
     min-width: 150px;
   }
 }
+
+/* UI Navbar (Bottom Navigation) */
+ui-navbar {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-fixed, 1030);
+}
+
+ui-navbar[hidden] {
+  display: none;
+}
+
+ui-navbar nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: var(--ui-navbar-height, 56px);
+  background: var(--ui-navbar-bg, var(--background));
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+}
+
+ui-navbar ul {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ui-navbar li {
+  flex: 1;
+  margin: 0;
+}
+
+ui-navbar a,
+ui-navbar button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  color: currentColor;
+  cursor: pointer;
+  padding: var(--s1) var(--s2);
+  transition: background var(--transition-fast), color var(--transition-fast);
+  text-decoration: none;
+}
+
+ui-navbar a:hover,
+ui-navbar button:hover,
+ui-navbar a:active,
+ui-navbar button:active,
+ui-navbar a.active,
+ui-navbar button.active {
+  opacity: 0.6;
+}
+
+ui-navbar ui-icon {
+  pointer-events: none;
+}
+
+/* UI Topbar (Top Navigation/Header) */
+ui-topbar {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-fixed, 1030);
+}
+
+ui-topbar[hidden] {
+  display: none;
+}
+
+ui-topbar header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--ui-topbar-height, 56px);
+  background: var(--ui-topbar-bg, var(--background));
+  padding: 0 var(--s3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+ui-topbar .back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  color: currentColor;
+  cursor: pointer;
+  padding: 0;
+  margin-right: var(--s2);
+  transition: opacity var(--transition-fast);
+  position: absolute;
+}
+
+ui-topbar .back-button:hover,
+ui-topbar .back-button:active {
+  opacity: 0.6;
+}
+
+ui-topbar h1 {
+  flex: 1;
+  text-align: center;
+  font-size: var(--fs-4);
+  font-weight: var(--fw-semibold);
+  margin: 0;
+  padding: 0;
+}
+
+ui-topbar .topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+}
+
+ui-topbar .menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  color: currentColor;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity var(--transition-fast);
+}
+
+ui-topbar .menu-button:hover,
+ui-topbar .menu-button:active {
+  opacity: 0.6;
+}

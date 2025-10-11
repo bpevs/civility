@@ -1,6 +1,6 @@
 # Civility 🎩
 
-### Unopinionated Styles and Utilities for Semantic Webapps
+### Styles and Utilities for Semantic Webapps
 
 Civility is a set of CSS and JS tools meant for building webapps in a very structured way. We provide:
 
@@ -17,6 +17,10 @@ We provide a system for defining themes and colors. The majority of styles can b
 ### Custom Elements
 
 For some concepts that don't exist in HTML, we provide custom elements under the `ui-` namespace, such as `ui-tag`, `ui-card`, and `ui-grid`.
+
+### CLI for structured webapps
+
+Assumes specific file structure, but if you're using it, we can automate things like building icons and ts files. There is not interdependence on custom elements or on css files.
 
 # Getting Started
 

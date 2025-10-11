@@ -1,6 +1,7 @@
 {
   "name": "@bpev/civility",
   "exports": {
+    ".": "./src/mod.ts",
     "./cli": "./scripts/cli.ts"
   },
   "compilerOptions": {
@@ -32,6 +33,7 @@
     "@std/path": "jsr:@std/path@^1.1.2",
     "autoprefixer": "npm:autoprefixer@^10.4.21",
     "esbuild": "npm:esbuild@^0.25.10",
+    "lit": "npm:lit@^3.3.1",
     "postcss": "npm:postcss@^8.5.4",
     "postcss-import": "npm:postcss-import@^16.1.0"
   }
