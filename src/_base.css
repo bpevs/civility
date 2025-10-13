@@ -162,7 +162,7 @@ details[open] summary {
   border-radius: var(--br-base) var(--br-base) 0 0;
 }
 
-details > *:not(summary):not(ul) {
+details>*:not(summary):not(ul) {
   padding: var(--s2);
 }
 

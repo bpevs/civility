@@ -53,77 +53,69 @@ export class Transport extends LitElement {
     const { state, callbacks } = this
 
     return html`
-      <div class="transport-controls">
-        <button
-          class="transport-btn"
-          ?disabled="${!state.hasPrevSet}"
-          @click="${callbacks.prevSet}"
-          aria-label="Previous Set"
-        >
-          <ui-icon
-            name="skip-back"
-            text="SET"
-            display="both"
-            style="font-size: 24px;"
-          ></ui-icon>
-        </button>
+      <button
+        ?disabled="${!state.hasPrevSet}"
+        @click="${callbacks.prevSet}"
+        aria-label="Previous Set"
+      >
+        <ui-icon
+          name="skip-back"
+          text="SET"
+          display="both"
+          style="font-size: 24px;"
+        ></ui-icon>
+      </button>
 
-        <button
-          class="transport-btn"
-          ?disabled="${!state.hasPrevRep}"
-          @click="${callbacks.prevRep}"
-          aria-label="Previous Rep"
-        >
-          <ui-icon
-            name="rewind"
-            text="REP"
-            display="both"
-            style="font-size: 24px;"
-          ></ui-icon>
-        </button>
+      <button
+        ?disabled="${!state.hasPrevRep}"
+        @click="${callbacks.prevRep}"
+        aria-label="Previous Rep"
+      >
+        <ui-icon
+          name="rewind"
+          text="REP"
+          display="both"
+          style="font-size: 24px;"
+        ></ui-icon>
+      </button>
 
-        <button
-          class="transport-btn play-btn"
-          @click="${callbacks.toggleStart}"
-          ?disabled="${!state.hasTimer || state.isComplete}"
-          aria-label="${(state.isPaused || !state.isRunning)
-            ? 'Play'
-            : 'Pause'}"
-        >
-          <ui-icon
-            name="${(state.isPaused || !state.isRunning) ? 'play' : 'pause'}"
-            style="font-size: 24px;"
-          ></ui-icon>
-        </button>
+      <button
+        class="play-btn"
+        @click="${callbacks.toggleStart}"
+        ?disabled="${!state.hasTimer || state.isComplete}"
+        aria-label="${(state.isPaused || !state.isRunning) ? 'Play' : 'Pause'}"
+      >
+        <ui-icon
+          name="${(state.isPaused || !state.isRunning) ? 'play' : 'pause'}"
+          style="font-size: 24px;"
+        ></ui-icon>
+      </button>
 
-        <button
-          class="transport-btn"
-          ?disabled="${!state.hasNextRep}"
-          @click="${callbacks.nextRep}"
-          aria-label="Next Rep"
-        >
-          <ui-icon
-            name="fast-forward"
-            text="REP"
-            display="both"
-            style="font-size: 24px;"
-          ></ui-icon>
-        </button>
+      <button
+        ?disabled="${!state.hasNextRep}"
+        @click="${callbacks.nextRep}"
+        aria-label="Next Rep"
+      >
+        <ui-icon
+          name="fast-forward"
+          text="REP"
+          display="both"
+          style="font-size: 24px;"
+        ></ui-icon>
+      </button>
 
-        <button
-          class="transport-btn"
-          ?disabled="${!state.hasNextSet}"
-          @click="${callbacks.nextSet}"
-          aria-label="Next Set"
-        >
-          <ui-icon
-            name="skip-forward"
-            text="SET"
-            display="both"
-            style="font-size: 24px;"
-          ></ui-icon>
-        </button>
-      </div>
+      <button
+        ?disabled="${!state.hasNextSet}"
+        @click="${callbacks.nextSet}"
+        aria-label="Next Set"
+      >
+        <ui-icon
+          name="skip-forward"
+          text="SET"
+          display="both"
+          style="font-size: 24px;"
+        ></ui-icon>
+      </button>
     `
   }
 }
