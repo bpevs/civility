@@ -1,5 +1,6 @@
 {
   "name": "@bpev/civility",
+  "version": "0.0.1",
   "exports": {
     ".": "./src/mod.ts",
     "./cli": "./cli/main.ts"

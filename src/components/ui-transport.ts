@@ -123,9 +123,3 @@ export class Transport extends LitElement {
 if (!customElements.get('ui-transport')) {
   customElements.define('ui-transport', Transport)
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'transport': Transport
-  }
-}

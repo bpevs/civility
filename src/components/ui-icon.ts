@@ -156,9 +156,3 @@ export class UiIcon extends LitElement {
 if (!customElements.get('ui-icon')) {
   customElements.define('ui-icon', UiIcon)
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'ui-icon': UiIcon
-  }
-}

@@ -1231,6 +1231,7 @@ ui-topbar .back-button {
   padding: 0;
   margin-right: var(--s2);
   transition: opacity var(--transition-fast);
+  position: absolute;
 }
 
 ui-topbar .back-button:hover,

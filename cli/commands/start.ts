@@ -97,7 +97,11 @@ export const Start = new Command()
           logError(`No fallback available for ${path}`)
           return new Response('Not Found', { status: 404 })
         } catch (error) {
-          logError(`Server error for ${path}: ${error.message}`)
+          logError(
+            `Server error for ${path}: ${
+              error instanceof Error ? error.message : String(error)
+            }`,
+          )
           return new Response('Internal Server Error', { status: 500 })
         }
       }
