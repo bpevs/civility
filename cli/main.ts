@@ -1,5 +1,6 @@
 #!/usr/bin/env -S deno run -A
-import { Command, ensureDir } from './deps.ts'
+import { Command } from '@cliffy/command'
+import { ensureDir } from '@std/fs'
 import { buildOnce, buildWatch, createBuildConfig } from './build.ts'
 import { logError, logInfo, logSuccess, theme } from './ui.ts'
 import { Icons } from './commands/icons.ts'

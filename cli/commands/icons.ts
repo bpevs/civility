@@ -1,5 +1,6 @@
-import { Command, ensureDir, join } from '../deps.ts'
-
+import { Command } from '@cliffy/command'
+import { ensureDir } from '@std/fs'
+import { join } from '@std/path'
 import { formatFileSize, logError, logInfo, logSuccess, theme } from '../ui.ts'
 
 export const Icons = new Command()

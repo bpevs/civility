@@ -1,4 +1,8 @@
-import { colors, Command, esbuild, exists, serveDir } from '../deps.ts'
+import { colors } from '@cliffy/ansi/colors'
+import { Command } from '@cliffy/command'
+import { exists } from '@std/fs'
+import { serveDir } from '@std/http/file-server'
+import esbuild from 'esbuild'
 import { buildWatch, createBuildConfig } from '../build.ts'
 import {
   formatDuration,

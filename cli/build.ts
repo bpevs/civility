@@ -1,4 +1,7 @@
-import { colors, denoPlugins, esbuild, resolve } from './deps.ts'
+import { colors } from '@cliffy/ansi/colors'
+import { denoPlugins } from '@luca/esbuild-deno-loader'
+import { resolve } from '@std/path'
+import esbuild from 'esbuild'
 import { logError, logInfo, logSuccess, logWarning } from './ui.ts'
 
 export interface BuildConfig {

@@ -1,4 +1,4 @@
-import { colors } from './deps.ts'
+import { colors } from '@cliffy/ansi/colors'
 
 export const icons = {
   success: '✓',
