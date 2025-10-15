@@ -4,6 +4,7 @@ import { exists } from '@std/fs'
 import { serveDir } from '@std/http/file-server'
 import esbuild from 'esbuild'
 import { buildWatch, createBuildConfig } from '../build.ts'
+import { loadConfig, resolvePaths } from '../config.ts'
 import {
   formatDuration,
   logError,
@@ -21,13 +22,32 @@ export const Start = new Command()
   .description('Start development server with esbuild watch')
   .option('-p, --port <port:number>', 'Port to serve on', { default: 8000 })
   .option('--prod', 'Enable production mode (caching enabled)')
+  .option('-r, --root <root>', 'Root directory to serve from')
+  .option('--outdir <outdir>', 'Build output directory')
   .action(async (options) => {
     const { port, prod } = options
     const startTime = Date.now()
     const requestCount = { value: 0 }
 
     try {
-      const { buildOptions } = await createBuildConfig()
+      // Load configuration with CLI option overrides
+      let config = await loadConfig()
+
+      // Apply CLI option overrides
+      if (options.root) {
+        config = { ...config, root: options.root }
+      }
+      if (options.outdir) {
+        config = { ...config, outdir: options.outdir }
+      }
+
+      // Resolve all paths
+      const resolvedConfig = resolvePaths(config)
+
+      logInfo(`Serving from: ${theme.bold(resolvedConfig.root)}`)
+      logInfo(`Build output: ${theme.bold(resolvedConfig.outdir)}`)
+
+      const { buildOptions } = await createBuildConfig(resolvedConfig)
       const ctx = await buildWatch(buildOptions)
 
       const handler = async (request: Request): Promise<Response> => {
@@ -46,7 +66,10 @@ export const Start = new Command()
         }
 
         try {
-          const response = await serveDir(request, { quiet: true })
+          const response = await serveDir(request, {
+            quiet: true,
+            fsRoot: resolvedConfig.root,
+          })
 
           if (response.status === 200) {
             const headers = new Headers(response.headers)
@@ -65,11 +88,13 @@ export const Start = new Command()
             })
           }
 
-          const has404 = await exists('./404.html')
-          const hasIndex = await exists('./index.html')
+          const has404 = await exists(`${resolvedConfig.root}/404.html`)
+          const hasIndex = await exists(`${resolvedConfig.root}/index.html`)
 
           if (has404) {
-            const content = await Deno.readTextFile('./404.html')
+            const content = await Deno.readTextFile(
+              `${resolvedConfig.root}/404.html`,
+            )
             const headers = new Headers({ 'Content-Type': 'text/html' })
             if (!prod) {
               headers.set('Cache-Control', noCache)
@@ -81,7 +106,9 @@ export const Start = new Command()
 
             return new Response(content, { status: 404, headers })
           } else if (hasIndex) {
-            const content = await Deno.readTextFile('./index.html')
+            const content = await Deno.readTextFile(
+              `${resolvedConfig.root}/index.html`,
+            )
             const headers = new Headers({ 'Content-Type': 'text/html' })
             if (!prod) {
               headers.set('Cache-Control', noCache)

@@ -3,20 +3,24 @@ import { denoPlugins } from '@luca/esbuild-deno-loader'
 import { resolve } from '@std/path'
 import esbuild from 'esbuild'
 import { logError, logInfo, logSuccess, logWarning } from './ui.ts'
+import type { CivilityConfig } from './config.ts'
 
 export interface BuildConfig {
   configPath: string
   config: Record<string, unknown>
   buildOptions: esbuild.BuildOptions
+  civilityConfig: CivilityConfig & { entryPoints: string[] }
 }
 
-export async function createBuildConfig(): Promise<BuildConfig> {
+export async function createBuildConfig(
+  civilityConfig: CivilityConfig & { entryPoints: string[] },
+): Promise<BuildConfig> {
   const configPath = resolve('./deno.json')
   const config = JSON.parse(await Deno.readTextFile(configPath))
 
   const buildOptions: esbuild.BuildOptions = {
-    entryPoints: ['./app/index.ts', './app/worker.ts'],
-    outdir: './dist',
+    entryPoints: civilityConfig.entryPoints,
+    outdir: civilityConfig.outdir,
     bundle: true,
     format: 'esm' as esbuild.Format,
     platform: 'browser',
@@ -29,7 +33,7 @@ globalThis.__APP_VERSION__ = "${config.version}";`,
     },
   }
 
-  return { configPath, config, buildOptions }
+  return { configPath, config, buildOptions, civilityConfig }
 }
 
 export async function buildOnce(

@@ -2,17 +2,27 @@ import { Command } from '@cliffy/command'
 import { ensureDir } from '@std/fs'
 import { join } from '@std/path'
 import { formatFileSize, logError, logInfo, logSuccess, theme } from '../ui.ts'
+import { loadConfig, resolvePaths } from '../config.ts'
 
 export const Icons = new Command()
   .description('Build icons files from source. Requires Imagemagick')
-  .option('-s, --source <source>', 'Source icon file', {
-    default: 'static/brand/icon.png',
-  })
-  .option('-o, --output <output>', 'Output directory', {
-    default: 'dist/icons',
-  })
+  .option('-s, --source <source>', 'Source icon file')
+  .option('-o, --output <output>', 'Output directory')
   .action(async (options) => {
-    const { source: sourceIcon, output: distDir } = options
+    // Load configuration with CLI option overrides
+    let config = await loadConfig()
+
+    // Apply CLI option overrides
+    if (options.source) {
+      config = { ...config, icon: { ...config.icon, source: options.source } }
+    }
+    if (options.output) {
+      config = { ...config, icon: { ...config.icon, output: options.output } }
+    }
+
+    // Resolve paths
+    const resolvedConfig = resolvePaths(config)
+    const { source: sourceIcon, output: distDir } = resolvedConfig.icon
     try {
       const stat = await Deno.stat(sourceIcon)
       if (!stat.isFile) {

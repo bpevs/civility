@@ -20,7 +20,60 @@ For some concepts that don't exist in HTML, we provide custom elements under the
 
 ### CLI for structured webapps
 
-Assumes specific file structure, but if you're using it, we can automate things like building icons and ts files. There is not interdependence on custom elements or on css files.
+The Civility CLI provides build tools and development server for PWA applications. It supports configurable paths through both command-line options and a `civility.json` configuration file.
+
+#### Configuration
+
+The CLI looks for a `civility.json` file in your project root. If not found, it uses sensible defaults:
+
+```json
+{
+  "root": "./src",
+  "outdir": "./src/dist",
+  "icon": {
+    "source": "./src/static/icon.png",
+    "output": "./src/dist/icons"
+  }
+}
+```
+
+**Configuration Options:**
+
+- `root`: Root directory containing your app source (serves as base for `index.ts` and `worker.ts`)
+- `outdir`: Build output directory
+- `icon.source`: Source PNG file for icon generation
+- `icon.output`: Output directory for generated icons
+
+#### CLI Commands
+
+**Build Application:**
+```bash
+civility build                    # Build once
+civility build --watch           # Build with watch mode
+civility build --outdir ./dist   # Override output directory
+```
+
+**Development Server:**
+```bash
+civility start                    # Start dev server on port 8000
+civility start --port 3000       # Custom port
+civility start --root ./app      # Override root directory
+civility start --prod            # Production mode (caching enabled)
+```
+
+**Generate Icons:**
+```bash
+civility icons                         # Use config defaults
+civility icons --source icon.png       # Override source
+civility icons --output ./dist/icons   # Override output
+```
+
+**Initialize Configuration:**
+```bash
+civility init    # Create default civility.json
+```
+
+The CLI automatically generates entry points (`index.ts` and `worker.ts`) from your configured root directory, eliminating the need to specify individual entry points.
 
 # Getting Started
 

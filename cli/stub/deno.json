@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "deno.ns",
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable"
+    ]
+  },
+  "tasks": {
+    "init": "civility icons",
+    "build": "civility",
+    "dev": "civility start"
+  }
+}
