@@ -1,4 +1,4 @@
-# My App
+# {{name}}
 
 ## Getting Started
 

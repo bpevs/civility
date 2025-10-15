@@ -1,8 +1,8 @@
 {
-  "short_name": "My App",
-  "name": "My App",
+  "short_name": "{{name}}",
+  "name": "{{name}}",
   "description": "",
-  "id": "https://bpev.me",
+  "id": "{{url}}",
   "categories": [],
   "orientation": "portrait",
   "icons": [

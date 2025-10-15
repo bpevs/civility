@@ -6,6 +6,7 @@ import { createDefaultConfig, loadConfig, resolvePaths } from './config.ts'
 import { logError, logInfo, logSuccess, theme } from './ui.ts'
 import { Icons } from './commands/icons.ts'
 import { Start } from './commands/start.ts'
+import { Init } from './commands/init.ts'
 
 // Load configuration
 const config = resolvePaths(await loadConfig())
@@ -66,8 +67,8 @@ const BuildCommand = new Command()
     }
   })
 
-const InitCommand = new Command()
-  .name('init')
+const ConfigInitCommand = new Command()
+  .name('init-config')
   .description('Create a default civility.json configuration file')
   .action(async () => {
     await createDefaultConfig()
@@ -131,5 +132,6 @@ await new Command()
   .command('build', BuildCommand)
   .command('icons', Icons)
   .command('start', Start)
-  .command('init', InitCommand)
+  .command('init', Init)
+  .command('init-config', ConfigInitCommand)
   .parse(Deno.args)
